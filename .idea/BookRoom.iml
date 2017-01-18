@@ -9,7 +9,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Mako" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../BookRoom\bookroom\templates" />
+        <option value="$MODULE_DIR$/bookroom/templates" />
       </list>
     </option>
   </component>

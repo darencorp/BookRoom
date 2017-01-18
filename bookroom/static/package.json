@@ -1,0 +1,22 @@
+{
+  "name": "module-name",
+  "version": "1.0.0",
+  "description": "BookRoom community",
+  "author": "Nazariy Mandebura <nazar.mandebura@gmail.com>",
+  "main": "lib/foo.js",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/darencorp/bookrooms.org"
+},
+  "keywords": [
+],
+  "dependencies": {
+    "angular": "1.6.1",
+    "angular-ui-router": "*",
+    "uikit": "*"
+  },
+  "preferGlobal": false,
+  "private": true,
+  "analyze": true,
+  "license": "MIT"
+}
