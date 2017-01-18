@@ -1,0 +1,3 @@
+# -*- coding: utf-8 -*-
+
+var urls = { ${','.join(['"%s": "%s"' % (k, v) for k, v in h.get_routes(request).items()]) | n} };

@@ -6,7 +6,13 @@
 
     <script src="../static/node_modules/angular/angular.min.js"></script>
     <script src="../static/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="../static/js/app.js"></script>
+##     <script src="../static/js/app.js"></script>
+
+     <script type="text/javascript" src="${request.route_path('js')}" ></script>
+    %for url in webassets(request, 'minjs'):
+        <script src="${h.fix_webasset(url)}"></script>
+    %endfor
+
 </head>
 <body>
 Hello world!
