@@ -1,0 +1,5 @@
+      [paste.app_factory]
+      main = bookroom:main
+      [console_scripts]
+      initialize_BookRoom_db = bookroom.scripts.initializedb:main
+      

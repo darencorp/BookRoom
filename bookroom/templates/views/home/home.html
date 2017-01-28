@@ -1,0 +1,33 @@
+<%inherit file="../../base.html"/>
+
+<%block name='headerTitle'>
+    | Home
+</%block>
+
+<%block name='userName'>
+##             <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
+    Nazariy Mandebura
+</%block>
+
+<%block name='main'>
+    <div ng-controller="HomeCtrl" class="uk-width-1-1 uk-height-1-1">
+        <div class="uk-width-3-4 uk-height-1-1 uk-container-center uk-flex">
+            <div class="home-menu-block uk-width-1-3 uk-height-1-1">
+                <ul class="menu-list uk-flex uk-flex-column uk-margin-right" data-uk-switcher="{connect:'#mainSwitcher'}">
+                    <li class="uk-active uk-flex uk-flex-right"><a class="home-menu-element"><h2>Library</h2></a></li>
+                    <li class="uk-flex uk-flex-right"><a class="home-menu-element"><h2>Friends</h2></a></li>
+                    <li class="uk-flex uk-flex-right"><a class="home-menu-element"><h2>Marketplace</h2></a></li>
+                    <li class="uk-flex uk-flex-right"><a class="home-menu-element"><h2>Blog</h2></a></li>
+                </ul>
+            </div>
+            <div class="home-menu-body uk-width-1-1 uk-height-1-1">
+                <ul id="mainSwitcher" class="uk-switcher">
+                    <li class=""><%include file="library.html"/></li>
+                    <li class=""><%include file="friends.html"/></li>
+                    <li class=""><%include file="marketplace.html"/></li>
+                    <li class=""><%include file="blog.html"/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</%block>

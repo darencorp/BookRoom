@@ -1,0 +1,25 @@
+<div class="uk-modal" id="login-form" data-uk-modal ng-controller="LoginCtrl">
+    <div class="uk-modal-dialog">
+        <a class="uk-float-right uk-modal-close uk-close"></a>
+        <div class="uk-modal-header">
+            <h2>Log In</h2>
+        </div>
+
+        <div class="uk-width-1-2 uk-container-center uk-form">
+
+            <label class="uk-form-row">Email</label>
+            <input type="text" class="uk-width-1-1">
+
+            <label class="uk-form-row">Password</label>
+            <input type="password" class="uk-width-1-1">
+
+            <br/>
+
+            <div class="uk-button-group uk-margin-top uk-width-1-2 uk-align-center">
+                <a ng-href="{{getLogin()}}"><button class="uk-button uk-button-primary">Log In</button></a>
+                <a><button ng-click="some()" class="uk-button">Sign In</button></a>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+CHANGES.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pyramid_webassets/__init__.py
+pyramid_webassets.egg-info/PKG-INFO
+pyramid_webassets.egg-info/SOURCES.txt
+pyramid_webassets.egg-info/dependency_links.txt
+pyramid_webassets.egg-info/not-zip-safe
+pyramid_webassets.egg-info/requires.txt
+pyramid_webassets.egg-info/top_level.txt
+pyramid_webassets/tests/__init__.py
+pyramid_webassets/tests/test_webassets.py

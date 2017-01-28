@@ -9,6 +9,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'bcrypt',
     'pyramid',
     'pyramid_jinja2',
     'pyramid_debugtoolbar',
@@ -18,7 +19,8 @@ requires = [
     'zope.sqlalchemy',
     'waitress',
     'pyramid_webassets',
-    'pyramid_beaker'
+    'pyramid_beaker',
+    'psycopg2'
     ]
 
 tests_require = [
@@ -28,7 +30,7 @@ tests_require = [
     ]
 
 setup(name='BookRoom',
-      version='0.0',
+      version='1.0',
       description='BookRoom',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
@@ -37,8 +39,8 @@ setup(name='BookRoom',
           "Topic :: Internet :: WWW/HTTP",
           "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
       ],
-      author='',
-      author_email='',
+      author='Nazariy Mandebura',
+      author_email='nazar.mandebura@gmail.com',
       url='',
       keywords='web wsgi bfg pylons pyramid',
       packages=find_packages(),

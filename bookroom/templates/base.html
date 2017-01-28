@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="uk-height-1-1">
+<head>
+    <meta charset="UTF-8">
+    <title>BookRoom <%block name='headerTitle'></%block></title>
+
+##     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+## 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic' rel='stylesheet' type='text/css'>
+
+
+    %for url in webassets(request, 'mincss'):
+        <link href="${url}" type="text/css" rel="stylesheet">
+    %endfor
+
+    <script type="text/javascript" src="${request.route_path('js')}" ></script>
+    %for url in webassets(request, 'minjs'):
+        <script src="${h.fix_webasset(url)}"></script>
+    %endfor
+
+</head>
+<body ng-app="BookRoomApp" class="ng-cloak uk-height-1-1">
+    <header>
+        <ul class="menu">
+        <li class="menu-button">
+          <div>BookRoom</div>
+        </li>
+        <li class="menu-button">
+            <%block name='userName'>
+                <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
+            </%block>
+        </li>
+        <li class="menu-button">
+          <div>Blog</div>
+        </li>
+        <li class="menu-button">
+          <div>About us</div>
+        </li>
+      </ul>
+    </header>
+
+    ${self.body()}
+
+    <%block name='main'>
+    </%block>
+</body>
+</html>

@@ -1,0 +1,10 @@
+pyramid
+beaker
+
+[docs]
+Sphinx
+docutils
+
+[testing]
+nose
+coverage

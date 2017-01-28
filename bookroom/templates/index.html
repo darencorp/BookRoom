@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="BookRoomApp">
-<head>
-    <meta charset="UTF-8">
-    <title>BookRoom</title>
+<%inherit file="base.html"/>
+<%include file="forms/login-form.html"/>
 
-    <script src="../static/node_modules/angular/angular.min.js"></script>
-    <script src="../static/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-##     <script src="../static/js/app.js"></script>
+    <%block name='userName'>
+        <div ng-controller="AppCtrl">
+        <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
+        </div>
+    </%block>
 
-     <script type="text/javascript" src="${request.route_path('js')}" ></script>
-    %for url in webassets(request, 'minjs'):
-        <script src="${h.fix_webasset(url)}"></script>
-    %endfor
 
-</head>
-<body>
-Hello world!
-</body>
-</html>
+    <%block name='main'>
+        <div ng-controller="AppCtrl">
+            <div class="uk-flex uk-flex-column uk-height-1-1">
+                <h1 class="caption uk-flex uk-flex-center">Read without leaving your homeflow</h1>
+                <p1 class="subcaption uk-flex uk-flex-center">All first-rate books and great community with you in main place</p1>
+                <a class="button-container uk-margin-top uk-flex uk-flex-center" ng-click="openLoginForm()"><div class=""><div class="main-button" ng-click="openLoginForm()">Join to Community</div></div></a>
+            </div>
+        </div>
+    </%block>

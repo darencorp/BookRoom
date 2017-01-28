@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Darencorp;
+    src: url(../fonts/Ubuntu-C.ttf) format("truetype");
+}
+
+body {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+    ), url(../img/book2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*z-index: 1;*/
+    font-family: Georgia, Arial;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 3em;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    background-color: rgba(0,0,0,0.3);
+}
+
+main {
+
+}
+
+footer {
+
+}
+
+.menu {
+    float: right;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-button{
+    height: 100%;
+    margin-left: auto;
+    justify-content: flex-end;
+    color: azure;
+    font-family: Darencorp;
+    font-size: 18px;
+    margin-right: 2em;
+    margin-top: 0.5em;
+}
+
+.menu-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menu-list {
+    margin-top: 5em;
+}
+
+.home-menu-block {
+    background: rgba(64,40,16,0.5);
+}
+
+.home-menu-element h2{
+    color: azure;
+    /*text-decoration-color: white;*/
+}
+
+.home-menu-element:hover{
+    text-decoration: none;
+
+}
+
+.home-menu-body {
+    background-color: rgba(64,40,16,0.8);
+}
+
+.home-menu-body-element {
+    border: none;
+    border-left: solid;
+    border-color: azure;
+    border-left-width: 1px;
+
+    resize: none;
+    height: 45.7em;
+}
+
+.color {
+    background-color: #e6aa9e;
+}

@@ -1,0 +1,109 @@
+Metadata-Version: 1.1
+Name: pyramid-beaker
+Version: 0.8
+Summary: Beaker session factory backend for Pyramid
+Home-page: http://docs.pylonsproject.org/projects/pyramid_beaker/en/latest/
+Author: Chris McDonough, Agendaless Consulting
+Author-email: pylons-devel@googlegroups.com
+License: BSD-derived (http://www.repoze.org/LICENSE.txt)
+Description: pyramid_beaker
+        ==============
+        
+        Provides a session factory for the `Pyramid <http://docs.pylonsproject.org>`_
+        web framework backed by the `Beaker <http://beaker.groovie.org/>`_ sessioning
+        system.
+        
+        See `the Pylons Project documentation <http://docs.pylonsproject.org>`_ for
+        more information.
+        
+        
+        0.8 (2013-06-28)
+        ----------------
+        
+        - On Python 3, the CSRF token returned by new_csrf_token was a bytestring
+          instead of correctly being a string.  See
+          https://github.com/Pylons/pyramid_beaker/pull/12
+        
+        - A new argument to PyramidBeakerSessionFactoryConfig named
+          ``constant_csrf_token`` is now permitted for test configuration purposes.
+          See https://github.com/Pylons/pyramid_beaker/pull/13 for more information.
+        
+        0.7 (2012-07-10)
+        ----------------
+        
+        - Python 3.2 compatibility.
+        
+        - Dropped Jython support (may be re-added after Jython releases a 2.7-
+          compatible version).
+        
+        - Dropped Python 2.5 support.
+        
+        - Made compatible with zope.interface 4.0.0 (symptom: ``TypeError: Class
+          advice impossible in Python3.  Use the @implementer class decorator
+          instead.`` when run under Python 2 or *or* Python 3)
+        
+        - Add ``dev`` and ``docs`` setup.py aliases.
+        
+        0.6.1 (2011-11-19)
+        ------------------
+        
+        - Beaker 1.6+ compat: added support for ``key_length`` and ``enabled``
+          options.
+        
+        0.6 (2011-11-12)
+        ----------------
+        
+        - Add a tox.ini for Jenkins testing.
+        
+        - Add includeme function to ease application setup.
+        
+        0.5 (2011-03-30)
+        ----------------
+        
+        - The default value for the ``cookie_on_exception`` parameter to
+          ``pyramid_beaker.BeakerSessionFactoryConfig`` is now ``True``.  This means
+          that when view code causes an exception to be raised, and the session has
+          been mutated, a cookie will be sent back in the response.  Previously its
+          default value was ``False``.
+        
+        0.4 (2011-01-08)
+        ----------------
+        
+        - Allow cache regions to inherit URL configuration from main cache options.
+        
+        - Respect a ``cookie_on_exception`` configuration value passed to the
+          ``BeakerSessionFactoryConfig`` constructor.  If this value is passed and
+          it's not false, session cookies will be set even on responses resulting
+          from an exception.
+        
+        - Update to new relationship between ``new_csrf_token`` and
+          ``get_csrf_token`` as described in Pyramid 1.0a9 interfaces.
+        
+        0.3 (2010-12-29)
+        ----------------
+        
+        - Support ISession flash/csrf API added to Pyramid 1.0a8+.
+        
+        0.2 (2010-11-27)
+        ----------------
+        
+        - Add cache_region support via
+          ``pyramid_beaker.set_cache_regions_from_settings`` (and documented).
+        
+        0.1
+        ---
+        
+        - Initial release.
+        
+Keywords: web wsgi pylons pyramid
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Framework :: Pyramid
