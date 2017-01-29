@@ -1,6 +1,30 @@
-<div id="register-form" class="uk-modal" data-uk-modal>
-    <div class="uk-modal-dialog"></div>
-    <div>
+<div class="uk-modal" id="register-form" ng-controller="LoginCtrl as reg">
+    <div class="uk-modal-dialog">
+        <a class="uk-float-right uk-modal-close uk-close"></a>
+        <div class="uk-modal-header">
+            <h2>Sign Up</h2>
+        </div>
 
+        <div class="uk-width-1-2 uk-container-center uk-form">
+
+            <label class="uk-form-row">First Name</label>
+            <input type="text" ng-model="reg.user.first_name" class="uk-width-1-1">
+
+            <label class="uk-form-row">Last Name</label>
+            <input type="text" ng-model="reg.user.last_name" class="uk-width-1-1">
+
+            <label class="uk-form-row">Email</label>
+            <input type="text" ng-model="reg.user.email" ng-class="{'uk-form-danger':!reg.emailValid}" class="uk-width-1-1">
+
+            <label class="uk-form-row">Password</label>
+            <input type="password" ng-model="reg.user.password" ng-class="{'uk-form-danger': !reg.passwordEquals}" class="uk-width-1-1">
+
+            <label class="uk-form-row">Confirm Password</label>
+            <input type="password" ng-model="reg.user.confirmed_password" ng-class="{'uk-form-danger': !reg.passwordEquals}" class="uk-width-1-1">
+
+            <br/>
+
+            <button class="uk-button uk-button-primary uk-margin-top uk-align-center" ng-click="reg.register(reg.user)">Register</button>
+        </div>
     </div>
 </div>

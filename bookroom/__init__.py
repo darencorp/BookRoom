@@ -1,4 +1,5 @@
 from pyramid import renderers
+from pyramid.authorization import ACLAuthorizationPolicy
 from pyramid.config import Configurator
 from pyramid.session import SignedCookieSessionFactory
 from webassets import Bundle
@@ -11,6 +12,7 @@ def include_js(config):
         'node_modules/uikit/dist/js/uikit.min.js',
         'node_modules/angular/angular.min.js',
         'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+        'node_modules/uikit/dist/js/components/notify.js',
 
         'js/lib/jquery.nano.js',
 
@@ -31,6 +33,7 @@ def include_css(config):
     mincss = Bundle(
 
         'node_modules/uikit/dist/css/uikit%s.css' % theme,
+        'node_modules/uikit/dist/css/components/notify.css',
 
         'css/app.css',
         'css/home.css',
@@ -46,13 +49,15 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
 
     config.set_session_factory(SignedCookieSessionFactory('itsaseekreet'))
+    config.set_authorization_policy(ACLAuthorizationPolicy())
 
     config.add_mako_renderer('.html')
 
     json_renderer = renderers.JSON()
     config.add_renderer('json', json_renderer)
 
-    config.include('pyramid_jinja2')
+    config.include('pyramid_jwt')
+    config.set_jwt_authentication_policy('secret')
     config.include('.models')
     config.include('.routes')
     config.include(include_js)

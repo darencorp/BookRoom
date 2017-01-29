@@ -7,6 +7,7 @@ import zope.sqlalchemy
 # Base.metadata prior to any initialization routines
 from .MarketBook import MarketBook  # noqa
 from .LibraryBook import LibraryBook  # noqa
+from .User import User  # noqa
 
 # run configure_mappers after defining all of the models to ensure
 # all relationships can be setup

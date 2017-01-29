@@ -46,3 +46,8 @@
 .main-button:active{
     background-color: rgba(168, 80, 79, 0.9);
 }
+
+.main-menu li a h2{
+    font-family: Darencorp;
+    color: azure;
+}

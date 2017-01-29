@@ -13,7 +13,8 @@
   "dependencies": {
     "angular": "1.6.1",
     "angular-ui-router": "*",
-    "uikit": "*"
+    "uikit": "*",
+    "jquery": "*"
   },
   "preferGlobal": false,
   "private": true,

@@ -18,5 +18,3 @@ class MarketBook(Base):
     author = Column(Text)
     category = Column(Text)
     price = Column(Float)
-
-Index('marketbook_index', MarketBook.name, unique=True, mysql_length=255)
