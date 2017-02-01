@@ -5,6 +5,7 @@ from pyramid.httpexceptions import HTTPFound
 from pyramid.security import remember, forget
 from pyramid.view import view_config, forbidden_view_config
 from bookroom.models import User
+from bookroom.models.facades.home_facade import HomeFacade
 
 
 class Common(object):
@@ -13,11 +14,12 @@ class Common(object):
         self.DBSession = request.dbsession
         self.session = request.session
 
+        self.hf = HomeFacade(request)
+
     @view_config(route_name='js', renderer='../templates/lib/js.html')
     def js(self):
         """Render JavaScript urls
         """
-        # self.request.response.content_type = 'application/javascript'
         return dict()
 
     @view_config(route_name='index', renderer='../templates/index.html')
@@ -26,23 +28,47 @@ class Common(object):
             return HTTPFound(location='login')
         return dict()
 
-    @view_config(route_name='login', renderer='../templates/views/home/home.html')
-    @forbidden_view_config(renderer='../templates/views/home/home.html')
+    @view_config(route_name='home', xhr=False, renderer='../templates/views/home/home.html')
+    @view_config(route_name='home', xhr=True, renderer='json')
+    def home(self):
+        if not self.session.get('loged_in'):
+            return HTTPFound(location='/')
+
+        if not self.request.is_xhr:
+            return dict()
+
+        items = self.hf.get_all_marketbooks()
+
+        books = []
+
+        for i in items:
+            books.append({
+                'id': i.id,
+                'name': i.name,
+                'image': i.image,
+                'author': i.author,
+                'price': i.price
+            })
+
+        return dict(books=books)
+
+    @view_config(route_name='login', renderer='json')
+    @forbidden_view_config(renderer='json')
     def go_login(self):
 
         def authenticate(email, password):
             user_query = self.DBSession.query(User).filter(User.email == email).limit(1)
 
             user = [{
-                'first_name': i.first_name,
-                'last_name': i.last_name,
-                'email': i.email,
-                'role': i.role
-            } for i in user_query]
+                        'first_name': i.first_name,
+                        'last_name': i.last_name,
+                        'email': i.email,
+                        'role': i.role
+                    } for i in user_query]
 
             my_password = [{
-                'password': i.password
-            } for i in user_query]
+                               'password': i.password
+                           } for i in user_query]
 
             if len(my_password) != 0 and bcrypt.verify(password, my_password[0].get('password')):
                 return user[0]
@@ -50,20 +76,18 @@ class Common(object):
                 return False
 
         login_url = self.request.resource_url(self.request.context, 'login')
-        message = ''
         login = self.request.POST.get('email')
         password = self.request.POST.get('password')
 
         if self.session.get('loged_in'):
-            return dict()
+            return HTTPFound(location=self.request.route_path('home'))
 
         user = authenticate(login, password)
 
         if user:
             self.session['loged_in'] = self.request.create_jwt_token(user)
-            return HTTPFound(location=login_url)
-        else:
-            message = 'Failed login'
+            self.session['loged_as'] = user
+        return HTTPFound(location=self.request.route_path('home'))
 
         return HTTPFound(location='/')
 
@@ -110,5 +134,5 @@ class Common(object):
 
     @view_config(route_name='logout', renderer='../templates/index.html')
     def logout(self):
-        self.session['loged_in'] = None
-        return HTTPFound(location=self.request.resource_url(self.request.context))
+        self.session.clear()
+        return dict()

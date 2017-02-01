@@ -62,7 +62,7 @@ footer {
 }
 
 .home-menu-block {
-    background: rgba(64,40,16,0.5);
+    background: rgba(1, 8, 25, 0.5);
 }
 
 .home-menu-element h2{
@@ -76,7 +76,7 @@ footer {
 }
 
 .home-menu-body {
-    background-color: rgba(64,40,16,0.8);
+    background-color: rgba(124,141,171,0.45);
 }
 
 .home-menu-body-element {
@@ -89,6 +89,23 @@ footer {
     height: 45.7em;
 }
 
-.color {
-    background-color: #e6aa9e;
+.market-book {
+    padding-top: 2em;
 }
+
+.market-book:hover{
+    background-color: rgba(255,255,255, 0.2);
+    border-radius: 7%;
+}
+
+.market-book-caption {
+    font-family: Darencorp;
+    color: rgb(0,0,0);
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/*.buy-button {*/
+    /*float: right;*/
+/*}*/

@@ -14,7 +14,15 @@ class MarketBook(Base):
     __tablename__ = 'market_book'
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(Text)
-    image = Column(Binary)
+    image = Column(Text)
     author = Column(Text)
     category = Column(Text)
     price = Column(Float)
+    description = Column(Text)
+
+    def __init__(self, image, name, author, category, price):
+        self.image = image
+        self.name = name
+        self.author = author
+        self.category = category
+        self.price = price

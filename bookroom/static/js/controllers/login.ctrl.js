@@ -15,8 +15,6 @@ angular.module('BookRoomApp')
                 }
             }
         );
-
-        // return $.nano(urls['login'])
     };
 
     $this.openRegisterForm = function () {

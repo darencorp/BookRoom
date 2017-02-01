@@ -1,3 +1,25 @@
-<div class="uk-scrollable-box home-menu-body-element">
-    <h2 style="color:white">Marketplace</h2>
+
+<%include file="../../forms/book-form.html"/>
+
+<div class="uk-scrollable-box home-menu-body-element" ng-controller="HomeCtrl as market">
+##     <div>
+##         <form class="uk-form" action="/upload" method="post" enctype="multipart/form-data">
+## ##         <form class="uk-form">
+##             <input type="file" name="image" value="Choose image"/>
+##             <input type="text" name="name">
+##             <input type="text" name="author">
+##             <input type="text" name="category">
+##             <input type="text" name="price">
+##         <p><button type="submit">Save</button></p>
+##         </form>
+##     </div>
+    <div class="uk-margin-large-top">
+        <div ng-click="market.openBookForm(book.id)" ng-repeat="book in market.books" class="market-book uk-width-1-4 uk-display-inline-block uk-margin-large-left uk-margin-large-bottom">
+            <div class="image uk-flex uk-flex-center">
+                <img src="{{book.image}}"/>
+            </div>
+            <h4 class="market-book-caption uk-flex uk-flex-center">{{book.name}}</h4>
+        </div>
+    </div>
+
 </div>

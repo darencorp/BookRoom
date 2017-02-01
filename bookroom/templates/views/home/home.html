@@ -6,19 +6,20 @@
 
 <%block name='userName'>
 ##             <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
-    Nazariy Mandebura
+    ${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}
 </%block>
 
 <%block name='exitButton'>
     <li class="menu-button">
-        <div ng-controller="HomeCtrl">
+        <div>
             <a class="uk-link-reset" href="${request.route_path('logout')}">Exit</a>
         </div>
     </li>
 </%block>
 
 <%block name='main'>
-    <div ng-controller="HomeCtrl" class="uk-width-1-1 uk-height-1-1">
+
+    <div ng-controller="HomeCtrl as home" class="uk-width-1-1 uk-height-1-1">
         <div class="uk-width-3-4 uk-height-1-1 uk-container-center uk-flex">
             <div class="home-menu-block uk-width-1-3 uk-height-1-1">
                 <ul class="menu-list uk-flex uk-flex-column uk-margin-right main-menu" data-uk-switcher="{connect:'#mainSwitcher'}">
