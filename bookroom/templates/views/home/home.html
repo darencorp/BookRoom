@@ -1,4 +1,5 @@
 <%inherit file="../../base.html"/>
+<%include file="../../forms/user-form.html"/>
 
 <%block name='headerTitle'>
     | Home
@@ -6,7 +7,13 @@
 
 <%block name='userName'>
 ##             <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
-    ${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}
+    <div ng-controller="HomeCtrl as userCtrl">
+        <a ng-click="userCtrl.openUserSetting()" class="uk-link-reset" href="#">${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</a>
+    </div>
+</%block>
+
+
+<%block name="aboutUs">
 </%block>
 
 <%block name='exitButton'>
@@ -23,17 +30,17 @@
         <div class="uk-width-3-4 uk-height-1-1 uk-container-center uk-flex">
             <div class="home-menu-block uk-width-1-3 uk-height-1-1">
                 <ul class="menu-list uk-flex uk-flex-column uk-margin-right main-menu" data-uk-switcher="{connect:'#mainSwitcher'}">
-                    <li class="uk-active uk-flex uk-flex-right"><a class="home-menu-element"><h2>Library</h2></a></li>
-                    <li class="uk-flex uk-flex-right"><a class="home-menu-element"><h2>Friends</h2></a></li>
-                    <li class="uk-flex uk-flex-right"><a class="home-menu-element"><h2>Marketplace</h2></a></li>
-                    <li class="uk-flex uk-flex-right"><a class="home-menu-element"><h2>Blog</h2></a></li>
+                    <li class="uk-active uk-flex uk-flex-right"><h2 class="home-menu-element">Store</h2></li>
+                    <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Library</h2></li>
+##                     <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Friends</h2></li>
+                    <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Blog</h2></li>
                 </ul>
             </div>
             <div class="home-menu-body uk-width-1-1 uk-height-1-1">
                 <ul id="mainSwitcher" class="uk-switcher">
-                    <li class=""><%include file="library.html"/></li>
-                    <li class=""><%include file="friends.html"/></li>
                     <li class=""><%include file="marketplace.html"/></li>
+                    <li class=""><%include file="library.html"/></li>
+##                     <li class=""><%include file="friends.html"/></li>
                     <li class=""><%include file="blog.html"/></li>
                 </ul>
             </div>

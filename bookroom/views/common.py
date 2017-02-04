@@ -57,27 +57,29 @@ class Common(object):
     def go_login(self):
 
         def authenticate(email, password):
-            user_query = self.DBSession.query(User).filter(User.email == email).limit(1)
+            user_query = self.DBSession.query(User).filter(User.email == email).first()
 
-            user = [{
-                        'first_name': i.first_name,
-                        'last_name': i.last_name,
-                        'email': i.email,
-                        'role': i.role
-                    } for i in user_query]
+            user = {
+                'first_name': user_query.first_name,
+                'last_name': user_query.last_name,
+                'email': user_query.email
+            }
 
-            my_password = [{
-                               'password': i.password
-                           } for i in user_query]
+            my_password = {
+                'password': user_query.password
+            }
 
-            if len(my_password) != 0 and bcrypt.verify(password, my_password[0].get('password')):
-                return user[0]
+            if len(my_password) != 0 and bcrypt.verify(password, my_password.get('password')):
+                return user
             else:
                 return False
 
+        p = self.request.POST
+        # j = self.request.json_body
+
         login_url = self.request.resource_url(self.request.context, 'login')
-        login = self.request.POST.get('email')
-        password = self.request.POST.get('password')
+        login = p.get('email')
+        password = p.get('password')
 
         if self.session.get('loged_in'):
             return HTTPFound(location=self.request.route_path('home'))

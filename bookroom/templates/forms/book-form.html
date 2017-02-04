@@ -1,25 +1,26 @@
-<div id="book-form" class="uk-modal" ng-controller="HomeCtrl as bookf">
+<div id="book-form" class="uk-modal" ng-controller="BookCtrl">
     <div class="uk-modal-dialog ">
         <div class="uk-close uk-modal-close"></div>
         <div class="uk-modal-header">
-            <h2>{{bookf.book.name}}</h2>
+            <h2>{{book.name}}</h2>
         </div>
 
         <div class="uk-flex">
             <div class="uk-form-row uk-width-1-4 uk-margin-large-top uk-margin-left">
-                <img src="{{bookf.book.image}}">
+                <img src="{{book.image}}">
+                <div class="uk-width-1-2 uk-align-center uk-margin-top book-price">$ {{book.price}}</div>
             </div>
 
             <div class="uk-width-3-4">
                 <h3>Description:</h3>
 
-                <div class="uk-padding uk-padding-bottom uk-scrollable-text uk-disable">{{bookf.book.desc}}</div>
+                <div class="uk-padding uk-padding-bottom uk-scrollable-text uk-disable">{{book.desc}}</div>
             </div>
         </div>
 
-        <div class="uk-modal-footer">
+        <div class="uk-modal-footer modal-footer-padding uk-margin-remove">
             <div>
-                <div class="uk-button uk-button-primary buy-button">Buy</div>
+                <div ng-click="processBook(book.id)" class="uk-button uk-button-primary uk-float-right uk-margin-bottom">Buy</div>
             </div>
         </div>
 

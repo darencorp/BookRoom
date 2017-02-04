@@ -8,7 +8,7 @@ angular.module('BookRoomApp')
     $this.emailValid = true;
 
     $this.getLogin = function() {
-        $http({method: 'POST', url: $.nano(urls['login']), data: $this.user, contentType: "application/json" }).then(
+        $http({method: 'POST', url: $.nano(urls['login']), data: $this.user, contentType: "application/x-www-form-urlencoded" }).then(
             function(ret) {
                 if(ret.data.error) {
                     $.UIkit.notify(ret.data.error.desc, {status:'danger'})
@@ -42,6 +42,8 @@ angular.module('BookRoomApp')
                 } else {
                     $this.passwordEquals = true;
                     $this.emailValid = true;
+
+                    // $this.getLogin();
                 }
             }
         );

@@ -52,9 +52,9 @@ class Home(object):
 
     @view_config(route_name='book', renderer='json')
     def book(self):
-        id_ = self.request.matchdict.get('id')
+        id_ = int(self.request.matchdict.get('id'))
 
-        item = self.hf.by_id(id_)
+        item = self.hf.marketbook_by_id(id_)
 
         book = {
             'id': item.id,
@@ -65,3 +65,38 @@ class Home(object):
         }
 
         return dict(book=book)
+
+    @view_config(route_name='book-buy', renderer='json')
+    def book_buy(self):
+
+        id_ = int(self.request.matchdict.get('id'))
+
+        if id_:
+
+            book = self.hf.get_library_book_by_key(id_, self.session['loged_as'].get('email'))
+
+            if not book:
+                self.hf.add_library_book(int(self.request.matchdict.get('id')))
+                return dict(status='ok')
+
+            else:
+                return dict(status='present')
+
+        return dict(status='error')
+
+    @view_config(route_name='library', renderer='json')
+    def library(self):
+
+        library= []
+
+        for i in self.hf.get_library():
+
+            library.append(
+                {
+                    'name': i.name,
+                    'desc': i.description,
+                    'author': i.author,
+                    'image': i.image
+                })
+
+        return dict(library=library)

@@ -8,11 +8,6 @@ angular.module('BookRoomApp')
         });
     };
 
-    $rootScope.$on('showBookForm', function (event, data) {
-        $this.book = data.book;
-        $.UIkit.modal('#book-form').show();
-    });
-
     $this.saveMarketBook = function(book) {
         home_service.saveMarketBook(book);
     };
@@ -21,7 +16,19 @@ angular.module('BookRoomApp')
         home_service.getBooks(function(ret) {
             $this.books = ret.data.books;
         });
+
+        home_service.getLibrary(function (ret)  {
+            $this.library = ret.data.library;
+        });
     };
 
     $this.getBooks();
+
+    $this.openUserSetting = function ()  {
+        $.UIkit.modal('#user-form').show();
+    };
+
+    $rootScope.$on('updateLibrary', function (event, data) {
+        $this.library = data;
+    });
 });

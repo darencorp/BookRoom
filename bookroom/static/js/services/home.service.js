@@ -9,8 +9,10 @@ angular.module('BookRoomApp')
            },
            getBook: function (id, success) {
                $http({method: 'POST', url: $.nano(urls['book'], {id:id}), contentType: "application/x-www-form-urlencoded"}).then(success);
+           },
+           getLibrary: function(success) {
+               $http({method: 'POST', url: $.nano(urls['library']), contentType: "application/x-www-form-urlencoded"}).then(success);
            }
-
        };
 
        return service;

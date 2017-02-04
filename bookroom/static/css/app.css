@@ -23,7 +23,7 @@ header {
     top: 0px;
     left: 0px;
     position: fixed;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.7);
 }
 
 main {
@@ -65,18 +65,28 @@ footer {
     background: rgba(1, 8, 25, 0.5);
 }
 
-.home-menu-element h2{
+.home-menu-element {
+    font-family: Darencorp;
     color: azure;
+    cursor: pointer;
     /*text-decoration-color: white;*/
 }
 
 .home-menu-element:hover{
-    text-decoration: none;
-
+    text-decoration: underline;
+    text-decoration-color: azure;
 }
 
 .home-menu-body {
     background-color: rgba(124,141,171,0.45);
+}
+
+.home-menu-body ::-webkit-scrollbar {
+    width: 0px !important;
+    /*color: #1b61d6;*/
+    /*background-color: #2b542c;*/
+
+
 }
 
 .home-menu-body-element {
@@ -91,21 +101,56 @@ footer {
 
 .market-book {
     padding-top: 2em;
+    /*height: 3em;*/
 }
 
 .market-book:hover{
-    background-color: rgba(255,255,255, 0.2);
     border-radius: 7%;
+    background-color: rgba(255,255,255, 0.2);
+
 }
 
 .market-book-caption {
     font-family: Darencorp;
-    color: rgb(0,0,0);
+    color: azure;
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
+    font-size: 1.4em;
 }
 
-/*.buy-button {*/
-    /*float: right;*/
-/*}*/
+.book-price{
+    font-family: Personality;
+    font-size: 1.5em;
+}
+
+.modal-footer-padding {
+    padding-bottom: 2em;
+}
+
+.library-book {
+    padding-top: 2em;
+    margin-left: 6em;
+    /*height: 3em;*/
+}
+
+.library-book:hover{
+    border-radius: 7%;
+    background-color: rgba(255,255,255, 0.2);
+
+}
+
+.empty-library-caption {
+    font-family: Darencorp;
+    margin-top: 2em;
+    margin-bottom: 0;
+    color: rgba(223, 225, 255, 0.7);
+    font-size: 3em;
+}
+
+.empty-library-subcaption {
+    font-family: Darencorp;
+    color: azure;
+    font-size: 1.4em;
+}
+

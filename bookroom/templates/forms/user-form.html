@@ -1,0 +1,34 @@
+<div id="user-form" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-float-right uk-modal-close uk-close"></a>
+        <div class="uk-modal-header">
+            <h2>${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</h2>
+        </div>
+
+        <div class="uk-width-1-2 uk-container-center uk-form uk-margin-bottom">
+
+            <div>
+                First Name - ${session.get('loged_as')['first_name']}<p></p>
+            </div>
+
+
+            <label class="uk-form-row">Last Name</label>
+            <input type="text" ng-model="reg.user.last_name" class="uk-width-1-1">
+
+            <label class="uk-form-row">Email</label>
+            <input type="text" ng-model="reg.user.email" class="uk-width-1-1">
+
+            <label class="uk-form-row">Password</label>
+            <input type="password" ng-model="reg.user.password" class="uk-width-1-1">
+
+            <label class="uk-form-row">Confirm Password</label>
+            <input type="password" ng-model="reg.user.confirmed_password" class="uk-width-1-1">
+
+            <br/>
+        </div>
+
+        <div class="uk-modal-footer modal-footer-padding uk-margin-remove">
+            <button class="uk-button uk-button-primary uk-float-right uk-margin-bottom">Save</button>
+        </div>
+    </div>
+</div>

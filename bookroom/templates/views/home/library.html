@@ -1,5 +1,21 @@
-<div class="uk-scrollable-box home-menu-body-element">
+<div class="uk-scrollable-box home-menu-body-element" ng-controller="HomeCtrl as libctrl">
 
+    <div class="uk-margin-large-top">
 
-    <h2 style="color: white">Library</h2>
+    <div ng-if="libctrl.library.length <= 0" class="uk-margin-large-top uk-flex uk-flex-column uk-flex-middle">
+        <h1 class="empty-library-caption">Empty</h1>
+        <p class="empty-library-subcaption">Add books in the store.</p>
+    </div>
+
+     <div class="uk-margin-large-top uk-width-1-1">
+         <div class="uk-width-1-2 uk-display-inline-block" ng-repeat="book in libctrl.library">
+            <div class="library-book uk-width-1-2 uk-margin-large-bottom">
+            <div class="image uk-flex uk-flex-center">
+                <img src="{{book.image}}"/>
+            </div>
+            <h4 class="market-book-caption uk-flex uk-flex-center">{{book.name}}</h4>
+            </div>
+         </div>
+    </div>
+        </div>
 </div>

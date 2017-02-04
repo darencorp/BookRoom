@@ -8,4 +8,8 @@ def includeme(config):
     config.add_route('register', '/register')
     config.add_route('logout', '/logout')
     config.add_route('upload', '/upload')
+
     config.add_route('book', '/book/{id}')
+    config.add_route('book-buy', '/book-process/{id}')
+
+    config.add_route('library', 'library')
