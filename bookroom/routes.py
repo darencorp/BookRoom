@@ -13,3 +13,7 @@ def includeme(config):
     config.add_route('book-buy', '/book-process/{id}')
 
     config.add_route('library', 'library')
+
+    config.add_route('posts', 'posts/{user}')
+    config.add_route('post_add', 'post/new')
+    config.add_route('post_delete', 'posts/{id}')

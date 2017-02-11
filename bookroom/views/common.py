@@ -132,7 +132,17 @@ class Common(object):
 
         self.DBSession.add(user)
 
-        return dict()
+        login_user = {
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'email': user.email
+
+        }
+
+        self.session['loged_in'] = self.request.create_jwt_token(login_user)
+        self.session['loged_as'] = login_user
+
+        return dict() #HTTPFound(location=self.request.route_path('home'))
 
     @view_config(route_name='logout', renderer='../templates/index.html')
     def logout(self):

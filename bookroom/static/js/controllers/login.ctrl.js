@@ -1,5 +1,5 @@
 angular.module('BookRoomApp')
-.controller('LoginCtrl', function($scope, $http){
+.controller('LoginCtrl', function($scope, $http, $window){
     var $this = this;
 
     $this.user = {};
@@ -43,7 +43,7 @@ angular.module('BookRoomApp')
                     $this.passwordEquals = true;
                     $this.emailValid = true;
 
-                    // $this.getLogin();
+                     $window.location.href = '/home';
                 }
             }
         );

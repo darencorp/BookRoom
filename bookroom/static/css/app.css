@@ -15,6 +15,7 @@ body {
     /*z-index: 1;*/
     font-family: Georgia, Arial;
     overflow: hidden;
+    font-family: Darencorp;
 }
 
 header {
@@ -24,14 +25,6 @@ header {
     left: 0px;
     position: fixed;
     background-color: rgba(0,0,0,0.7);
-}
-
-main {
-
-}
-
-footer {
-
 }
 
 .menu {
@@ -59,6 +52,10 @@ footer {
 
 .menu-list {
     margin-top: 5em;
+}
+
+.menu-list li h2{
+    font-size: 2.1em;
 }
 
 .home-menu-block {
@@ -152,5 +149,21 @@ footer {
     font-family: Darencorp;
     color: azure;
     font-size: 1.4em;
+}
+
+.blog-textarea {
+    resize: none;
+}
+
+.blog-post {
+    padding-top: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 0;
+}
+
+.blog-post:hover{
+    border-radius: 25px;
+    background-color: rgba(255,255,255, 0.2);
 }
 

@@ -1,10 +1,9 @@
-import os
-
+from datetime import datetime
 from pyramid.httpexceptions import HTTPFound
 from pyramid.view import view_config
 from bookroom.lib.helpers import fix_webasset
 
-from bookroom.models import MarketBook
+from bookroom.models import MarketBook, Post
 from bookroom.models.facades.home_facade import HomeFacade
 
 
@@ -100,3 +99,22 @@ class Home(object):
                 })
 
         return dict(library=library)
+
+    @view_config(route_name='posts', renderer='json')
+    def posts_for_user(self):
+        return dict()
+
+    @view_config(route_name='post_add', renderer='json')
+    def add_post(self):
+        j = self.request.json_body
+        s = self.session
+
+        some = datetime.now()
+
+        a = j.get('content')
+        b = s.get('loged_as').get('email')
+
+        post = Post(a, b)
+        self.DBSession.add(post)
+
+        return dict()

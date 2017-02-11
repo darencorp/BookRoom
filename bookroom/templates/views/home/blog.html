@@ -1,2 +1,22 @@
-<div class="uk-scrollable-box home-menu-body-element">
+<div class="uk-scrollable-box home-menu-body-element" ng-controller="BlogCtrl">
+    <div class="uk-margin-large-top uk-width-9-10 uk-align-center">
+        <div class="uk-grid uk-padding-remove">
+            <div class="uk-width-1-1 uk-form">
+                <textarea ng-model="post.content" class="uk-width-1-1 blog-textarea" style="font-size: 1.3em; height: 4em;" placeholder="Add new post"></textarea>
+                <button class="uk-button uk-button-primary uk-margin-top uk-float-right" ng-click="addPost(post)">Add</button>
+                <button class="uk-button uk-margin-top uk-margin-right uk-float-right">Cancel</button>
+            </div>
+
+            <div class="uk-margin-left uk-margin-large-top uk-grid blog-post uk-width-1-1">
+                <div>
+                <img src="../../../static/img/no-avatar.png"/>
+                <div>${session.get('loged_as').get('first_name')}</div>
+                </div>
+
+                <div>
+                    Some post
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
