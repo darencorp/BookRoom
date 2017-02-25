@@ -18,3 +18,11 @@ If you have Windows:
 If you have *UNIX:
 
 - env/bin/python3 setup.py develop
+
+
+For run server:
+
+- env\Scripts\pserve.exe development.ini for Windows
+- env/bin/pserve development.ini for *UNIX
+
+In your browser open http://localhost
