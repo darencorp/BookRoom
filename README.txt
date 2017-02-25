@@ -4,11 +4,17 @@ BookRoom README
 Getting Started
 ---------------
 
-- cd <directory containing this file>
+For intall:
 
-- $VENV/bin/pip install -e .
+- install python 3.4 or 3.5
+- run pip install virtualenv
+- remove env/ dir.
+- python -m virtualenv env
 
-- $VENV/bin/initialize_BookRoom_db development.ini
+If you have Windows:
 
-- $VENV/bin/pserve development.ini
+- env\Scripts\python setup.py develop
 
+If you have *UNIX:
+
+- env/bin/python3 setup.py develop
