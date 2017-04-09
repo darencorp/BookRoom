@@ -6,7 +6,7 @@ Getting Started
 
 For intall:
 
-- install python 3.4 or 3.5
+- install python 3.4
 - run pip install virtualenv
 - remove env/ dir.
 - python -m virtualenv env
