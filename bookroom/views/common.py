@@ -75,9 +75,7 @@ class Common(object):
                 return False
 
         p = self.request.POST
-        # j = self.request.json_body
 
-        login_url = self.request.resource_url(self.request.context, 'login')
         login = p.get('email')
         password = p.get('password')
 
@@ -91,10 +89,8 @@ class Common(object):
             self.session['loged_as'] = user
         return HTTPFound(location=self.request.route_path('home'))
 
-        return HTTPFound(location='/')
-
     @view_config(route_name='register', renderer='json')
-    def some(self):
+    def register(self):
         j = self.request.json_body
 
         if j.get('password') != j.get('confirmed_password') or len(j.get('password')) == 0:
@@ -142,9 +138,9 @@ class Common(object):
         self.session['loged_in'] = self.request.create_jwt_token(login_user)
         self.session['loged_as'] = login_user
 
-        return dict() #HTTPFound(location=self.request.route_path('home'))
+        return dict()
 
     @view_config(route_name='logout', renderer='../templates/index.html')
     def logout(self):
         self.session.clear()
-        return dict()
+        return HTTPFound(location=self.request.route_path('home'))

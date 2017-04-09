@@ -11,10 +11,10 @@
   "keywords": [
 ],
   "dependencies": {
+    "jquery": "",
     "angular": "1.6.1",
     "angular-ui-router": "*",
-    "uikit": "*",
-    "jquery": "*"
+    "uikit": "*"
   },
   "preferGlobal": false,
   "private": true,

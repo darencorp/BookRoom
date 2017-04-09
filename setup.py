@@ -20,7 +20,6 @@ requires = [
     'waitress',
     'pyramid_webassets',
     'pyramid_beaker',
-    'psycopg2',
     'passlib',
     'pyramid_jwt'
     ]
