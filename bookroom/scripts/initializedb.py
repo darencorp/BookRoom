@@ -15,7 +15,6 @@ from ..models import (
     get_session_factory,
     get_tm_session,
     )
-from ..models import MarketBook, LibraryBook
 
 
 def usage(argv):

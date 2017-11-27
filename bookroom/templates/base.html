@@ -8,17 +8,18 @@
         <link href="${url}" type="text/css" rel="stylesheet">
     %endfor
 
-    <script type="text/javascript" src="${request.route_path('js')}" ></script>
+    <script type="text/javascript" src="${request.route_path('js')}"></script>
+
     %for url in webassets(request, 'minjs'):
-        <script src="${h.fix_webasset(url)}"></script>
+        <script src="${url}"></script>
     %endfor
 
 </head>
 <body ng-app="BookRoomApp" class="ng-cloak uk-height-1-1">
-    <header>
-        <ul class="menu">
+<header>
+    <ul class="menu">
         <li class="menu-button">
-          <div>BookRoom</div>
+            <div>BookRoom</div>
         </li>
         <li class="menu-button">
             <%block name='userName'>
@@ -26,18 +27,18 @@
             </%block>
         </li>
         <li class="menu-button">
-          <div>Blog</div>
+            <div>Blog</div>
         </li>
         <%block name='aboutUs'>
-        <li class="menu-button">
-          <div>About us</div>
-        </li>
+            <li class="menu-button">
+                <div>About us</div>
+            </li>
         </%block>
         <%block name='exitButton'>
 
         </%block>
-      </ul>
-    </header>
+    </ul>
+</header>
 
     ${self.body()}
 

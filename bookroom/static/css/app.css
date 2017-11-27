@@ -7,12 +7,11 @@ body {
     background: linear-gradient(
             rgba(0, 0, 0, 0.4),
             rgba(0, 0, 0, 0.4)
-    ), url(../img/book2.jpg) no-repeat center center fixed;
+    ), url(../img/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /*z-index: 1;*/
     font-family: Georgia, Arial;
     overflow: hidden;
     font-family: Darencorp;
@@ -66,7 +65,6 @@ header {
     font-family: Darencorp;
     color: azure;
     cursor: pointer;
-    /*text-decoration-color: white;*/
 }
 
 .home-menu-element:hover{
@@ -80,90 +78,17 @@ header {
 
 .home-menu-body ::-webkit-scrollbar {
     width: 0px !important;
-    /*color: #1b61d6;*/
-    /*background-color: #2b542c;*/
-
-
 }
 
 .home-menu-body-element {
-    border: none;
-    border-left: solid;
-    border-color: azure;
-    border-left-width: 1px;
+    border: none azure;
+    border-left: 1px solid;
 
     resize: none;
     height: 45.7em;
 }
 
-.market-book {
-    padding-top: 2em;
-    /*height: 3em;*/
-}
-
-.market-book:hover{
-    border-radius: 7%;
-    background-color: rgba(255,255,255, 0.2);
-
-}
-
-.market-book-caption {
-    font-family: Darencorp;
-    color: azure;
-    text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    font-size: 1.4em;
-}
-
-.book-price{
-    font-family: Personality;
-    font-size: 1.5em;
-}
-
 .modal-footer-padding {
     padding-bottom: 2em;
-}
-
-.library-book {
-    padding-top: 2em;
-    margin-left: 6em;
-    /*height: 3em;*/
-}
-
-.library-book:hover{
-    border-radius: 7%;
-    background-color: rgba(255,255,255, 0.2);
-
-}
-
-.empty-library-caption {
-    font-family: Darencorp;
-    margin-top: 2em;
-    margin-bottom: 0;
-    color: rgba(223, 225, 255, 0.7);
-    font-size: 3em;
-}
-
-.empty-library-subcaption {
-    font-family: Darencorp;
-    color: azure;
-    font-size: 1.4em;
-}
-
-.blog-textarea {
-    resize: none;
-}
-
-.blog-post {
-    padding-top: 1.5em;
-    padding-right: 1.5em;
-    padding-bottom: 1.5em;
-    padding-left: 0;
-}
-
-.blog-post:hover{
-    border-radius: 25px;
-    background-color: rgba(255,255,255, 0.2);
 }
 

@@ -1,1 +1,0 @@
-env\Scripts\pserve development.ini --reload

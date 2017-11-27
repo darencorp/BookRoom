@@ -20,8 +20,6 @@ def include_js(config):
 
         'js/controllers/login.ctrl.js',
         'js/controllers/home.ctrl.js',
-        'js/controllers/book.ctrl.js',
-        'js/controllers/blog.ctrl.js',
 
         'js/services/home.service.js',
 

@@ -5,15 +5,14 @@
   "author": "Nazariy Mandebura <nazar.mandebura@gmail.com>",
   "main": "lib/foo.js",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/darencorp/bookrooms.org"
-},
-  "keywords": [
-],
+    "type": "git",
+    "url": "https://github.com/darencorp/bookrooms.org"
+  },
+  "keywords": [],
   "dependencies": {
-    "jquery": "",
     "angular": "1.6.1",
     "angular-ui-router": "*",
+    "jquery": "^3.2.1",
     "uikit": "*"
   },
   "preferGlobal": false,

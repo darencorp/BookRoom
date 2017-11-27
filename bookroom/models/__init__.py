@@ -5,8 +5,6 @@ import zope.sqlalchemy
 
 # import or define all models here to ensure they are attached to the
 # Base.metadata prior to any initialization routines
-from .MarketBook import MarketBook  # noqa
-from .LibraryBook import LibraryBook  # noqa
 from .User import User  # noqa
 
 # run configure_mappers after defining all of the models to ensure

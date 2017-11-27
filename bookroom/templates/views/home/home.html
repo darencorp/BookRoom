@@ -6,9 +6,9 @@
 </%block>
 
 <%block name='userName'>
-##             <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
     <div ng-controller="HomeCtrl as userCtrl">
-        <a ng-click="userCtrl.openUserSetting()" class="uk-link-reset" href="#">${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</a>
+        <a ng-click="userCtrl.openUserSetting()" class="uk-link-reset"
+           href="#">${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</a ng-click="userCtrl.openUserSetting()">
     </div>
 </%block>
 
@@ -32,16 +32,12 @@
                 <ul class="menu-list uk-flex uk-flex-column uk-margin-right main-menu" data-uk-switcher="{connect:'#mainSwitcher'}">
                     <li class="uk-active uk-flex uk-flex-right"><h2 class="home-menu-element">Store</h2></li>
                     <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Library</h2></li>
-##                     <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Friends</h2></li>
-                    <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Blog</h2></li>
                 </ul>
             </div>
             <div class="home-menu-body uk-width-1-1 uk-height-1-1">
                 <ul id="mainSwitcher" class="uk-switcher">
                     <li class=""><%include file="marketplace.html"/></li>
                     <li class=""><%include file="library.html"/></li>
-##                     <li class=""><%include file="friends.html"/></li>
-                    <li class=""><%include file="blog.html"/></li>
                 </ul>
             </div>
         </div>

@@ -37,20 +37,7 @@ class Common(object):
         if not self.request.is_xhr:
             return dict()
 
-        items = self.hf.get_all_marketbooks()
-
-        books = []
-
-        for i in items:
-            books.append({
-                'id': i.id,
-                'name': i.name,
-                'image': i.image,
-                'author': i.author,
-                'price': i.price
-            })
-
-        return dict(books=books)
+        return dict()
 
     @view_config(route_name='login', renderer='json')
     @forbidden_view_config(renderer='json')

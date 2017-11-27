@@ -1,19 +1,23 @@
 <%inherit file="base.html"/>
 <%include file="forms/login-form.html"/>
 
-    <%block name='userName'>
-        <div ng-controller="AppCtrl">
+<%block name='userName'>
+    <div ng-controller="AppCtrl">
         <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
-        </div>
-    </%block>
+    </div>
+</%block>
 
 
-    <%block name='main'>
-        <div ng-controller="AppCtrl">
-            <div class="uk-flex uk-flex-column uk-height-1-1">
-                <h1 class="caption uk-flex uk-flex-center">Read without leaving your homeflow</h1>
-                <p1 class="subcaption uk-flex uk-flex-center">All first-rate books and great community with you in main place</p1>
-                <div class="button-container uk-margin-top uk-flex uk-flex-center" ng-click="openLoginForm()"><div class="main-button" ng-click="openLoginForm()">Join to Community</div></div>
+<%block name='main'>
+    <div ng-controller="AppCtrl">
+        <div class="uk-flex uk-flex-column uk-height-1-1">
+            <h1 class="caption uk-flex uk-flex-center">Read without leaving your homeflow</h1>
+            <p1 class="subcaption uk-flex uk-flex-center">All first-rate books and great community with you in main
+                place
+            </p1>
+            <div class="button-container uk-margin-top uk-flex uk-flex-center" ng-click="openLoginForm()">
+                <div class="main-button" ng-click="openLoginForm()">Join to Community</div>
             </div>
         </div>
-    </%block>
+    </div>
+</%block>
