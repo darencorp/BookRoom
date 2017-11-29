@@ -29,9 +29,13 @@
     <div ng-controller="HomeCtrl as home" class="uk-width-1-1 uk-height-1-1">
         <div class="uk-width-3-4 uk-height-1-1 uk-container-center uk-flex">
             <div class="home-menu-block uk-width-1-3 uk-height-1-1">
-                <ul class="menu-list uk-flex uk-flex-column uk-margin-right main-menu" data-uk-switcher="{connect:'#mainSwitcher'}">
-                    <li class="uk-active uk-flex uk-flex-right"><h2 class="home-menu-element">Store</h2></li>
-                    <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Library</h2></li>
+                <ul class="menu-list uk-flex uk-flex-column uk-margin-right main-menu"
+                    data-uk-switcher="{connect:'#mainSwitcher'}">
+                    <li class="uk-active uk-flex uk-flex-right"><h2 class="home-menu-element">Catalog</h2></li>
+                    <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Users</h2></li>
+                    %if request.has_permission('view'):
+                    <li class="uk-flex uk-flex-right"><h2 class="home-menu-element">Test</h2></li>
+                    %endif
                 </ul>
             </div>
             <div class="home-menu-body uk-width-1-1 uk-height-1-1">

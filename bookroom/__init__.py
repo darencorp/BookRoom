@@ -1,12 +1,14 @@
 from pyramid import renderers
+from pyramid.authentication import SessionAuthenticationPolicy
 from pyramid.authorization import ACLAuthorizationPolicy
 from pyramid.config import Configurator
 from pyramid.session import SignedCookieSessionFactory
 from webassets import Bundle
 
+from lib.security import Root, groupfinder
+
 
 def include_js(config):
-
     minjs = Bundle(
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/uikit/dist/js/uikit.min.js',
@@ -28,8 +30,8 @@ def include_js(config):
     )
     config.add_webasset('minjs', minjs)
 
-def include_css(config):
 
+def include_css(config):
     theme = '.almost-flat'
 
     mincss = Bundle(
@@ -45,21 +47,21 @@ def include_css(config):
     )
     config.add_webasset('mincss', mincss)
 
+
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
     config = Configurator(settings=settings)
 
-    config.set_session_factory(SignedCookieSessionFactory('itsaseekreet'))
+    config.set_session_factory(SignedCookieSessionFactory('secret', max_age=1200))
     config.set_authorization_policy(ACLAuthorizationPolicy())
+    config.set_authentication_policy(SessionAuthenticationPolicy('secret', callback=groupfinder))
+    config.set_root_factory(Root)
 
     config.add_mako_renderer('.html')
-
     json_renderer = renderers.JSON()
     config.add_renderer('json', json_renderer)
 
-    config.include('pyramid_jwt')
-    config.set_jwt_authentication_policy('secret')
     config.include('.models')
     config.include('.routes')
     config.include(include_js)

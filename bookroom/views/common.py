@@ -2,7 +2,7 @@ import re
 
 from passlib.handlers.bcrypt import bcrypt
 from pyramid.httpexceptions import HTTPFound
-from pyramid.security import remember, forget
+from pyramid.security import remember, authenticated_userid
 from pyramid.view import view_config, forbidden_view_config
 from bookroom.models import User
 from bookroom.models.facades.home_facade import HomeFacade
@@ -24,14 +24,14 @@ class Common(object):
 
     @view_config(route_name='index', renderer='../templates/index.html')
     def my_view(self):
-        if self.session.get('loged_in'):
+        if authenticated_userid(request=self.request):
             return HTTPFound(location='login')
         return dict()
 
     @view_config(route_name='home', xhr=False, renderer='../templates/views/home/home.html')
     @view_config(route_name='home', xhr=True, renderer='json')
     def home(self):
-        if not self.session.get('loged_in'):
+        if not authenticated_userid(request=self.request):
             return HTTPFound(location='/')
 
         if not self.request.is_xhr:
@@ -61,20 +61,25 @@ class Common(object):
             else:
                 return False
 
+        r = self.request
         p = self.request.POST
 
         login = p.get('email')
         password = p.get('password')
 
-        if self.session.get('loged_in'):
+        if authenticated_userid(request=r):
             return HTTPFound(location=self.request.route_path('home'))
 
         user = authenticate(login, password)
 
         if user:
-            self.session['loged_in'] = self.request.create_jwt_token(user)
             self.session['loged_as'] = user
-        return HTTPFound(location=self.request.route_path('home'))
+            remember(request=r, userid=user['email'])
+
+            return HTTPFound(location=self.request.route_path('home'))
+
+        else:
+            return False
 
     @view_config(route_name='register', renderer='json')
     def register(self):
@@ -99,9 +104,7 @@ class Common(object):
 
         dbuser = self.DBSession.query(User).filter(User.email == j.get('email'))
 
-        u = [{
-            'email': i.email
-        } for i in dbuser]
+        u = [{'email': i.email} for i in dbuser]
 
         if not len(u) == 0:
             error_dict = {
@@ -119,11 +122,10 @@ class Common(object):
             'first_name': user.first_name,
             'last_name': user.last_name,
             'email': user.email
-
         }
 
-        self.session['loged_in'] = self.request.create_jwt_token(login_user)
         self.session['loged_as'] = login_user
+        remember(request=self.request, userid=user['email'])
 
         return dict()
 
