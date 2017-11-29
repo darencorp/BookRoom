@@ -1,16 +1,415 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/templates/views/home/home.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bookroom/templates/views/home/library.html" afterPath="$PROJECT_DIR$/bookroom/templates/views/catalog.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bookroom/templates/views/home/marketplace.html" afterPath="$PROJECT_DIR$/bookroom/templates/views/users.html" />
+    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="fix front&#10;fix login">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookroom/static/img/books/HarryPotter.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookroom/static/img/unknown_user.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/uikit3.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/apple-touch-icon.png" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/apple-touch-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_blog.png" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_blog.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_contact.png" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_contact.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_documentation.png" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_documentation.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_frontpage.png" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_frontpage.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_login.png" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_login.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_portfolio.png" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_portfolio.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_1.jpg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_2.jpg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_3.jpg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_1.jpg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_2.jpg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_3.jpg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_4.jpg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.woff2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js" afterPath="$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/lib/security.py" afterPath="$PROJECT_DIR$/bookroom/lib/security.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/css/app.css" afterPath="$PROJECT_DIR$/bookroom/static/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/node-promise/package.json" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/node-promise/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/CHANGELOG.md" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/LICENSE.md" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/LICENSE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/README.md" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/bower.json" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/composer.json" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/bower.json" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.almost-flat.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.almost-flat.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.gradient.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.gradient.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/accordion.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/accordion.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/accordion.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/autocomplete.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/autocomplete.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/autocomplete.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/datepicker.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/datepicker.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/datepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-password.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-password.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-password.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-password.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-select.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-select.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-select.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid-parallax.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid-parallax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid-parallax.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid-parallax.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/htmleditor.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/htmleditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/htmleditor.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/htmleditor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/lightbox.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/lightbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/lightbox.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/lightbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/nestable.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/nestable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/nestable.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/nestable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/notify.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/notify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/notify.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/notify.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/pagination.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/pagination.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/pagination.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/pagination.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/parallax.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/parallax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/parallax.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/parallax.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/search.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/search.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/search.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slider.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slider.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideset.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideset.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideset.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow-fx.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow-fx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow-fx.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow-fx.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sortable.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sortable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sortable.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sortable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sticky.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sticky.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sticky.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/timepicker.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/timepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/timepicker.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/timepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/tooltip.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/tooltip.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/tooltip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/upload.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/upload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/upload.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/upload.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/alert.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/alert.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/alert.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/button.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/button.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/button.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/core.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/core.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/core.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/cover.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/cover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/cover.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/cover.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/dropdown.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/dropdown.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/dropdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/grid.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/grid.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/grid.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/modal.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/modal.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/modal.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/nav.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/nav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/nav.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/nav.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/offcanvas.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/offcanvas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/offcanvas.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/offcanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/scrollspy.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/scrollspy.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/scrollspy.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/smooth-scroll.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/smooth-scroll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/smooth-scroll.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/smooth-scroll.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/switcher.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/switcher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/switcher.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/switcher.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/tab.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/tab.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/tab.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/toggle.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/toggle.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/toggle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/touch.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/touch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/touch.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/touch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/utility.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/utility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/utility.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/utility.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/uikit.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/uikit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/uikit.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/uikit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/notify.less" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/notify.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/tooltip.less" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/tooltip.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/icon.less" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/icon.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/uikit-variables.less" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/uikit-variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/notify.scss" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/notify.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/tooltip.scss" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/tooltip.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/icon.scss" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/icon.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/uikit-mixins.scss" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/uikit-mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/uikit-variables.scss" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/uikit-variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/accordion.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/accordion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/alert.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/alert.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/animation.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/animation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/article.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/autocomplete.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/autocomplete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/badge.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/badge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/base.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/block.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/block.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/breadcrumb.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/breadcrumb.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/button.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/close.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/close.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/column.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/column.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/comment.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/comment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/components.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/components.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/contrast.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/contrast.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/core.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/core.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/cover.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/cover.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/css/uikit.docs.min.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/css/uikit.docs.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/customizer.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/customizer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/datepicker.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/datepicker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/description-list.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/description-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_create-a-style.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_create-a-style.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_create-a-theme.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_create-a-theme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_custom-prefix.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_custom-prefix.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_customizer-json.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_customizer-json.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_get-started.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_get-started.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_how-to-customize.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_how-to-customize.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_javascript.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_javascript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_layouts.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_layouts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_less-sass.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_less-sass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_project-structure.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_project-structure.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/dotnav.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/dotnav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/dropdown.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/dropdown.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/flex.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/flex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-advanced.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-advanced.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-file.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-file.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-password.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-password.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-select.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-select.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid-js.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid-js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid-parallax.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid-parallax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/htmleditor.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/htmleditor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/icon.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/icon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/logo_uikit3.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/logo_uikit3.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_120x255.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_120x255.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x100.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x100.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_1.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_1.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_2.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_3.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_3.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_4.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_4.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x200.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x200.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_300x455.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_300x455.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_400x200.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_400x200.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_400x250.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_400x250.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_480x260.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_480x260.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_600x400.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_600x400.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_600x400_2.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_600x400_2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x280.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x280.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_avatar.svg" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_avatar.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/js/docs.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/js/docs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/js/uikit.min.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/js/uikit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/lightbox.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/lightbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/list.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/modal.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/modal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/nav.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/nav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/navbar.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/nestable.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/nestable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/notify.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/notify.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/offcanvas.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/offcanvas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/overlay.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/overlay.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/pagination-js.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/pagination-js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/pagination.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/pagination.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/panel.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/parallax.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/parallax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/placeholder.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/placeholder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/print.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/print.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/progress.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/progress.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/scrollspy.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/scrollspy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/search.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slidenav.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slidenav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slider.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slider.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slideset.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slideset.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slideshow.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slideshow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/smooth-scroll.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/smooth-scroll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/sortable.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/sortable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/sticky.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/sticky.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/subnav.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/subnav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/switcher.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/switcher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tab.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/table.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/table.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/text.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/text.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/thumbnail.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/thumbnail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/thumbnav.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/thumbnav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/timepicker.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/timepicker.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/toggle.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/toggle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tooltip.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tooltip.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tutorials.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tutorials.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/upload.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/upload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/utility.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/utility.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/gulpfile.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/index.html" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/package.json" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/accordion.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/autocomplete.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/datepicker.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/form-password.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/form-password.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/form-select.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/form-select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/grid-parallax.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/grid-parallax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/grid.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/htmleditor.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/htmleditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/lightbox.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/lightbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/nestable.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/nestable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/notify.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/notify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/pagination.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/pagination.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/parallax.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/parallax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/search.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slider.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideset.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideshow-fx.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideshow-fx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideshow.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideshow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/sortable.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/sortable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/sticky.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/timepicker.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/timepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/tooltip.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/upload.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/upload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/alert.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/button.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/core.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/cover.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/cover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/dropdown.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/grid.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/modal.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/nav.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/nav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/offcanvas.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/offcanvas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/scrollspy.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/smooth-scroll.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/smooth-scroll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/switcher.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/switcher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/tab.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/toggle.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/touch.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/touch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/utility.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/utility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/notify.less" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/notify.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/tooltip.less" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/tooltip.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/icon.less" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/icon.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/codemirror/codemirror.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/codemirror/codemirror.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/codemirror/show-hint.css" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/codemirror/show-hint.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/holder.js" afterPath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/holder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/package.json" afterPath="$PROJECT_DIR$/bookroom/static/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/base.html" afterPath="$PROJECT_DIR$/bookroom/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" afterPath="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/index.html" afterPath="$PROJECT_DIR$/bookroom/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/views/common.py" afterPath="$PROJECT_DIR$/bookroom/views/common.py" />
     </list>
     <ignored path="BookRoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +427,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/BookRoom$.coverage" NAME=" Coverage Results" MODIFIED="1511820180588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/BookRoom$pyramid.coverage" NAME="pyramid Coverage Results" MODIFIED="1511956207533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BookRoom$pyramid.coverage" NAME="pyramid Coverage Results" MODIFIED="1511995201481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -71,31 +470,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login-form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register-form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/register-form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="security.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookroom/lib/security.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+            <state relative-caret-position="285">
+              <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -103,11 +482,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.ctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js">
+      <file leaf-file-name="development.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/development.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="234">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,8 +495,38 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookroom/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="66">
+              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login-form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bookroom/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -144,6 +553,7 @@
       <find>showBookForm</find>
       <find>loged_in</find>
       <find>getLogin</find>
+      <find>`</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -192,21 +602,22 @@
         <option value="$PROJECT_DIR$/bookroom/static/js/services/home.service.js" />
         <option value="$PROJECT_DIR$/bookroom/static/js/controllers/home.ctrl.js" />
         <option value="$PROJECT_DIR$/bookroom/static/js/controllers/book.ctrl.js" />
-        <option value="$PROJECT_DIR$/bookroom/static/css/app.css" />
         <option value="$PROJECT_DIR$/production.ini" />
         <option value="$PROJECT_DIR$/development.ini" />
         <option value="$PROJECT_DIR$/bookroom/lib/__init__.py" />
         <option value="$PROJECT_DIR$/bookroom/security.py" />
         <option value="$PROJECT_DIR$/bookroom/routes.py" />
         <option value="$PROJECT_DIR$/bookroom/models/User.py" />
-        <option value="$PROJECT_DIR$/bookroom/__init__.py" />
         <option value="$PROJECT_DIR$/bookroom/templates/views/home/home.html" />
-        <option value="$PROJECT_DIR$/bookroom/templates/base.html" />
-        <option value="$PROJECT_DIR$/bookroom/templates/index.html" />
-        <option value="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" />
         <option value="$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js" />
         <option value="$PROJECT_DIR$/bookroom/views/common.py" />
         <option value="$PROJECT_DIR$/bookroom/lib/security.py" />
+        <option value="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" />
+        <option value="$PROJECT_DIR$/bookroom/templates/forms/user-form.html" />
+        <option value="$PROJECT_DIR$/bookroom/static/css/app.css" />
+        <option value="$PROJECT_DIR$/bookroom/__init__.py" />
+        <option value="$PROJECT_DIR$/bookroom/templates/base.html" />
+        <option value="$PROJECT_DIR$/bookroom/templates/index.html" />
       </list>
     </option>
   </component>
@@ -274,6 +685,58 @@
               <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
               <item name="bookroom" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="uikit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="uikit" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="uikit" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
+              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="uikit" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -281,8 +744,9 @@
               <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
               <item name="bookroom" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="uikit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
@@ -296,13 +760,6 @@
               <item name="bookroom" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
-              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
@@ -328,20 +785,21 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bookroom/static/img/books" />
       <recent name="$PROJECT_DIR$/bookroom/templates/views" />
       <recent name="$PROJECT_DIR$/bookroom/lib" />
       <recent name="$PROJECT_DIR$/bookroom/templates/lib" />
       <recent name="$PROJECT_DIR$/bookroom" />
-      <recent name="C:\Users\Nazariy Mandebura\PycharmProjects\BookRoom\bookroom\templates\views\home" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bookroom/static/img" />
       <recent name="C:\Users\Nazariy Mandebura\PycharmProjects\BookRoom\bookroom\static\js\lib" />
       <recent name="C:\Users\Nazariy Mandebura\PycharmProjects\BookRoom\bookroom\static\css" />
       <recent name="C:\Users\Nazariy Mandebura\PycharmProjects\BookRoom\bookroom\static" />
@@ -668,7 +1126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511952107748</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix front&#10;fix login">
+      <created>1511956517686</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511956517686</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -689,12 +1154,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31329924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24222586" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24168798" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22460657" sideWeight="0.4948849" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16523606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16523606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29283887" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39897698" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3375959" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25894135" sideWeight="0.5051151" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -729,7 +1194,8 @@
     <MESSAGE value="full refactor" />
     <MESSAGE value="refactor" />
     <MESSAGE value="fix authentication policy&#10;add permissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix authentication policy&#10;add permissions" />
+    <MESSAGE value="fix front&#10;fix login" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix front&#10;fix login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -745,16 +1211,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bookroom/models/LibraryBook.py" />
-    <entry file="file://$PROJECT_DIR$/bookroom/models/facades/home_facade.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/models/MarketBook.py" />
     <entry file="file://$PROJECT_DIR$/bookroom/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -808,13 +1264,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/static/js/controllers/book.ctrl.js" />
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/views/users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/static/img/background.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -842,13 +1291,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/tests.py" />
-    <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="87" column="19" lean-forward="true" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/lib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -918,7 +1360,7 @@
         <state relative-caret-position="330">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -939,29 +1381,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/development.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/lib/python3.4/site-packages/pyramid-1.9.1-py3.4.egg/pyramid/authentication.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,22 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/user-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1029,10 +1437,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/4a610256/4366ecc9-f627-4b6a-90ff-d342aed1a664/main.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/views/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/node_modules/uikit/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="113" column="21" lean-forward="true" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/lib/security.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/development.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/user-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="7" column="79" lean-forward="true" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/uikit.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/article.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1641">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-199">
+          <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1047,36 +1544,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        <state relative-caret-position="66">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/4a610256/4366ecc9-f627-4b6a-90ff-d342aed1a664/main.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        <state relative-caret-position="417">
+          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/lib/security.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -17,14 +17,29 @@
 </head>
 <body ng-app="BookRoomApp" class="ng-cloak uk-height-1-1">
 <header>
-    <ul class="menu">
-        <li class="menu-button">
-            <%block name='userName'>
-            </%block>
-        </li>
-        <%block name='exitButton'>
-        </%block>
-    </ul>
+    <div class="uk-width-1-1 uk-flex uk-flex-center">
+        <div class="uk-width-3-4 uk-flex uk-margin-small-top">
+            <div class="uk-width-1-2 uk-flex uk-margin-small-top">
+                <div class="menu-button uk-margin-small-top uk-margin-left">Bookroom</div>
+                <div class="menu-button uk-margin-small-top uk-margin-left">Catalogue</div>
+                <div class="uk-form-icon">
+                    <i class="uk-margin-left uk-icon-search"></i>
+                    <input class="uk-margin-left uk-margin-small-top uk-margin-small-bottom menu-input"
+                           placeholder="Search"/>
+                </div>
+            </div>
+            <div class="uk-width-1-2 uk-flex uk-flex-right uk-margin-small-top">
+                <div class="uk-margin-right uk-margin-small-top menu-button">
+                    <%block name='userName'>
+                    </%block>
+                </div>
+                <div class="menu-button uk-margin-small-top">
+                    <%block name='exitButton'>
+                    </%block>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 
     ${self.body()}

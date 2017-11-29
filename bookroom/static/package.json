@@ -13,7 +13,7 @@
     "angular": "1.6.1",
     "angular-ui-router": "*",
     "jquery": "^3.2.1",
-    "uikit": "*"
+    "uikit": "^2.27.4"
   },
   "preferGlobal": false,
   "private": true,

@@ -16,8 +16,8 @@ def check_password(expected_hash, pw):
     return False
 
 
-def groupfinder(userid, request):
-    users_query = request.dbsession.query(User.id, User.role).filter(User.email == userid).first()
+def groupfinder(user_mail, request):
+    users_query = request.dbsession.query(User.id, User.role).filter(User.email == user_mail).first()
 
     user_role = {
         'role': users_query.role
