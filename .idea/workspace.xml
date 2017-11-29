@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="refactor">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookroom/lib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookRoom.sqlite" afterPath="$PROJECT_DIR$/BookRoom.sqlite" />
+    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/__init__.py" afterPath="$PROJECT_DIR$/bookroom/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/lib/security.py" afterPath="$PROJECT_DIR$/bookroom/lib/security.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/routes.py" afterPath="$PROJECT_DIR$/bookroom/routes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/views/home/home.html" afterPath="$PROJECT_DIR$/bookroom/templates/views/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/views/common.py" afterPath="$PROJECT_DIR$/bookroom/views/common.py" />
     </list>
     <ignored path="BookRoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -585,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511807092366</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor">
+      <created>1511952023215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1511952023215</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
