@@ -26,16 +26,13 @@ class Common(object):
     def my_view(self):
         if authenticated_userid(request=self.request):
             return HTTPFound(location='login')
+
         return dict()
 
-    @view_config(route_name='home', xhr=False, renderer='../templates/views/home/home.html')
-    @view_config(route_name='home', xhr=True, renderer='json')
+    @view_config(route_name='home', renderer='../templates/index.html')
     def home(self):
         if not authenticated_userid(request=self.request):
             return HTTPFound(location='/')
-
-        if not self.request.is_xhr:
-            return dict()
 
         return dict()
 
@@ -62,24 +59,26 @@ class Common(object):
                 return False
 
         r = self.request
-        p = self.request.POST
-
-        login = p.get('email')
-        password = p.get('password')
 
         if authenticated_userid(request=r):
             return HTTPFound(location=self.request.route_path('home'))
+
+        p = self.request.json
+
+        login = p.get('email', '')
+        password = p.get('password', '')
+
+        if login == '' or password == '':
+            return dict(error="Email or password is incorrect!")
 
         user = authenticate(login, password)
 
         if user:
             self.session['loged_as'] = user
             remember(request=r, userid=user['email'])
+            return dict()
 
-            return HTTPFound(location=self.request.route_path('home'))
-
-        else:
-            return False
+        return dict(error="Email or password is incorrect!")
 
     @view_config(route_name='register', renderer='json')
     def register(self):
@@ -129,7 +128,7 @@ class Common(object):
 
         return dict()
 
-    @view_config(route_name='logout', renderer='../templates/index.html')
+    @view_config(route_name='logout', renderer='json')
     def logout(self):
         self.session.clear()
         return HTTPFound(location=self.request.route_path('home'))

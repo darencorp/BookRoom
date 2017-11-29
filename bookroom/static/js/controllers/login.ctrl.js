@@ -7,16 +7,17 @@ angular.module('BookRoomApp')
         $this.passwordEquals = true;
         $this.emailValid = true;
 
-        $this.getLogin = function () {
+        $this.login = function () {
             $http({
                 method: 'POST',
                 url: $.nano(urls['login']),
-                data: $this.user,
-                contentType: "application/x-www-form-urlencoded"
+                data: $this.user
             }).then(
                 function (ret) {
                     if (ret.data.error) {
-                        $.UIkit.notify(ret.data.error.desc, {status: 'danger'})
+                        $.UIkit.notify(ret.data.error, {status: 'danger'})
+                    } else {
+                        $window.location.href = '/home';
                     }
                 }
             );

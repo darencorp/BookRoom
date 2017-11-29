@@ -7,7 +7,7 @@
             <h2>Log In</h2>
         </div>
 
-        <form class="uk-width-1-2 uk-container-center uk-form" method="POST" action="${request.route_path('login')}">
+        <form class="uk-width-1-2 uk-container-center uk-form">
 
             <label class="uk-form-row">Email</label>
             <input type="text" name="email" ng-model="login.user.email" class="uk-width-1-1">
@@ -18,7 +18,7 @@
             <br/>
 
             <div class="uk-button-group uk-margin-top uk-width-1-2 uk-align-center">
-                <button type="submit" class="uk-button uk-button-primary">Log In</button>
+                <button ng-click="login.login()" class="uk-button uk-button-primary">Log In</button>
                 <a ng-click="login.openRegisterForm()">
                     <button class="uk-button">Sign Up</button>
                 </a>
