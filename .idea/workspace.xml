@@ -1,875 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="fix front&#10;fix login">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/release/angular-ui-router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/release/angular-ui-router.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/scripts/ui-router-ng2.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/scripts/ui-router-ng2.ipr" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/scripts/ui-router-ng2.iws" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/resolve.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/state.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/stateDirectives.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/stateFilters.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/templateFactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/urlMatcherFactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/urlRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/view.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/viewDirective.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/src/viewScroll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/ui-router.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/ui-router.ipr" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular-ui-router/ui-router.iws" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/angular-csp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/angular.min.js.gzip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/angular/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/node-promise/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/node-promise/fs-promise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/node-promise/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/node-promise/promise.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/accordion.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/autocomplete.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/datepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/dotnav.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-advanced.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-file.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-password.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/form-select.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/htmleditor.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/nestable.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/notify.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/placeholder.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/progress.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/search.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slidenav.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slider.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/slideshow.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sortable.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/sticky.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/tooltip.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/components/upload.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.almost-flat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.almost-flat.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.gradient.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.gradient.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/css/uikit.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/accordion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/accordion.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/autocomplete.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/datepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-password.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-password.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-select.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/form-select.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid-parallax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid-parallax.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/grid.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/htmleditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/htmleditor.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/lightbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/lightbox.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/nestable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/nestable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/notify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/notify.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/pagination.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/pagination.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/parallax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/parallax.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/search.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideset.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow-fx.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow-fx.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/slideshow.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sortable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sortable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sticky.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/sticky.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/timepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/timepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/tooltip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/upload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/components/upload.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/alert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/alert.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/button.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/core.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/cover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/cover.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/dropdown.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/grid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/grid.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/modal.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/nav.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/nav.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/offcanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/offcanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/scrollspy.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/smooth-scroll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/smooth-scroll.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/switcher.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/switcher.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/tab.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/tab.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/toggle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/toggle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/touch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/touch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/utility.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/core/utility.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/uikit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/js/uikit.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/accordion.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/autocomplete.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/datepicker.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/dotnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/form-advanced.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/form-file.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/form-password.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/form-select.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/htmleditor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/nestable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/notify.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/placeholder.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/progress.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/search.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/slidenav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/slider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/slideshow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/sortable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/sticky.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/components/upload.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/alert.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/animation.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/article.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/badge.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/breadcrumb.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/button.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/column.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/comment.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/contrast.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/cover.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/description-list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/flex.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/form.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/icon.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/modal.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/nav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/offcanvas.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/overlay.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/panel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/subnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/switcher.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/tab.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/table.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/thumbnail.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/thumbnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/utility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/core/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/uikit-variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/uikit.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/accordion.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/autocomplete.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/datepicker.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/dotnav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/form-advanced.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/form-file.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/form-password.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/form-select.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/htmleditor.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/nestable.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/notify.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/placeholder.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/progress.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/search.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/slidenav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/slider.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/slideshow.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/sortable.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/sticky.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/tooltip.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/components/upload.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/alert.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/animation.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/article.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/badge.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/base.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/block.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/breadcrumb.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/button.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/close.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/column.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/comment.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/contrast.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/cover.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/description-list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/dropdown.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/flex.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/form.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/icon.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/modal.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/nav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/navbar.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/offcanvas.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/overlay.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/pagination.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/panel.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/print.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/subnav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/switcher.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/tab.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/table.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/text.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/thumbnail.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/thumbnav.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/utility.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/core/variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/uikit-mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/uikit-variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/scss/uikit.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/accordion.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/alert.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/animation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/article.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/autocomplete.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/badge.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/base.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/block.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/breadcrumb.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/button.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/close.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/column.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/comment.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/components.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/contrast.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/core.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/cover.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/css/docs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/css/uikit.docs.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/customizer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/datepicker.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/description-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_create-a-style.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_create-a-theme.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_custom-prefix.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_customizer-json.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_get-started.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_how-to-customize.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_javascript.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_layouts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_less-sass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/documentation_project-structure.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/dotnav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/dropdown.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/flex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-advanced.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-file.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-password.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form-select.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid-js.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid-parallax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/grid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/htmleditor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/icon.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/apple-touch-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/bg_teaser.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/icon_components.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/icon_less.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/icon_responsive.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/icon_themes.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_blog.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_contact.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_documentation.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_frontpage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_login.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/layouts_portfolio.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/logo_uikit.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/logo_uikit3.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/logo_uikit_large.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_120x255.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x100.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_2.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_3.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x150_4.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_200x200.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_300x455.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_400x200.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_400x250.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_480x260.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_600x400.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_600x400_2.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x280.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x400_3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_800x600_4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/images/placeholder_avatar.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/js/customizer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/js/docs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/js/uikit.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/layouts_blog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/layouts_contact.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/layouts_documentation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/layouts_frontpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/layouts_login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/layouts_portfolio.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/layouts_post.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/less/uikit.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/lightbox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/modal.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/nav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/navbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/nestable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/notify.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/offcanvas.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/overlay.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/pagination-js.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/pagination.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/panel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/parallax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/placeholder.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/print.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/progress.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/scrollspy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slidenav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slider.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slideset.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/slideshow.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/smooth-scroll.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/sortable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/sticky.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/subnav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/switcher.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tab.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/text.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/thumbnail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/thumbnav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/timepicker.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/toggle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tooltip.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/tutorials.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/uikit3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/upload.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/docs/utility.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/accordion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/form-password.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/form-select.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/grid-parallax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/grid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/htmleditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/lightbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/nestable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/notify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/pagination.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/parallax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideshow-fx.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/slideshow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/sortable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/sticky.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/timepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/components/upload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/alert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/cover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/grid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/nav.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/offcanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/smooth-scroll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/switcher.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/tab.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/toggle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/touch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/js/core/utility.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/accordion.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/autocomplete.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/datepicker.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/dotnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/form-advanced.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/form-file.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/form-password.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/form-select.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/htmleditor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/nestable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/notify.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/placeholder.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/progress.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/search.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/slidenav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/slider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/slideshow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/sortable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/sticky.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/components/upload.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/alert.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/animation.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/article.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/badge.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/breadcrumb.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/button.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/column.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/comment.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/contrast.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/cover.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/description-list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/flex.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/form.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/icon.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/modal.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/nav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/offcanvas.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/overlay.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/panel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/subnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/switcher.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/tab.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/table.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/thumbnail.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/thumbnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/utility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/core/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/src/less/uikit.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/_test.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/_test.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/_autocomplete.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/_searchautocomplete.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/accordion.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/autocomplete.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/datepicker.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/dotnav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/form-advanced.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/form-file.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/form-password.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/form-select.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/grid-js.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/grid-parallax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/htmleditor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/lightbox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/nestable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/notify.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/pagination-js.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/parallax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/placeholder.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/progress.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/slidenav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/slider.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/slideset.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/slideshow.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/sortable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/sticky.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/timepicker.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/tooltip.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/components/upload.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/alert.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/animation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/article.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/badge.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/base.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/block.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/breadcrumb.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/button.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/close.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/column.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/comment.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/contrast.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/cover.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/description-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/dropdown.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/flex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/grid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/icon.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/modal.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/nav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/navbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/offcanvas.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/overlay.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/pagination.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/panel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/scrollspy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/smooth-scroll.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/subnav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/switcher.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/tab.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/templating.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/text.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/thumbnail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/thumbnav.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/toggle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/touch.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/core/utility.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/tests/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/accordion.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/alert.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/article.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/autocomplete.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/badge.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/breadcrumb.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/button.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/column.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/comment.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/contrast.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/customizer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/datepicker.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/description-list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/dotnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/form-advanced.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/form-password.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/form.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/htmleditor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/icon.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/modal.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/nav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/nestable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/notify.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/offcanvas.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/overlay.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/panel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/placeholder.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/progress.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/search.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/slidenav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/sortable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/sticky.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/subnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/tab.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/table.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/thumbnail.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/thumbnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/uikit-customizer.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/uikit.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/utility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/almost-flat/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/accordion.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/alert.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/article.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/autocomplete.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/badge.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/breadcrumb.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/button.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/column.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/comment.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/contrast.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/customizer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/datepicker.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/description-list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/dotnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/form-advanced.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/form-password.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/form.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/htmleditor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/icon.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/modal.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/nav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/nestable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/notify.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/offcanvas.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/overlay.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/panel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/placeholder.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/progress.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/search.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/slidenav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/sortable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/sticky.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/subnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/tab.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/table.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/thumbnail.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/thumbnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/uikit-customizer.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/uikit.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/utility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/default/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/accordion.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/alert.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/article.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/autocomplete.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/badge.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/base.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/breadcrumb.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/button.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/column.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/comment.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/contrast.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/customizer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/datepicker.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/description-list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/dotnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/dropdown.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/form-advanced.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/form-password.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/form.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/htmleditor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/icon.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/modal.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/nav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/nestable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/notify.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/offcanvas.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/overlay.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/panel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/placeholder.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/progress.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/search.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/slidenav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/sortable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/sticky.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/subnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/tab.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/table.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/thumbnail.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/thumbnav.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/uikit-customizer.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/uikit.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/utility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/themes/gradient/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/codemirror/codemirror.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/codemirror/codemirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/codemirror/show-hint.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/commonmark.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/customizer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/highlight/highlight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/highlight/highlight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/highlight/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/holder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/jquery.less.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/jquery.mustache.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/jquery.rtl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/less.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/spectrum/spectrum.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/spectrum/spectrum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bookroom/static/node_modules/uikit/vendor/spectrum/test.html" afterPath="" />
+    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="delete node_modules">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/index.html" afterPath="$PROJECT_DIR$/bookroom/templates/index.html" />
     </list>
     <ignored path="BookRoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -887,7 +21,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/BookRoom$.coverage" NAME=" Coverage Results" MODIFIED="1511820180588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/BookRoom$pyramid.coverage" NAME="pyramid Coverage Results" MODIFIED="1511995201481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BookRoom$pyramid.coverage" NAME="pyramid Coverage Results" MODIFIED="1512045770035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -965,7 +99,7 @@
       <file leaf-file-name="login-form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="465">
               <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
@@ -975,18 +109,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bookroom/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+            <state relative-caret-position="202">
+              <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -1074,10 +198,10 @@
         <option value="$PROJECT_DIR$/bookroom/lib/security.py" />
         <option value="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/forms/user-form.html" />
-        <option value="$PROJECT_DIR$/bookroom/static/css/app.css" />
         <option value="$PROJECT_DIR$/bookroom/__init__.py" />
         <option value="$PROJECT_DIR$/bookroom/templates/base.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/index.html" />
+        <option value="$PROJECT_DIR$/bookroom/static/css/app.css" />
       </list>
     </option>
   </component>
@@ -1087,7 +211,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/bookroom/static/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -1136,21 +264,6 @@
               <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
               <item name="bookroom" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
-              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookRoom" type="462c0819:PsiDirectoryNode" />
-              <item name="bookroom" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="books" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BookRoom" type="b2602c69:ProjectViewProjectNode" />
@@ -1544,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511995845429</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="delete node_modules">
+      <created>1511995939962</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511995939962</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1557,12 +677,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="1" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2672634" sideWeight="0.5028612" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31329924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31329924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24168798" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1570,7 +690,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16523606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29283887" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3375959" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3375959" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25894135" sideWeight="0.5051151" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1607,7 +727,8 @@
     <MESSAGE value="fix authentication policy&#10;add permissions" />
     <MESSAGE value="fix front&#10;fix login" />
     <MESSAGE value="home page&#10;code refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="home page&#10;code refactor" />
+    <MESSAGE value="delete node_modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete node_modules" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1906,22 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="57" column="26" lean-forward="false" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/static/node_modules/uikit/dist/less/uikit.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1964,10 +1069,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="202">
+          <caret line="74" column="62" lean-forward="false" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
           <folding />
         </state>
       </provider>
