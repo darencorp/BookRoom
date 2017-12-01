@@ -24,118 +24,17 @@
 
 
 <%block name='main'>
-    <div ng-controller="HomeCtrl as home" class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center">
-        <div class="uk-width-3-4 home-menu-body uk-height-1-1 uk-flex uk-flex-center">
-            <div class="uk-width-9-10 uk-height-1-1 uk-flex uk-flex-column uk-flex-middle">
-                <div class="uk-width-2-3 uk-height-1-2 uk-flex uk-margin-large-top">
-                    <div class="uk-width-1-3 uk-margin-large-top">
-                        <div class="uk-margin--small-top">
-                            <img class="uk-width-3-4 uk-height-3-4 uk-margin-top"
-                                 src="static/img/books/HarryPotter.jpg">
-                        </div>
-                    </div>
-
-                    <div class="uk-width-2-3 uk-margin-left">
-                        <div class="uk-flex uk-flex-column uk-margin-large-top">
-                            <div class="uk-margin-top">
-                                <h2>Harry Potter and the Cursed Child</h2>
-                            </div>
-                            <div class="uk-text">
-                                <p>
-                                    Harry Potter and the Cursed Child Parts One and Two is the official script book for
-                                    the
-                                    play
-                                    of
-                                    the
-                                    same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
-
-                                    It is the eighth story published in the Harry Potter book series.
-
-                                    J. K. Rowling wanted the plot of the play to remain a secret for as long as
-                                    possible.
-                                    Following
-                                    the
-                                    opening night of the first preview, she started a #KeepTheSecrets campaign.
-                                    Following the opening night of the first preview, she started a campaign
-                                    campaign.
-                                </p>
-                            </div>
-                            <div class="uk-flex">
-                                <div class="uk-width-1-2">
-                                    <progress class="uk-progress uk-margin-small-top" value="0.9" max=""></progress>
-                                </div>
-                                <div class="uk-width-1-2 uk-flex uk-flex-right uk-margin-right">
-                                    <a>Reviews</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="uk-width-1-1 uk-height-1-1 uk-flex">
-                    <div class="uk-width-1-1 uk-margin-large-top uk-height-1-1 uk-flex uk-flex-middle">
-                        <div class="uk-width-1-3 uk-flex">
-                            <div class="uk-width-1-10">
-                                <img src="static/img/unknown_user.png">
-                            </div>
-                            <div class="uk-width-9-10 uk-margin-left uk-flex uk-flex-column">
-                                <div class="uk-text-large">
-                                    Some User > Harry Potter
-                                </div>
-                                <div class="uk-margin-top">
-                                    Jack Thorne’s play, based on a new story by himself, Rowling and John Tiffany,
-                                    strikes a
-                                    clever balance between recognisable Pottery and a new departure. It begins where the
-                                    final (seventh) book left off, with the middle-aged Harry watching his son board the
-                                    Hogwarts Express. Its emotional centre belongs partly to the younger wizard
-                                    generation,
-                                    but not entirely.
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="uk-width-1-3 uk-margin-large-left uk-flex">
-                            <div class="uk-width-1-10">
-                                <img src="static/img/unknown_user.png">
-                            </div>
-                            <div class="uk-width-9-10 uk-margin-left uk-flex uk-flex-column">
-                                <div class="uk-text-large">
-                                    Some User > Harry Potter
-                                </div>
-                                <div class="uk-margin-top">
-                                    Jack Thorne’s play, based on a new story by himself, Rowling and John Tiffany,
-                                    strikes a
-                                    clever balance between recognisable Pottery and a new departure. It begins where the
-                                    final (seventh) book left off, with the middle-aged Harry watching his son board the
-                                    Hogwarts Express. Its emotional centre belongs partly to the younger wizard
-                                    generation,
-                                    but not entirely.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-width-1-3 uk-margin-large-left uk-flex">
-                            <div class="uk-width-1-10">
-                                <img src="static/img/unknown_user.png">
-                            </div>
-                            <div class="uk-width-9-10 uk-margin-left uk-flex uk-flex-column">
-                                <div class="uk-text-large">
-                                    Some User > Harry Potter
-                                </div>
-                                <div class="uk-margin-top">
-                                    Jack Thorne’s play, based on a new story by himself, Rowling and John Tiffany,
-                                    strikes a
-                                    clever balance between recognisable Pottery and a new departure. It begins where the
-                                    final (seventh) book left off, with the middle-aged Harry watching his son board the
-                                    Hogwarts Express. Its emotional centre belongs partly to the younger wizard
-                                    generation,
-                                    but not entirely.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="uk-width-1-1 uk-height-1-1">
+        <div ng-controller="HomeCtrl as home" class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center">
+            <div class="uk-width-3-4 home-menu-body uk-height-1-1 uk-flex uk-flex-center">
+                <ul id="mainSwitcher" class="uk-switcher">
+                    <li class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center">
+                            <%include file='views/home.html'/>
+                    </li>
+                    <li>
+                            <%include file='views/catalog.html'/>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
 </%block>

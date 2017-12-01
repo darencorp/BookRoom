@@ -33,6 +33,7 @@ header {
 .menu-button{
     color: azure;
     font-size: 1.5em;
+    list-style: none;
 }
 
 .menu-button:hover {
