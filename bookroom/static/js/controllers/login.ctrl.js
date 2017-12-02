@@ -17,7 +17,7 @@ angular.module('BookRoomApp')
                     if (ret.data.error) {
                         $.UIkit.notify(ret.data.error, {status: 'danger'})
                     } else {
-                        $window.location.href = '/home';
+                        $window.location.reload();
                     }
                 }
             );
@@ -54,7 +54,7 @@ angular.module('BookRoomApp')
                         $this.passwordEquals = true;
                         $this.emailValid = true;
 
-                        $window.location.href = '/home';
+                        $window.location.reload();
                     }
                 }
             );

@@ -2,10 +2,30 @@ var app = angular.module('BookRoomApp', [
     'ui.router'
 ])
 
-    .config(['$httpProvider', function ($httpProvider) {
-        $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-        $httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-    }])
+    .config(function ($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+
+            .state('home', {
+                url: '/',
+                views: {
+                    'main': {
+                        templateUrl: "templates/home.html"
+                    }
+                }
+            })
+
+            .state('catalogue', {
+                url: '/catalogue',
+                views: {
+                    'main': {
+                        templateUrl: "templates/catalogue.html"
+                    }
+                }
+            });
+
+            $urlRouterProvider.otherwise('/');
+    })
 
     .controller('AppCtrl', function ($scope) {
 

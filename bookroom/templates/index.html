@@ -8,8 +8,7 @@
         </div>
     %else:
         <div ng-controller="HomeCtrl as userCtrl" class="uk-margin-small-right">
-            <a class="uk-link-reset"
-               href="#">${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</a>
+            <a class="uk-link-reset">${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</a>
         </div>
     %endif
 </%block>
@@ -27,14 +26,7 @@
     <div class="uk-width-1-1 uk-height-1-1">
         <div ng-controller="HomeCtrl as home" class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center">
             <div class="uk-width-3-4 home-menu-body uk-height-1-1 uk-flex uk-flex-center">
-                <ul id="mainSwitcher" class="uk-switcher">
-                    <li class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center">
-                            <%include file='views/home.html'/>
-                    </li>
-                    <li>
-                            <%include file='views/catalog.html'/>
-                    </li>
-                </ul>
+                <div ui-view="main" class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center"></div>
             </div>
         </div>
 </%block>
