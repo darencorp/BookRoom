@@ -12,9 +12,9 @@ def include_js(config):
     minjs = Bundle(
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/uikit/dist/js/uikit.min.js',
+        'node_modules/uikit/dist/js/uikit-icons.min.js',
         'node_modules/angular/angular.min.js',
         'node_modules/angular-ui-router/release/angular-ui-router.min.js',
-        'node_modules/uikit/dist/js/components/notify.js',
 
         'js/lib/jquery.nano.js',
 
@@ -36,8 +36,8 @@ def include_css(config):
 
     mincss = Bundle(
 
-        'node_modules/uikit/dist/css/uikit%s.css' % theme,
-        'node_modules/uikit/dist/css/components/notify.css',
+        'node_modules/uikit/dist/css/uikit.css',
+        # 'node_modules/uikit/dist/css/components/notify.css',
 
         'css/app.css',
         'css/home.css',

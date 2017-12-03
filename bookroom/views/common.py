@@ -41,6 +41,14 @@ class Common(object):
     def go_login(self):
 
         def authenticate(email, password):
+
+            email_query = self.DBSession.query(User.email).filter(User.email == email).first()
+
+            db_email = email_query
+
+            if not db_email:
+                return False
+
             user_query = self.DBSession.query(User).filter(User.email == email).first()
 
             user = {
@@ -87,7 +95,7 @@ class Common(object):
         if j.get('password') != j.get('confirmed_password') or len(j.get('password')) == 0:
             error_dict = {
                 'code': 400,
-                'desc': "Passwords is invalid"
+                'desc': "Passwords are invalid"
             }
             return dict(error=error_dict)
 
@@ -124,7 +132,7 @@ class Common(object):
         }
 
         self.session['loged_as'] = login_user
-        remember(request=self.request, userid=user['email'])
+        remember(request=self.request, userid=login_user['email'])
 
         return dict()
 

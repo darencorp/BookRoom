@@ -15,7 +15,7 @@ angular.module('BookRoomApp')
             }).then(
                 function (ret) {
                     if (ret.data.error) {
-                        $.UIkit.notify(ret.data.error, {status: 'danger'})
+                        UIkit.notification(ret.data.error, {status: 'danger'});
                     } else {
                         $window.location.reload();
                     }
@@ -24,10 +24,10 @@ angular.module('BookRoomApp')
         };
 
         $this.openRegisterForm = function () {
-            $.UIkit.modal('#register-form').show();
+            UIkit.modal('#register-form').show();
         };
 
-        $this.register = function (user) {
+        $this.register = function () {
             $http({
                 method: 'POST',
                 url: $.nano(urls['register']),
@@ -36,7 +36,7 @@ angular.module('BookRoomApp')
             }).then(
                 function (ret) {
                     if (ret.data.error) {
-                        $.UIkit.notify(ret.data.error.desc, {status: 'danger'});
+                        UIkit.notification(ret.data.error.desc, {status: 'danger'});
                         switch (ret.data.error.code) {
                             case 400:
                                 $this.passwordEquals = false;

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="add ui.router">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bookroom/templates/views/catalog.html" afterPath="$PROJECT_DIR$/bookroom/templates/views/catalogue.html" />
+    <list default="true" id="20c8e80f-ced3-4b2d-907a-b9631b152749" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookRoom.sqlite" afterPath="$PROJECT_DIR$/BookRoom.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/routes.py" afterPath="$PROJECT_DIR$/bookroom/routes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/__init__.py" afterPath="$PROJECT_DIR$/bookroom/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/css/app.css" afterPath="$PROJECT_DIR$/bookroom/static/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/css/home.css" afterPath="$PROJECT_DIR$/bookroom/static/css/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/js/app.js" afterPath="$PROJECT_DIR$/bookroom/static/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/js/controllers/home.ctrl.js" afterPath="$PROJECT_DIR$/bookroom/static/js/controllers/home.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js" afterPath="$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/static/package.json" afterPath="$PROJECT_DIR$/bookroom/static/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/base.html" afterPath="$PROJECT_DIR$/bookroom/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" afterPath="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/forms/register-form.html" afterPath="$PROJECT_DIR$/bookroom/templates/forms/register-form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/index.html" afterPath="$PROJECT_DIR$/bookroom/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/views/catalogue.html" afterPath="$PROJECT_DIR$/bookroom/templates/views/catalogue.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/templates/views/home.html" afterPath="$PROJECT_DIR$/bookroom/templates/views/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookroom/views/common.py" afterPath="$PROJECT_DIR$/bookroom/views/common.py" />
     </list>
     <ignored path="BookRoom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +35,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/BookRoom$.coverage" NAME=" Coverage Results" MODIFIED="1511820180588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/BookRoom$pyramid.coverage" NAME="pyramid Coverage Results" MODIFIED="1512239865934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BookRoom$pyramid.coverage" NAME="pyramid Coverage Results" MODIFIED="1512333549737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -61,38 +69,28 @@
       <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookroom/views/common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="133" column="66" lean-forward="true" selection-start-line="133" selection-start-column="66" selection-end-line="133" selection-end-column="66" />
+            <state relative-caret-position="798">
+              <caret line="115" column="27" lean-forward="true" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookroom/templates/index.html">
+      <file leaf-file-name="catalogue.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bookroom/templates/views/catalogue.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+            <state relative-caret-position="324">
+              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bookroom/static/js/app.js">
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookroom/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="370">
+              <caret line="70" column="15" lean-forward="false" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -134,11 +132,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bookroom/views/default.py" />
         <option value="$PROJECT_DIR$/bookroom/templates/lib/js.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/home.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/view/login.html" />
-        <option value="$PROJECT_DIR$/bookroom/static/css/home.css" />
         <option value="$PROJECT_DIR$/bookroom/templates/view/login-form.html" />
         <option value="$PROJECT_DIR$/bookroom/static/js/modules/home.module.js" />
         <option value="$PROJECT_DIR$/bookroom/templates/view/library.html" />
@@ -156,12 +152,10 @@
         <option value="$PROJECT_DIR$/bookroom/models/facades/home_facade.py" />
         <option value="$PROJECT_DIR$/bookroom/models/__init__.py" />
         <option value="$PROJECT_DIR$/bookroom/subscribe.py" />
-        <option value="$PROJECT_DIR$/bookroom/templates/forms/register-form.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/views/home/marketplace.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/views/home/blog.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/views/home/library.html" />
         <option value="$PROJECT_DIR$/bookroom/static/js/services/home.service.js" />
-        <option value="$PROJECT_DIR$/bookroom/static/js/controllers/home.ctrl.js" />
         <option value="$PROJECT_DIR$/bookroom/static/js/controllers/book.ctrl.js" />
         <option value="$PROJECT_DIR$/production.ini" />
         <option value="$PROJECT_DIR$/bookroom/lib/__init__.py" />
@@ -169,22 +163,26 @@
         <option value="$PROJECT_DIR$/bookroom/models/User.py" />
         <option value="$PROJECT_DIR$/bookroom/templates/views/home/home.html" />
         <option value="$PROJECT_DIR$/bookroom/lib/security.py" />
-        <option value="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/forms/user-form.html" />
         <option value="$PROJECT_DIR$/bookroom/lib/helpers.py" />
-        <option value="$PROJECT_DIR$/bookroom/static/css/app.css" />
-        <option value="$PROJECT_DIR$/bookroom/templates/views/home.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/views/catalog.html" />
         <option value="$PROJECT_DIR$/bookroom/views/home.py" />
         <option value="$PROJECT_DIR$/bookroom/static/package.json" />
-        <option value="$PROJECT_DIR$/bookroom/__init__.py" />
         <option value="$PROJECT_DIR$/development.ini" />
         <option value="$PROJECT_DIR$/bookroom/routes.py" />
-        <option value="$PROJECT_DIR$/bookroom/views/common.py" />
-        <option value="$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js" />
+        <option value="$PROJECT_DIR$/bookroom/static/css/home.css" />
+        <option value="$PROJECT_DIR$/bookroom/__init__.py" />
+        <option value="$PROJECT_DIR$/bookroom/static/js/controllers/home.ctrl.js" />
+        <option value="$PROJECT_DIR$/bookroom/templates/views/home.html" />
         <option value="$PROJECT_DIR$/bookroom/static/js/app.js" />
-        <option value="$PROJECT_DIR$/bookroom/templates/base.html" />
         <option value="$PROJECT_DIR$/bookroom/templates/index.html" />
+        <option value="$PROJECT_DIR$/bookroom/templates/base.html" />
+        <option value="$PROJECT_DIR$/bookroom/templates/forms/login-form.html" />
+        <option value="$PROJECT_DIR$/bookroom/templates/forms/register-form.html" />
+        <option value="$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js" />
+        <option value="$PROJECT_DIR$/bookroom/static/css/app.css" />
+        <option value="$PROJECT_DIR$/bookroom/templates/views/catalogue.html" />
+        <option value="$PROJECT_DIR$/bookroom/views/common.py" />
       </list>
     </option>
   </component>
@@ -683,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512159245752</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add ui.router">
+      <created>1512242321990</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1512242321990</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -703,14 +708,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2672634" sideWeight="0.5028612" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31329924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31329924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24168798" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2274678" sideWeight="0.4948849" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16523606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29283887" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25894135" sideWeight="0.5051151" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3375959" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3375959" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -749,7 +754,8 @@
     <MESSAGE value="delete node_modules" />
     <MESSAGE value="fix index page" />
     <MESSAGE value="add menu switcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="add menu switcher" />
+    <MESSAGE value="add ui.router" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ui.router" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,18 +766,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bookroom/static/js/services/home.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/templates/views/home/blog.html" />
     <entry file="file://$PROJECT_DIR$/bookroom/static/js/lib/jquery.nano.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -878,13 +877,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/templates/views/home/home.html" />
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/register-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/lib/python3.4/site-packages/venusian-1.1.0-py3.4.egg/venusian/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -953,34 +945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/templates/views/users.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/static/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1017,50 +985,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/static/js/controllers/home.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/routes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/views/catalogue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="120" column="6" lean-forward="false" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1073,34 +1001,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/views/common.py">
+    <entry file="file://$PROJECT_DIR$/bookroom/static/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="133" column="66" lean-forward="true" selection-start-line="133" selection-start-column="66" selection-end-line="133" selection-end-column="66" />
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookroom/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/bookroom/static/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/js/controllers/home.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1532">
+          <caret line="116" column="37" lean-forward="false" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state relative-caret-position="90">
+          <caret line="6" column="62" lean-forward="false" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookroom/static/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+        <state relative-caret-position="385">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/register-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/js/controllers/login.ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/forms/login-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="103" lean-forward="false" selection-start-line="18" selection-start-column="103" selection-end-line="18" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/static/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="70" column="15" lean-forward="false" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/views/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="115" column="27" lean-forward="true" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookroom/templates/views/catalogue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding />
         </state>
       </provider>

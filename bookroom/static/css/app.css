@@ -13,7 +13,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     font-family: Georgia, Arial;
-    overflow: hidden;
     font-family: Darencorp;
 }
 
@@ -32,7 +31,7 @@ header {
 
 .menu-button{
     color: azure;
-    font-size: 1.5em;
+    font-size: 1.7em;
     list-style: none;
 }
 
@@ -42,17 +41,17 @@ header {
 }
 
 .menu-input {
-    width: 8em;
-    height: 1.3em;
-    border-radius: 1em;
+    width: 11em;
+    height: 1.7em;
+    border-radius: 0.8em;
     outline: none;
-    font-size: 0.9em;
+    font-size: 1em;
     transition: width 0.3s;
     padding-left: 1em;
 }
 
 .menu-input:focus {
-    width: 12em;
+    width: 14.5em;
 }
 
 .home-menu-body {
@@ -68,3 +67,6 @@ header {
     padding-bottom: 2em;
 }
 
+.catalogue-filter {
+    border-left: 2px solid #c0c0c0;
+}

@@ -8,45 +8,6 @@
     src: url(../fonts/FournierMTS.ttf) format("truetype");
 }
 
-.caption {
-    font-family: Darencorp;
-    font-size: 3em;
-    color: #ffe2f8;
-    margin-top: 12%;
-}
-
-.subcaption {
-    color: white;
-    font-family: Personality;
-    font-size: 1.5em;
-}
-
-
-
-.button-container:hover,
-.button-container:active{
-    text-decoration: none;
-}
-
-.main-button {
-    border: 1px solid;
-    font-family: Darencorp;
-    border-color: black;
-    padding: 10px;
-    color: white;
-    font-size: 1.2em;
-    background-color: rgba(82, 24, 7, 1);
-}
-
-.main-button:hover{
-    background-color: rgba(154, 68, 43, 0.9);
-    cursor: pointer;
-}
-
-.main-button:active{
-    background-color: rgba(168, 80, 79, 0.9);
-}
-
 .main-menu li a h2{
     font-family: Darencorp;
     color: azure;

@@ -28,8 +28,7 @@ var app = angular.module('BookRoomApp', [
     })
 
     .controller('AppCtrl', function ($scope) {
-
         $scope.openLoginForm = function () {
-            $.UIkit.modal('#login-form').show();
+            UIkit.modal('#login-form').show();
         }
     });
