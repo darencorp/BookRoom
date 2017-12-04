@@ -23,11 +23,6 @@
 
 
 <%block name='main'>
-    <div class="uk-width-1-1 uk-height-1-1">
-        <div ng-controller="HomeCtrl as home" class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center">
-            <div class="uk-width-3-4 home-menu-body uk-height-1-1">
-                <div ui-view="main">
-                </div>
-            </div>
-        </div>
+    <div class="uk-height-1-1" ng-controller="HomeCtrl as home" ui-view="main">
+    </div>
 </%block>
