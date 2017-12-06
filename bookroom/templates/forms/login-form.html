@@ -7,19 +7,23 @@
             <h2 class="uk-modal-title">Login</h2>
         </div>
         <div class="uk-margin-top uk-flex uk-flex-center">
-            <form class="uk-width-1-2 uk-form">
+            <form class="uk-width-1-2 uk-form uk-flex uk-flex-column uk-flex-middle">
 
-                <input name="email" ng-model="login.user.email"  placeholder="Email" class="uk-width-1-1 uk-form-large uk-margin-bottom">
+                <input name="email" ng-model="login.user.email" placeholder="Email"
+                       class="uk-width-1-1 uk-input uk-form-large uk-margin-bottom">
 
-                <input type="password" name="password" ng-model="login.user.password" placeholder="Password" class="uk-width-1-1 uk-form-large">
+                <input type="password" name="password" ng-model="login.user.password" placeholder="Password"
+                       class="uk-width-1-1 uk-input uk-form-large">
 
                 <br/>
 
-                <div class="uk-button-group  uk-margin-top uk-width-1-2 uk-align-center">
+                <div class="uk-button-group uk-margin-top uk-width-1-2 uk-flex uk-flex-column uk-flex-middle">
                     <button ng-click="login.login()" class="uk-button uk-button-primary uk-button-large">Log In</button>
-                    <a ng-click="login.openRegisterForm()">
-                        <button class="uk-button uk-button-large">Sign Up</button>
-                    </a>
+                    <div>
+                        <a ng-click="login.openRegisterForm()" class="uk-flex uk-flex-center">
+                            <div class="uk-button uk-button-large">Sign Up</div>
+                        </a>
+                    </div>
                 </div>
             </form>
 

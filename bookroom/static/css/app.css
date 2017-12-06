@@ -16,42 +16,216 @@ body {
     font-family: Darencorp;
 }
 
-header {
-    width: 100%;
-    height: 3.5em;
-    top: 0px;
-    left: 0px;
-    position: fixed;
-    background-color: rgba(0,0,0,0.7);
-}
-
 .menu {
     list-style-type: none;
 }
 
-.menu-button{
-    color: azure;
-    font-size: 1.7em;
-    list-style: none;
+@media (min-width: 1200px) {
+
+    header {
+        width: 100%;
+        height: 2.5em;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-button {
+        color: azure;
+        font-size: 1.2em;
+        list-style: none;
+        margin-bottom: 1em;
+        margin-top: 0em;
+    }
+
+    .menu-input {
+        width: 8em;
+        height: 1.1em;
+        border-radius: 0.8em;
+        outline: none;
+        transition: width 0.3s;
+        margin-bottom: 1.2em;
+    }
+
+    .header-search-icon {
+        inline-size: 0.9rem;
+        margin-left: 0.5rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .menu-input:focus {
+        width: 10.5em;
+    }
+
+    .main-book {
+        margin-top: 0em;
+    }
+
+    .main-book-name {
+        font-size: 1.5em;
+    }
+
+    .main-book-text {
+        font-size: 0.82em;
+    }
+
+    .uk-progress {
+        height: 0.5em;
+        margin-top: 0.9em;
+    }
+
+    .main-review-title {
+        font-size: 1.1em;
+    }
+
+    .main-reviews-margin {
+        margin-top: 45px;
+    }
+
+    .main-review-text {
+        font-size: 0.875rem;
+    }
+
+    .catalogue-book-text {
+        font-size: 0.825rem;
+    }
+
+    .catalogue-book-author {
+        font-size: 0.925rem;
+    }
+
+    .catalogue-book-rating {
+        font-size: 0.925rem;
+    }
+
+    .uk-progress {
+        height: 0.3em;
+    }
+
+    .catalogue-filter-title {
+        font-size: 1.3em;
+    }
+
+    .catalogue-filter-option {
+        font-size: 1em;
+    }
+
+    .catalogue-filter-row {
+        margin-top: 0.2em;
+        font-size: 0.8em;
+    }
+
+    .catalogue-filter-row input[type=checkbox] {
+        height: 0.8em;
+        width: 0.8em;
+        margin-left: 0.8em;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    header {
+        width: 100%;
+        height: 3.5em;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-button {
+        color: azure;
+        font-size: 1.7em;
+        list-style: none;
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+
+    .menu-input {
+        width: 11em;
+        height: 1.5em;
+        border-radius: 0.8em;
+        outline: none;
+        transition: width 0.3s;
+        padding-left: 1em;
+        margin-bottom: 0em;
+    }
+
+    .header-search-icon {
+        inline-size: 1.15em;
+        margin-left: 0.8rem;
+        margin-bottom: 0em;
+    }
+
+    .menu-input:focus {
+        width: 14.5em;
+    }
+
+    .main-book {
+        margin-top: 70px !important;
+    }
+
+    .main-book-name {
+        font-size: 2em;
+    }
+
+    .main-book-text {
+        font-size: 1.2em;
+    }
+
+    .uk-progress {
+        height: 0.5em;
+    }
+
+    .main-review-title {
+        font-size: 1.5em;
+    }
+
+    .main-reviews-margin {
+        margin-top: 70px;
+    }
+
+    .main-review-text {
+        font-size: 1.2em;
+    }
+
+    .catalogue-book-text {
+        font-size: 1em;
+    }
+
+    .catalogue-book-rating {
+        font-size: 1.2em;
+    }
+
+    .uk-progress {
+        height: 0.5em;
+    }
+
+    .catalogue-filter-title {
+        font-size: 1.9em;
+    }
+
+    .catalogue-filter-option {
+        font-size: 1.5em;
+    }
+
+    .catalogue-filter-row {
+        margin-top: 0.2em;
+        font-size: 1.2em;
+    }
+
+    .catalogue-filter-row input[type=checkbox] {
+        height: 1em;
+        width: 1em;
+        margin-left: 1em;
+    }
+
 }
 
 .menu-button:hover {
     text-decoration: underline;
     cursor: pointer;
-}
-
-.menu-input {
-    width: 11em;
-    height: 1.7em;
-    border-radius: 0.8em;
-    outline: none;
-    font-size: 1em;
-    transition: width 0.3s;
-    padding-left: 1em;
-}
-
-.menu-input:focus {
-    width: 14.5em;
 }
 
 .home-menu-body {
@@ -61,7 +235,6 @@ header {
 .home-menu-body ::-webkit-scrollbar {
     width: 0px !important;
 }
-
 
 .modal-footer-padding {
     padding-bottom: 2em;

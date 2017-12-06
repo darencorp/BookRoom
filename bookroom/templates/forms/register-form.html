@@ -8,18 +8,18 @@
         <div class="uk-width-1-1 uk-flex uk-flex-center">
             <div class="uk-width-1-2 uk-form">
 
-                <input ng-model="reg.user.first_name" placeholder="First name" class="uk-width-1-1 uk-form-large uk-margin-top">
+                <input ng-model="reg.user.first_name" placeholder="First name" class="uk-width-1-1 uk-input uk-form-large uk-margin-top">
 
-                <input ng-model="reg.user.last_name" placeholder="Last name" class="uk-width-1-1 uk-form-large uk-margin-top">
+                <input ng-model="reg.user.last_name" placeholder="Last name" class="uk-width-1-1 uk-input uk-form-large uk-margin-top">
 
                 <input ng-model="reg.user.email" placeholder="Email" ng-class="{'uk-form-danger':!reg.emailValid}"
-                       class="uk-width-1-1 uk-form-large uk-margin-top">
+                       class="uk-width-1-1 uk-input uk-form-large uk-margin-top">
 
                 <input type="password" placeholder="Password" ng-model="reg.user.password" ng-class="{'uk-form-danger': !reg.passwordEquals}"
-                       class="uk-width-1-1 uk-form-large uk-margin-top">
+                       class="uk-width-1-1 uk-input uk-form-large uk-margin-top">
 
                 <input type="password" placeholder="Confirm password" ng-model="reg.user.confirmed_password"
-                       ng-class="{'uk-form-danger': !reg.passwordEquals}" class="uk-width-1-1 uk-form-large uk-margin-top">
+                       ng-class="{'uk-form-danger': !reg.passwordEquals}" class="uk-width-1-1 uk-input uk-form-large uk-margin-top">
 
                 <br/>
 
