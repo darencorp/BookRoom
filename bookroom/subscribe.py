@@ -1,4 +1,5 @@
 from pyramid.events import subscriber, BeforeRender
+
 from bookroom.lib import helpers as h
 
 

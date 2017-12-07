@@ -1,7 +1,7 @@
 import bcrypt
 from pyramid.security import Allow, ALL_PERMISSIONS
 
-from models import User
+from bookroom.models import User
 
 
 def hash_password(pw):

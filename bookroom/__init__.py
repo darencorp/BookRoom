@@ -5,7 +5,7 @@ from pyramid.config import Configurator
 from pyramid.session import SignedCookieSessionFactory
 from webassets import Bundle
 
-from lib.security import Root, groupfinder
+from bookroom.lib.security import groupfinder, Root
 
 
 def include_js(config):
@@ -32,12 +32,9 @@ def include_js(config):
 
 
 def include_css(config):
-    theme = '.almost-flat'
-
     mincss = Bundle(
 
         'node_modules/uikit/dist/css/uikit.css',
-        # 'node_modules/uikit/dist/css/components/notify.css',
 
         'css/app.css',
         'css/home.css',

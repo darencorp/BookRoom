@@ -1,6 +1,6 @@
 @font-face {
     font-family: Darencorp;
-    src: url(../fonts/Ubuntu-C.ttf) format("truetype");
+    src: url(http://localhost:6543/fonts/Ubuntu-C.ttf) format("truetype");
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: Georgia, Arial;
+    /*font-family: Georgia, Arial;*/
     font-family: Darencorp;
 }
 

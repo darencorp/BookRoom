@@ -12,3 +12,7 @@ class Home(object):
         self.settings = request.registry.settings
 
         self.hf = HomeFacade(request)
+
+    @view_config(route_name='get_book', renderer='../templates/views/book.html')
+    def get_book(self):
+        return dict()
