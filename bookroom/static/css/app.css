@@ -84,7 +84,7 @@ body {
     }
 
     .main-review-text {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
     }
 
     .catalogue-book-text {
@@ -120,6 +120,11 @@ body {
         height: 0.8em;
         width: 0.8em;
         margin-left: 0.8em;
+    }
+
+    .catalogue-scrollable {
+        border: none;
+        height: 32em;
     }
 }
 
@@ -221,6 +226,10 @@ body {
         margin-left: 1em;
     }
 
+    .catalogue-scrollable {
+        border: none;
+        height: 100%;
+    }
 }
 
 .menu-button:hover {
@@ -242,8 +251,4 @@ body {
 
 .catalogue-filter {
     border-left: 2px solid #c0c0c0;
-}
-
-.catalogue-scrollable {
-    border: none;
 }
