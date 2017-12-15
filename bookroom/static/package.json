@@ -18,5 +18,8 @@
   "preferGlobal": false,
   "private": true,
   "analyze": true,
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "angular-swx-session-storage": "^1.0.0"
+  }
 }

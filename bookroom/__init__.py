@@ -15,6 +15,8 @@ def include_js(config):
         'node_modules/uikit/dist/js/uikit-icons.min.js',
         'node_modules/angular/angular.min.js',
         'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+        'node_modules/angular-swx-session-storage/release/swx-session-storage.min.js',
+
 
         'js/lib/jquery.nano.js',
 

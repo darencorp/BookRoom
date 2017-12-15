@@ -1,31 +1,23 @@
 var app = angular.module('BookRoomApp', [
-    'ui.router'
+    'ui.router',
+    'swxSessionStorage'
 ])
     .config(['$httpProvider', function ($httpProvider) {
-        $httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
         $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     }])
 
-    .controller('AppCtrl', function ($scope, $rootScope, $http) {
-
-        $scope.searchCriteria = '';
+    .controller('AppCtrl', function ($scope, $rootScope, $sessionStorage) {
+        $scope.init = function () {
+            $scope.searchCriteria = $rootScope.searchCriteria;
+        };
 
         $scope.openLoginForm = function () {
             UIkit.modal('#login-form').show();
         };
 
         $scope.searchChange = function () {
-            $rootScope.searchCriteria = $scope.searchCriteria
+            $sessionStorage.put('searchCriteria', $rootScope.searchCriteria)
         };
 
-        $scope.submitSearch = function () {
-            // $scope.$emit('search', null);
-            $http({
-                method: 'GET',
-                url: '/search',
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-            });
-
-            $scope.searchCriteria = $rootScope.searchCriteria;
-        };
+        $scope.init();
     });

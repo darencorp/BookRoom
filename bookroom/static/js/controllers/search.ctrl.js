@@ -1,16 +1,13 @@
 angular.module('BookRoomApp')
-.controller('SearchCtrl', function($scope, $rootScope, $http){
+.controller('SearchCtrl', function($scope, $rootScope, $http, $sessionStorage){
     var $this = this;
 
     $this.init = function () {
-        $http.get('/search?q=${$rootScope.searchCriteria}' , {params: {'q': $this.searchCriteria}}).then(function (ret) {
-            console.log(ret);
+        $rootScope.searchCriteria = $sessionStorage.get('searchCriteria');
+        $http.get('/search?q=${$sessionStorage.searchCriteria}' , {params: {'q': $this.searchCriteria}}).then(function (ret) {
+            //show results
         })
     };
 
     $this.init();
-
-    $rootScope.$on('search', function () {
-        $this.search = $rootScope.searchCriteria;
-    });
 });
