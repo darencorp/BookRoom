@@ -24,16 +24,6 @@ class Common(object):
 
     @view_config(route_name='index', renderer='../templates/index.html')
     def my_view(self):
-        if authenticated_userid(request=self.request):
-            return HTTPFound(location='login')
-
-        return dict()
-
-    @view_config(route_name='home', renderer='../templates/index.html')
-    def home(self):
-        if not authenticated_userid(request=self.request):
-            return HTTPFound(location='/')
-
         return dict()
 
     @view_config(route_name='login', renderer='json')
@@ -69,7 +59,7 @@ class Common(object):
         r = self.request
 
         if authenticated_userid(request=r):
-            return HTTPFound(location=self.request.route_path('home'))
+            return HTTPFound(location=self.request.route_path('index'))
 
         p = self.request.json
 
@@ -139,4 +129,4 @@ class Common(object):
     @view_config(route_name='logout', renderer='json')
     def logout(self):
         self.session.clear()
-        return HTTPFound(location=self.request.route_path('home'))
+        return HTTPFound(location=self.request.route_path('index'))

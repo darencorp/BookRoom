@@ -22,6 +22,9 @@ def include_js(config):
 
         'js/controllers/login.ctrl.js',
         'js/controllers/home.ctrl.js',
+        'js/controllers/catalogue.ctrl.js',
+        'js/controllers/user_page.ctrl.js',
+        'js/controllers/search.ctrl.js',
 
         'js/services/home.service.js',
 

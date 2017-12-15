@@ -1,0 +1,325 @@
+<%inherit file="../base.html"/>
+
+
+<%block name='main'>
+    <div ng-controller="CatalogueCtrl as cctrl" class="uk-width-1-1 uk-height-1-1 uk-flex uk-flex-center">
+        <div class="uk-width-3-4 home-menu-body uk-height-1-1">
+            <div class="uk-height-1-1">
+                <div class="uk-flex uk-flex-row uk-height-1-1">
+                    <div class="uk-width-1-5 uk-margin-large-top uk-margin-left">
+                        <div class="catalogue-filter-title">Filter:</div>
+                        <div class="uk-margin-left">
+                            <div class="uk-flex uk-flex-column">
+                                <div class="catalogue-filter-option">Genre:</div>
+                                <div>
+                                    <ul class="uk-list">
+                                        <li class="catalogue-filter-row"><input
+                                                class="uk-checkbox uk-margin-small-right"
+                                                type="checkbox">Action
+                                        </li>
+                                        <li class="catalogue-filter-row"><input
+                                                class="uk-checkbox uk-margin-small-right"
+                                                type="checkbox">Romantic
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="uk-flex uk-flex-column">
+                                <div class="catalogue-filter-option">Year:</div>
+                                <div class="uk-width-1-1 uk-flex">
+                                    <div class=" uk-width-1-3 uk-flex uk-flex-column">
+                                        <div class="uk-text-right uk-margin-right catalogue-filter-row">From:</div>
+                                        <div class="uk-text-right uk-margin-right catalogue-filter-row">To:</div>
+                                    </div>
+                                    <div class="uk-flex uk-flex-column">
+                                        <div><input class="uk-width-1-2@l"></div>
+                                        <div><input class="uk-width-1-2@l"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-4-5 uk-height-1-1 uk-flex uk-flex-column catalogue-filter">
+                        <div class="uk-height-1-1 uk-flex uk-flex-center uk-margin-large-top uk-margin-medium-left">
+                            <div class="uk-panel uk-panel-scrollable uk-height-1-1 catalogue-scrollable">
+                                <div class="uk-flex uk-flex-column">
+
+                                    <div class="uk-width-1-1 uk-flex">
+                                        <div class="uk-width-1-6 uk-flex uk-flex-center">
+                                            <a href="/book">
+                                                <div class="uk-width-4-6">
+                                                    <img class="uk-height-1-5 uk-margin-top"
+                                                         src="static/img/books/HarryPotter.jpg">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="uk-width-4-6 uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right">
+                                            <div>
+                                                <a href="/book">
+                                                    <div class="uk-margin-remove uk-text-lead">Harry Potter and the
+                                                        Cursed
+                                                        Child
+                                                    </div>
+                                                </a>
+                                                <div class="catalogue-book-author uk-text-bold">J. K. Rouling</div>
+                                            </div>
+                                            <div class="catalogue-book-text">
+                                                Harry Potter and the Cursed Child Parts One and Two is the official
+                                                script
+                                                book for
+                                                the
+                                                play
+                                                of
+                                                the
+                                                same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
+
+                                                It is the eighth story published in the Harry Potter book series.
+
+                                                J. K. Rowling wanted the plot of the play to remain a secret for as long
+                                                as
+                                                possible.
+                                                Following
+                                                the
+                                                opening night of the first preview, she started a #KeepTheSecrets
+                                                campaign.
+                                                Following the opening night of the first preview<span
+                                                    class="uk-text-muted">...</span><a
+                                                    href="/book">Read
+                                                more</a>
+                                            </div>
+                                            <div class="uk-flex uk-flex-middle uk-margin-small-top">
+                                                <div class="uk-width-1-3">
+                                                    <progress class="uk-progress uk-margin-small-top"
+                                                              value="0.9"></progress>
+                                                </div>
+                                                <div class="uk-width-1-2 uk-flex uk-margin-small-bottom uk-margin-left uk-text-primary catalogue-book-rating">
+                                                    9.0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-1-6"></div>
+                                    </div>
+
+                                    <div class="uk-width-1-1 uk-flex">
+                                        <div class="uk-width-1-6 uk-flex uk-flex-center">
+                                            <div class="uk-width-4-6">
+                                                <img class="uk-height-1-5 uk-margin-top"
+                                                     src="static/img/books/HarryPotter.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-4-6 uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right">
+                                            <div>
+                                                <div class="uk-margin-remove uk-text-lead">Harry Potter and the Cursed
+                                                    Child
+                                                </div>
+                                                <div class="catalogue-book-author uk-text-bold">J. K. Rouling</div>
+                                            </div>
+                                            <div class="catalogue-book-text">
+                                                Harry Potter and the Cursed Child Parts One and Two is the official
+                                                script
+                                                book for
+                                                the
+                                                play
+                                                of
+                                                the
+                                                same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
+
+                                                It is the eighth story published in the Harry Potter book series.
+
+                                                J. K. Rowling wanted the plot of the play to remain a secret for as long
+                                                as
+                                                possible.
+                                                Following
+                                                the
+                                                opening night of the first preview, she started a #KeepTheSecrets
+                                                campaign.
+                                                Following the opening night of the first preview<span
+                                                    class="uk-text-muted">...</span><a>Read
+                                                more</a>
+                                            </div>
+                                            <div class="uk-flex uk-flex-middle uk-margin-small-top">
+                                                <div class="uk-width-1-3">
+                                                    <progress class="uk-progress uk-margin-small-top"
+                                                              value="0.9"></progress>
+                                                </div>
+                                                <div class="uk-width-1-2 uk-flex uk-margin-small-bottom uk-margin-left uk-text-primary catalogue-book-rating">
+                                                    9.0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-1-6"></div>
+                                    </div>
+
+                                    <div class="uk-width-1-1 uk-flex">
+                                        <div class="uk-width-1-6 uk-flex uk-flex-center">
+                                            <div class="uk-width-4-6">
+                                                <img class="uk-height-1-5 uk-margin-top"
+                                                     src="static/img/books/HarryPotter.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-4-6 uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right">
+                                            <div>
+                                                <div class="uk-margin-remove uk-text-lead">Harry Potter and the Cursed
+                                                    Child
+                                                </div>
+                                                <div class="catalogue-book-author uk-text-bold">J. K. Rouling</div>
+                                            </div>
+                                            <div class="catalogue-book-text">
+                                                Harry Potter and the Cursed Child Parts One and Two is the official
+                                                script
+                                                book for
+                                                the
+                                                play
+                                                of
+                                                the
+                                                same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
+
+                                                It is the eighth story published in the Harry Potter book series.
+
+                                                J. K. Rowling wanted the plot of the play to remain a secret for as long
+                                                as
+                                                possible.
+                                                Following
+                                                the
+                                                opening night of the first preview, she started a #KeepTheSecrets
+                                                campaign.
+                                                Following the opening night of the first preview<span
+                                                    class="uk-text-muted">...</span><a>Read
+                                                more</a>
+                                            </div>
+                                            <div class="uk-flex uk-flex-middle uk-margin-small-top">
+                                                <div class="uk-width-1-3">
+                                                    <progress class="uk-progress uk-margin-small-top"
+                                                              value="0.9"></progress>
+                                                </div>
+                                                <div class="uk-width-1-2 uk-flex uk-margin-small-bottom uk-margin-left uk-text-primary catalogue-book-rating">
+                                                    9.0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-1-6"></div>
+                                    </div>
+
+                                    <div class="uk-width-1-1 uk-flex">
+                                        <div class="uk-width-1-6 uk-flex uk-flex-center">
+                                            <div class="uk-width-4-6">
+                                                <img class="uk-height-1-5 uk-margin-top"
+                                                     src="static/img/books/HarryPotter.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-4-6 uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right">
+                                            <div>
+                                                <div class="uk-margin-remove uk-text-lead">Harry Potter and the Cursed
+                                                    Child
+                                                </div>
+                                                <div class="catalogue-book-author uk-text-bold">J. K. Rouling</div>
+                                            </div>
+                                            <div class="catalogue-book-text">
+                                                Harry Potter and the Cursed Child Parts One and Two is the official
+                                                script
+                                                book for
+                                                the
+                                                play
+                                                of
+                                                the
+                                                same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
+
+                                                It is the eighth story published in the Harry Potter book series.
+
+                                                J. K. Rowling wanted the plot of the play to remain a secret for as long
+                                                as
+                                                possible.
+                                                Following
+                                                the
+                                                opening night of the first preview, she started a #KeepTheSecrets
+                                                campaign.
+                                                Following the opening night of the first preview<span
+                                                    class="uk-text-muted">...</span><a>Read
+                                                more</a>
+                                            </div>
+                                            <div class="uk-flex uk-flex-middle uk-margin-small-top">
+                                                <div class="uk-width-1-3">
+                                                    <progress class="uk-progress uk-margin-small-top"
+                                                              value="0.9"></progress>
+                                                </div>
+                                                <div class="uk-width-1-2 uk-flex uk-margin-small-bottom uk-margin-left uk-text-primary catalogue-book-rating">
+                                                    9.0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-1-6"></div>
+                                    </div>
+
+                                    <div class="uk-width-1-1 uk-flex">
+                                        <div class="uk-width-1-6 uk-flex uk-flex-center">
+                                            <div class="uk-width-4-6">
+                                                <img class="uk-height-1-5 uk-margin-top"
+                                                     src="static/img/books/HarryPotter.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-4-6 uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right">
+                                            <div>
+                                                <div class="uk-margin-remove uk-text-lead">Harry Potter and the Cursed
+                                                    Child
+                                                </div>
+                                                <div class="catalogue-book-author uk-text-bold">J. K. Rouling</div>
+                                            </div>
+                                            <div class="catalogue-book-text">
+                                                Harry Potter and the Cursed Child Parts One and Two is the official
+                                                script
+                                                book for
+                                                the
+                                                play
+                                                of
+                                                the
+                                                same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
+
+                                                It is the eighth story published in the Harry Potter book series.
+
+                                                J. K. Rowling wanted the plot of the play to remain a secret for as long
+                                                as
+                                                possible.
+                                                Following
+                                                the
+                                                opening night of the first preview, she started a #KeepTheSecrets
+                                                campaign.
+                                                Following the opening night of the first preview<span
+                                                    class="uk-text-muted">...</span><a>Read
+                                                more</a>
+                                            </div>
+                                            <div class="uk-flex uk-flex-middle uk-margin-small-top">
+                                                <div class="uk-width-1-3">
+                                                    <progress class="uk-progress uk-margin-small-top"
+                                                              value="0.9"></progress>
+                                                </div>
+                                                <div class="uk-width-1-2 uk-flex uk-margin-small-bottom uk-margin-left uk-text-primary catalogue-book-rating">
+                                                    9.0
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-1-6"></div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-column uk-flex-middle uk-margin-bottom">
+                            <ul class="uk-pagination" uk-margin>
+                                <li><a href="#"><span uk-pagination-previous></span></a></li>
+                                <li class="uk-active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="uk-disabled"><span>...</span></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#"><span uk-pagination-next></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</%block>

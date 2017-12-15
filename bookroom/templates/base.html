@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="uk-height-1-1">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width"/>
     <title>BookRoom <%block name='headerTitle'></%block></title>
 
     %for url in webassets(request, 'mincss'):
@@ -17,34 +17,48 @@
 </head>
 <body ng-app="BookRoomApp" class="ng-cloak uk-height-1-1">
 <header>
+    <%include file="forms/login-form.html"/>
+
     <div class="uk-width-1-1 uk-flex uk-flex-center">
         <div class="uk-width-3-4 uk-flex uk-margin-small-top">
             <div class="uk-width-1-2 uk-flex">
-                <div class="uk-flex uk-flex-middle">
-                    <div class="menu-button uk-margin-left"><a class="uk-link-reset" ui-sref="home">Bookroom</a></div>
-                    <div class="menu-button uk-margin-left"><a class="uk-link-reset" ui-sref="catalogue">Catalogue</a>
-                    </div>
+                <ul ng-controller="AppCtrl" class="uk-flex uk-flex-middle">
+                    <li class="menu-button"><a href="/" class="uk-link-reset">Bookroom</a></li>
+                    <li class="menu-button uk-margin-left"><a href="/catalogue" class="uk-link-reset">Catalogue</a>
+                    </li>
                     <div class="uk-flex-middle">
-                        <div class="uk-margin-left uk-inline">
+                        <form class="uk-margin-left uk-inline" method="GET" action="/search">
                             <span class="header-search-icon uk-form-icon" uk-icon="icon: search"></span>
-                            <input class="uk-input menu-input" placeholder="Search">
-                        </div>
+                            <input ng-change="searchChange()" name="q" ng-model="searchCriteria" class="uk-input menu-input"
+                                   placeholder="Search">
+                        </form>
                     </div>
-                </div>
+                </ul>
             </div>
             <div class="uk-width-1-2 uk-flex uk-flex-right">
-                    <div class="uk-margin-right uk-float-right menu-button">
-                        <%block name='userName'>
-                    </%block>
-                    </div>
-                    <div class="menu-button">
-                        <%block name='exitButton'>
-                    </%block>
-                    </div>
+                <div class="uk-margin-right uk-float-right menu-button">
+                    %if not session.get('loged_as'):
+                        <div ng-controller="AppCtrl">
+                            <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
+                        </div>
+                    %else:
+                        <div ng-controller="HomeCtrl as userCtrl" class="uk-margin-small-right">
+                            <a href="user"
+                               class="uk-link-reset">${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</a>
+                        </div>
+                    %endif
                 </div>
+                <div class="menu-button">
+                    %if session.get('loged_as'):
+                        <div class="uk-margin-right">
+                            <a class="uk-link-reset" href="${request.route_path('logout')}">Log out</a>
+                        </div>
+                    %endif
+                </div>
+            </div>
         </div>
+    </div>
 </header>
-
     ${self.body()}
 
     <%block name='main'>

@@ -13,6 +13,35 @@ class Home(object):
 
         self.hf = HomeFacade(request)
 
-    @view_config(route_name='get_book', renderer='../templates/views/book.html')
+    @view_config(route_name='catalogue', renderer='../templates/views/catalogue.html')
+    @view_config(route_name='catalogue', xhr=True, renderer='json')
+    def catalogue(self):
+        if not self.request.is_xhr:
+            return dict()
+
+        return dict()
+
+    @view_config(route_name='user', renderer='../templates/views/user-page.html')
+    @view_config(route_name='user', xhr=True, renderer='json')
+    def user(self):
+
+        if not self.request.is_xhr:
+            return dict()
+
+        return dict()
+
+    @view_config(route_name='small_search', renderer='json')
+    def small_search(self):
+        return dict()
+
+    @view_config(route_name='global_search', renderer='../templates/views/search.html')
+    @view_config(route_name='global_search', xhr=True, renderer='json')
+    def global_search(self):
+        if not self.request.is_xhr:
+            return dict()
+
+        return dict()
+
+    @view_config(route_name='get_book', renderer='json')
     def get_book(self):
         return dict()

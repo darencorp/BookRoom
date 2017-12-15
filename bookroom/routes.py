@@ -4,9 +4,12 @@ def includeme(config):
 
     config.add_route('js', '/js')
     config.add_route('index', '/')
-    config.add_route('home', '/home')
     config.add_route('login', '/login')
     config.add_route('register', '/register')
     config.add_route('logout', '/logout')
 
+    config.add_route('catalogue', '/catalogue')
+    config.add_route('user', '/user')
+    config.add_route('small_search', '/front_search')
+    config.add_route('global_search', '/search')
     config.add_route('get_book', '/book')
