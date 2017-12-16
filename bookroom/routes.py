@@ -13,3 +13,6 @@ def includeme(config):
     config.add_route('small_search', '/front_search')
     config.add_route('global_search', '/search')
     config.add_route('get_book', '/book')
+
+    config.add_route('image_upload', '/image_upload')
+    config.add_route('add_book', '/add_book')

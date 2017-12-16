@@ -14,6 +14,7 @@ class User(Base):
     email = Column(Text)
     password = Column(Text)
     role = Column(Text)
+    avatar = Column(Text)
 
     def __init__(self, first_name, last_name, email, password):
         self.first_name = first_name

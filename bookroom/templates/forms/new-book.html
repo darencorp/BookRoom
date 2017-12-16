@@ -1,0 +1,41 @@
+<div uk-modal id="new-book-form" class="uk-modal-container" ng-controller="BookCtrl as nbctrl">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Add new book</h2>
+        </div>
+        <div class="uk-modal-body">
+            <form class="uk-width-1-1 uk-form uk-flex">
+                <div class="uk-width-1-2 uk-margin-top uk-flex uk-flex-center">
+                    <div class="uk-width-1-1 uk-margin-large-left">
+                        <input class="uk-input" name="name" placeholder="Name" ng-model="nbctrl.newBook.name">
+                        <input class="uk-input uk-margin-top" name="author" placeholder="Author" ng-model="nbctrl.newBook.author">
+                        <input class="uk-input uk-margin-top" name="year" placeholder="Year" ng-model="nbctrl.newBook.year">
+                        <select class="uk-select uk-margin-top" name="year" placeholder="Genre" ng-model="nbctrl.newBook.genre">
+                            <option>Action</option>
+                            <option>Romantic</option>
+                        </select>
+
+                        <textarea class="uk-input uk-margin-top new-book-textarea"
+                                  placeholder="Description" ng-model="nbctrl.newBook.description"></textarea>
+
+                        <div class="uk-width-1-1 js-upload uk-placeholder uk-text-center uk-margin-top">
+                            <span uk-icon="icon: cloud-upload"></span>
+                            <span class="uk-text-middle">Attach image by dropping them here or</span>
+                            <div uk-form-custom>
+                                <input type="file" file-model="nbctrl.image">
+                                <span class="uk-link">selecting one</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-margin-left uk-width-1-2">
+
+                </div>
+            </form>
+        </div>
+        <div class="uk-modal-footer uk-flex uk-flex-right">
+            <button class="uk-button uk-button-primary uk-margin-right" ng-click="nbctrl.confirmNewBook()">Confirm</button>
+        </div>
+    </div>
+</div>
