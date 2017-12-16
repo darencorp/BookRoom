@@ -4,15 +4,20 @@
 }
 
 body {
-    background: linear-gradient(
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.4)
-    ), url(../img/background.jpg) no-repeat center center fixed;
+    font-family: Darencorp;
+
+}
+
+.image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/background.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: Darencorp;
+    z-index: -1;
 }
 
 .menu {

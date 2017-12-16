@@ -16,6 +16,9 @@
 
 </head>
 <body ng-app="BookRoomApp" class="ng-cloak uk-height-1-1">
+
+<div class="image"></div>
+
 <header>
     <%include file="forms/login-form.html"/>
 
@@ -29,7 +32,8 @@
                     <div class="uk-flex-middle">
                         <form class="uk-margin-left uk-inline" method="GET" action="/search">
                             <span class="header-search-icon uk-form-icon" uk-icon="icon: search"></span>
-                            <input ng-change="searchChange()" name="q" ng-model="$root.searchCriteria" class="uk-input menu-input"
+                            <input ng-change="searchChange()" name="q" ng-model="$root.searchCriteria"
+                                   class="uk-input menu-input"
                                    placeholder="Search">
                         </form>
                     </div>
@@ -63,5 +67,6 @@
 
     <%block name='main'>
     </%block>
+
 </body>
 </html>

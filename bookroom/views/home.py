@@ -42,6 +42,10 @@ class Home(object):
 
         return dict()
 
-    @view_config(route_name='get_book', renderer='json')
+    @view_config(route_name='get_book', renderer='../templates/views/book.html')
+    @view_config(route_name='get_book', xhr=True, renderer='json')
     def get_book(self):
+        if not self.request.is_xhr:
+            return dict()
+
         return dict()

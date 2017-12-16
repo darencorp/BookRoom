@@ -1,0 +1,29 @@
+@media (min-width: 1400px) {
+
+    .review-textarea {
+        font-size: 1.3em;
+        height: 2em;
+        transition: height 0.5s, font-size 0.5s;
+    }
+
+    .review-textarea:focus {
+        height: 9em;
+        font-size: 1em;
+    }
+
+    .review-textarea-expanded {
+        height: 9em;
+    }
+
+    .review-body {
+        margin-left: -2em;
+    }
+
+    .review-button-up svg {
+        color: #0e9c20;
+    }
+
+    .review-button-text {
+        color: #0e9c20;
+    }
+}
