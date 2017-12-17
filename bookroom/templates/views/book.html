@@ -1,7 +1,7 @@
 <%inherit file="../base.html"/>
 
 <%block name='main'>
-    <div ng-controller="BookCtrl as bctrl" class="uk-width-1-1 uk-flex uk-flex-center">
+    <div ng-controller="BookCtrl as bctrl" class="uk-width-1-1 uk-flex uk-flex-center" ng-init="bctrl.init(${book_id})">
         <div class="uk-width-3-4 home-menu-body">
             <div class="uk-flex">
                 <div class="uk-width-5-6 uk-height-1-1 uk-flex uk-flex-column">
@@ -9,35 +9,19 @@
                         <div class="uk-width-1-5 uk-margin-large-top uk-margin-medium-left uk-flex uk-flex-center">
                             <div class="uk-width-3-4">
                                 <img class="uk-width-1-1 uk-margin-top"
-                                     src="static/img/books/HarryPotter.jpg">
+                                     ng-src="../static/img/books/{{bctrl.book.image}}">
                             </div>
                         </div>
 
                         <div class="uk-width-2-3 uk-margin-left uk-margin-large-right">
                             <div class="uk-flex uk-flex-column uk-margin-large-top">
                                 <div class="uk-margin-top">
-                                    <div class="main-book-name">Harry Potter and the Cursed Child</div>
-                                    <div>J. K. Rouling</div>
+                                    <div class="main-book-name">{{bctrl.book.name}}</div>
+                                    <div>{{bctrl.book.author}}</div>
                                 </div>
                                 <div class="uk-text uk-margin-top">
                                     <h4 class="main-book-text">
-                                        Harry Potter and the Cursed Child Parts One and Two is the official script
-                                        book for
-                                        the
-                                        play
-                                        of
-                                        the
-                                        same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
-
-                                        It is the eighth story published in the Harry Potter book series.
-
-                                        J. K. Rowling wanted the plot of the play to remain a secret for as long as
-                                        possible.
-                                        Following
-                                        the
-                                        opening night of the first preview, she started a #KeepTheSecrets campaign.
-                                        Following the opening night of the first preview, she started a campaign
-                                        campaign.
+                                        {{bctrl.book.desc}}
                                     </h4>
                                 </div>
                                 <div class="uk-flex uk-flex-middle">
@@ -64,7 +48,7 @@
                             <div class="uk-margin-medium-top uk-flex uk-flex-column">
                                 <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom">
                                     <div class="uk-width-1-6">
-                                        <img class="uk-width-1-2" src="static/img/unknown_user.png"/>
+                                        <img class="uk-width-1-2" src="../static/img/unknown_user.png"/>
                                     </div>
                                     <div class="uk-width-5-6 review-body uk-flex">
                                         <div class="uk-width-9-10 uk-flex uk-flex-column">
@@ -107,7 +91,7 @@
                                 </div>
                                 <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom">
                                     <div class="uk-width-1-6">
-                                        <img class="uk-width-1-2" src="static/img/unknown_user.png"/>
+                                        <img class="uk-width-1-2" src="../static/img/unknown_user.png"/>
                                     </div>
                                     <div class="uk-width-5-6 review-body uk-flex">
                                         <div class="uk-width-9-10 uk-flex uk-flex-column">
@@ -150,7 +134,7 @@
                                 </div>
                                 <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom">
                                     <div class="uk-width-1-6">
-                                        <img class="uk-width-1-2" src="static/img/unknown_user.png"/>
+                                        <img class="uk-width-1-2" src="../static/img/unknown_user.png"/>
                                     </div>
                                     <div class="uk-width-5-6 review-body uk-flex">
                                         <div class="uk-width-9-10 uk-flex uk-flex-column">
@@ -193,7 +177,7 @@
                                 </div>
                                 <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom">
                                     <div class="uk-width-1-6">
-                                        <img class="uk-width-1-2" src="static/img/unknown_user.png"/>
+                                        <img class="uk-width-1-2" src="../static/img/unknown_user.png"/>
                                     </div>
                                     <div class="uk-width-5-6 review-body uk-flex">
                                         <div class="uk-width-9-10 uk-flex uk-flex-column">
@@ -236,7 +220,7 @@
                                 </div>
                                 <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom">
                                     <div class="uk-width-1-6">
-                                        <img class="uk-width-1-2" src="static/img/unknown_user.png"/>
+                                        <img class="uk-width-1-2" src="../static/img/unknown_user.png"/>
                                     </div>
                                     <div class="uk-width-5-6 review-body uk-flex">
                                         <div class="uk-width-9-10 uk-flex uk-flex-column">
@@ -279,7 +263,7 @@
                                 </div>
                                 <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom">
                                     <div class="uk-width-1-6">
-                                        <img class="uk-width-1-2" src="static/img/unknown_user.png"/>
+                                        <img class="uk-width-1-2" src="../static/img/unknown_user.png"/>
                                     </div>
                                     <div class="uk-width-5-6 review-body uk-flex">
                                         <div class="uk-width-9-10 uk-flex uk-flex-column">
@@ -334,21 +318,21 @@
                         <div class="uk-flex uk-text-small uk-text-truncate">
                             Harry Potter and the Cursed Child
                         </div>
-                        <img class="uk-flex uk-width-3-5 uk-margin-small-top" src="static/img/books/HarryPotter.jpg"/>
+                        <img class="uk-flex uk-width-3-5 uk-margin-small-top" src="../static/img/books/HarryPotter.jpg"/>
                     </div>
 
                     <div class="uk-width-1-1 uk-flex uk-flex-column uk-flex-middle uk-margin-medium-bottom">
                         <div class="uk-flex uk-text-small uk-text-truncate">
                             Harry Potter and the Cursed Child
                         </div>
-                        <img class="uk-flex uk-width-3-5 uk-margin-small-top" src="static/img/books/HarryPotter.jpg"/>
+                        <img class="uk-flex uk-width-3-5 uk-margin-small-top" src="../static/img/books/HarryPotter.jpg"/>
                     </div>
 
                     <div class="uk-width-1-1 uk-flex uk-flex-column uk-flex-middle uk-margin-medium-bottom">
                         <div class="uk-flex uk-text-small uk-text-truncate">
                             Harry Potter and the Cursed Child
                         </div>
-                        <img class="uk-flex uk-width-3-5 uk-margin-small-top" src="static/img/books/HarryPotter.jpg"/>
+                        <img class="uk-flex uk-width-3-5 uk-margin-small-top" src="../static/img/books/HarryPotter.jpg"/>
                     </div>
                 </div>
             </div>

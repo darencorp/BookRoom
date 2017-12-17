@@ -5,11 +5,11 @@ import os
 import sys
 
 import shutil
-from pyramid.httpexceptions import HTTPFound
+from pyramid.httpexceptions import HTTPFound, HTTPNotFound
 from pyramid.view import view_config
 
 from bookroom.models.facades.home_facade import HomeFacade
-from models.Book import Book
+from bookroom.models.Book import Book
 
 
 class Home(object):
@@ -31,6 +31,7 @@ class Home(object):
 
         books = [
             {
+                'id': i.id,
                 'name': i.name,
                 'author': i.author,
                 'year': i.year,
@@ -66,10 +67,32 @@ class Home(object):
     @view_config(route_name='get_book', renderer='../templates/views/book.html')
     @view_config(route_name='get_book', xhr=True, renderer='json')
     def get_book(self):
-        if not self.request.is_xhr:
-            return dict()
 
-        return dict()
+        r = self.request
+        _id = r.matchdict.get('id')
+
+        try:
+            id = int(_id)
+        except ValueError:
+            return HTTPNotFound()
+
+        if not self.request.is_xhr:
+            book_id = self.DBSession.query(Book.id).filter(Book.id == id).first().id
+            return dict(book_id=book_id)
+
+        book_query = self.DBSession.query(Book).filter(Book.id == id).first()
+
+        book = {
+            'id': book_query.id,
+            'name': book_query.name,
+            'author': book_query.author,
+            'year': book_query.year,
+            'genre': book_query.genre,
+            'desc': book_query.description,
+            'image': book_query.image
+        }
+
+        return dict(book=book)
 
     @view_config(route_name='add_book', renderer='json')
     def add_book(self):
