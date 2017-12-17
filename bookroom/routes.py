@@ -9,6 +9,7 @@ def includeme(config):
     config.add_route('logout', '/logout')
 
     config.add_route('catalogue', '/catalogue')
+    config.add_route('get_catalogue', '/get_catalogue')
     config.add_route('user', '/user')
     config.add_route('small_search', '/front_search')
     config.add_route('global_search', '/search')

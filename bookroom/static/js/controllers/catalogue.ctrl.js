@@ -3,7 +3,7 @@ angular.module('BookRoomApp')
         var $this = this;
 
         $this.init = function () {
-            $http.get('/catalogue', {}).then(function (ret) {
+            $http.get('/get_catalogue', {}).then(function (ret) {
                 $this.books = ret.data.books;
             })
         };

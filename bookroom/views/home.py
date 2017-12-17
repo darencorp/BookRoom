@@ -22,11 +22,11 @@ class Home(object):
         self.hf = HomeFacade(request)
 
     @view_config(route_name='catalogue', renderer='../templates/views/catalogue.html')
-    @view_config(route_name='catalogue', xhr=True, renderer='json')
     def catalogue(self):
-        if not self.request.is_xhr:
-            return dict()
+        return dict()
 
+    @view_config(route_name='get_catalogue', renderer='json')
+    def get_catalogue(self):
         book_query = self.DBSession.query(Book).all()
 
         books = [
@@ -69,7 +69,6 @@ class Home(object):
         if not self.request.is_xhr:
             return dict()
 
-
         return dict()
 
     @view_config(route_name='add_book', renderer='json')
@@ -107,7 +106,7 @@ class Home(object):
         file = image.file
         filepath = str(os.path.dirname(__file__)) + '/../static/img/books/'
 
-        with open(filepath+filename, 'wb') as output_file:
+        with open(filepath + filename, 'wb') as output_file:
             shutil.copyfileobj(file, output_file)
 
         return filename
