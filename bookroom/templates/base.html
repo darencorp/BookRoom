@@ -41,7 +41,7 @@
             </div>
             <div class="uk-width-1-2 uk-flex uk-flex-right">
                 <div class="uk-margin-right uk-float-right menu-button">
-                    %if not session.get('loged_as'):
+                    %if request.authenticated_userid is None:
                         <div ng-controller="AppCtrl">
                             <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
                         </div>
@@ -53,7 +53,7 @@
                     %endif
                 </div>
                 <div class="menu-button">
-                    %if session.get('loged_as'):
+                    %if request.authenticated_userid is not None:
                         <div class="uk-margin-right">
                             <a class="uk-link-reset" href="${request.route_path('logout')}">Log out</a>
                         </div>

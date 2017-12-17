@@ -33,4 +33,8 @@
         height: 10em;
         resize: none;
     }
+
+    .review-title {
+        font-size: 1.2em;
+    }
 }

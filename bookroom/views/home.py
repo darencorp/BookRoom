@@ -6,10 +6,15 @@ import sys
 
 import shutil
 from pyramid.httpexceptions import HTTPFound, HTTPNotFound
+from pyramid.security import authenticated_userid
 from pyramid.view import view_config
+from sqlalchemy import func, desc
+from sqlalchemy.dialects.postgresql import array
 
 from bookroom.models.facades.home_facade import HomeFacade
 from bookroom.models.Book import Book
+from models.User import User
+from models.Review import Review
 
 
 class Home(object):
@@ -82,6 +87,10 @@ class Home(object):
 
         book_query = self.DBSession.query(Book).filter(Book.id == id).first()
 
+        reviews_query = self.DBSession.query(Review.id, Review.body, Review._date, Review.modified, User.first_name,
+                                             User.last_name).join(User, User.email == Review.user_id).filter(
+            Review.book_id == id).order_by(desc(Review._date))
+
         book = {
             'id': book_query.id,
             'name': book_query.name,
@@ -92,7 +101,18 @@ class Home(object):
             'image': book_query.image
         }
 
-        return dict(book=book)
+        reviews = [
+            {
+                'id': i.id,
+                'body': i.body,
+                'date': i._date.strftime("%Y-%m-%d %H:%M"),
+                'modified': i.modified,
+                'user_fname': i.first_name,
+                'user_lname': i.last_name
+            } for i in reviews_query
+        ]
+
+        return dict(book=book, reviews=reviews)
 
     @view_config(route_name='add_book', renderer='json')
     def add_book(self):
@@ -133,3 +153,46 @@ class Home(object):
             shutil.copyfileobj(file, output_file)
 
         return filename
+
+    @view_config(route_name='add_review', renderer='json')
+    def add_review(self):
+        r = self.request
+        j = r.json_body
+
+        body = j.get('body')
+        book_id = int(j.get('book'))
+        user_id = r.authenticated_userid
+
+        now = datetime.datetime.now().replace(microsecond=0)
+
+        review = Review(user_id, book_id, body, now, False)
+
+        self.DBSession.add(review)
+
+        return dict()
+
+    @view_config(route_name='update_reviews', renderer='json')
+    def update_reviews(self):
+        r = self.request
+        _id = r.json_body
+
+        try:
+            id = int(_id)
+        except ValueError:
+            return dict()
+
+        reviews_query = self.DBSession.query(Review.id, Review.body, Review._date, Review.modified, User.first_name,
+                                             User.last_name).join(User, User.email == Review.user_id).filter(Review.book_id == id).order_by(desc(Review._date))
+
+        reviews = [
+            {
+                'id': i.id,
+                'body': i.body,
+                'date': i._date.strftime("%Y-%m-%d %H:%M"),
+                'modified': i.modified,
+                'user_fname': i.first_name,
+                'user_lname': i.last_name
+            } for i in reviews_query
+        ]
+
+        return dict(reviews=reviews)

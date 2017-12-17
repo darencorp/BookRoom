@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey
+from sqlalchemy import Column, ForeignKey, Text
 from sqlalchemy import Integer
 
 from .meta import Base
@@ -7,7 +7,7 @@ from .meta import Base
 class BookRating(Base):
     __tablename__ = 'book_rating'
     id = Column(Integer, primary_key=True, nullable=False)
-    user_id = Column(Integer, ForeignKey('user.id'))
+    user_id = Column(Text, ForeignKey('user.email'))
     book_id = Column(Integer, ForeignKey('book.id'))
     value = Column(Integer)
 

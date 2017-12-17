@@ -1,7 +1,8 @@
 from sqlalchemy import Column, String
 from sqlalchemy import Integer
-from sqlalchemy import Text
+from sqlalchemy.orm import relationship
 
+# from .Review import Review
 from .meta import Base
 
 
