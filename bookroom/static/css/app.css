@@ -258,3 +258,39 @@ body {
 .catalogue-filter {
     border-left: 2px solid #c0c0c0;
 }
+
+.main-rating {
+}
+
+.main-rating .main-rating-label  {
+    text-indent: -10em;
+    overflow: hidden;
+    /*cursor: pointer;*/
+}
+
+.main-rating-label {
+    float: left;
+}
+
+.main-rating-input {
+    position: absolute;
+    display: none;
+}
+
+.main-rating-input, .main-rating .main-rating-label.main-stars {
+    float: right;
+}
+
+span + .main-rating-input + .main-rating-label, legend + .main-rating-input + .main-rating-label {
+    clear: right;
+    counter-reset: checkbox;
+}
+
+.main-rating .main-rating-label.main-stars {
+    background: transparent url('/static/img/star_off.png') no-repeat center center;
+}
+
+.main-rating .main-rating-input:checked ~ .main-rating-label.main-stars {
+    background-image: url('/static/img/star.png');
+    counter-increment: checkbox;
+}

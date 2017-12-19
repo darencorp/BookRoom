@@ -38,3 +38,67 @@
         font-size: 1.2em;
     }
 }
+
+/*enabled*/
+.rating-label {
+    text-indent: -10em;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+}
+
+.rating-input {
+    position: absolute;
+    display: none;
+    float: right;
+}
+
+.stars {
+    float: right;
+    background: transparent url('/static/img/star_off.png') no-repeat center center;
+}
+
+span + .rating-input + .rating-label, legend + .rating-input + .rating-label {
+    clear: right;
+    counter-reset: checkbox;
+}
+
+.rating-input:checked ~ .rating-label.stars {
+    background-image: url('/static/img/star.png');
+    counter-increment: checkbox;
+}
+
+.rating-label.stars:hover ~ .rating-label.stars,
+.rating-label.stars:hover{
+    background-image: url('/static/img/star.png');
+    counter-increment: checkbox;
+}
+
+/*disabled*/
+.disabled-rating-label {
+    text-indent: -10em;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+}
+
+.disabled-rating-input {
+    position: absolute;
+    display: none;
+    float: right;
+}
+
+.stars {
+    float: right;
+    background: transparent url('/static/img/star_off.png') no-repeat center center;
+}
+
+span + .disabled-rating-input + .disabled-rating-label, legend + .disabled-rating-input + .disabled-rating-label {
+    clear: right;
+    counter-reset: checkbox;
+}
+
+.disabled-rating-input:checked ~ .disabled-rating-label.stars {
+    background-image: url('/static/img/star.png');
+    counter-increment: checkbox;
+}

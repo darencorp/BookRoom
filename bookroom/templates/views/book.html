@@ -16,8 +16,8 @@
                             </div>
                         </div>
 
-                        <div class="uk-width-2-3 uk-margin-left uk-margin-large-right">
-                            <div class="uk-flex uk-flex-column uk-margin-large-top">
+                        <div class="uk-width-2-3 uk-flex uk-flex-column uk-margin-left uk-margin-large-right">
+                            <div class="uk-height-medium uk-flex uk-flex-column uk-margin-large-top">
                                 <div class="uk-margin-top">
                                     <div class="main-book-name">{{bctrl.book.name}}</div>
                                     <div>{{bctrl.book.author}}</div>
@@ -27,11 +27,47 @@
                                         {{bctrl.book.desc}}
                                     </h4>
                                 </div>
-                                <div class="uk-flex uk-flex-middle">
-                                    <div class="uk-width-1-2">
-                                        <progress class="uk-progress" value="0.9"></progress>
+
+                            </div>
+                            <div class="uk-flex uk-flex-column">
+                                %if request.authenticated_userid != None:
+                                    <div class="uk-width-1-4">
+                                        <input class="rating-input" type="radio" name="stars" value="5" id="4_stars"
+                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                        <label class="uk-width-1-5 rating-label stars" for="4_stars">4 stars</label>
+                                        <input class="rating-input" type="radio" name="stars" value="4" id="3_stars"
+                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                        <label class="uk-width-1-5 rating-label stars" for="3_stars">3 stars</label>
+                                        <input class="rating-input" type="radio" name="stars" value="3" id="2_stars"
+                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                        <label class="uk-width-1-5 rating-label stars" for="2_stars">2 stars</label>
+                                        <input class="rating-input" type="radio" name="stars" value="2" id="1_stars"
+                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                        <label class="uk-width-1-5 rating-label stars" for="1_stars">1 star</label>
+                                        <input class="rating-input" type="radio" name="stars" value="1" id="0_stars"
+                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                        <label class="uk-width-1-5 rating-label stars" for="0_stars">0 star</label>
                                     </div>
-                                </div>
+                                    <div ng-if="bctrl.my_rating.length == 1" class="uk-text-muted">My vote: {{bctrl.my_rating}}</div>
+                                %else:
+                                    <div class="uk-width-1-4" title="Sign in or Sign Up to vote" uk-tooltip>
+                                        <input class="disabled-rating-input" type="radio" name="stars" value="5" id="4_stars"
+                                               ng-model="bctrl.rating" disabled>
+                                        <label class="uk-width-1-5 disabled-rating-label stars" for="4_stars">4 stars</label>
+                                        <input class="disabled-rating-input" type="radio" name="stars" value="4" id="3_stars"
+                                               ng-model="bctrl.rating" disabled>
+                                        <label class="uk-width-1-5 disabled-rating-label stars" for="3_stars">3 stars</label>
+                                        <input class="disabled-rating-input" type="radio" name="stars" value="3" id="2_stars"
+                                               ng-model="bctrl.rating" disabled>
+                                        <label class="uk-width-1-5 disabled-rating-label stars" for="2_stars">2 stars</label>
+                                        <input class="disabled-rating-input" type="radio" name="stars" value="2" id="1_stars"
+                                               ng-model="bctrl.rating" disabled>
+                                        <label class="uk-width-1-5 disabled-rating-label stars" for="1_stars">1 star</label>
+                                        <input class="disabled-rating-input" type="radio" name="stars" value="1" id="0_stars"
+                                               ng-model="bctrl.rating" disabled>
+                                        <label class="uk-width-1-5 disabled-rating-label stars" for="0_stars">0 star</label>
+                                    </div>
+                                %endif
                             </div>
                         </div>
                     </div>

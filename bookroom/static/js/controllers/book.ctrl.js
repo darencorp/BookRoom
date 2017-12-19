@@ -5,15 +5,22 @@ angular.module('BookRoomApp')
         $this.book = {};
         $this.reviews = [];
 
+        $this.rating = '0';
+        $this.my_rating = '';
+
         $this.newReview = '';
 
         $this.init = function (id) {
             $http.post('/book/' + id, {}).then(function (ret) {
                 $this.book = ret.data.book;
                 $this.reviews = ret.data.reviews;
-
-                console.log(ret.data.reviews)
+                $this.rating = ret.data.avg_rating + '';
+                $this.my_rating = ret.data.user_rating || '';
             });
+        };
+
+        $this.print = function () {
+            console.log($this.rating);
         };
 
         $this.openLoginForm = function () {
@@ -39,5 +46,18 @@ angular.module('BookRoomApp')
                     })
                 });
             }
+        };
+
+        $this.voteBook = function () {
+
+            var vote = {
+                book_id: $this.book.id,
+                rating: $this.rating
+            };
+
+            $http.post('/vote_book', vote).then(function (ret) {
+                $this.my_rating = $this.rating;
+                $this.rating = ret.data.avg_rating + '';
+            });
         }
     });

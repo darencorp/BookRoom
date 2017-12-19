@@ -19,3 +19,4 @@ def includeme(config):
     config.add_route('add_book', '/add_book')
     config.add_route('add_review', '/add_review')
     config.add_route('update_reviews', '/update_reviews')
+    config.add_route('vote_book', '/vote_book')

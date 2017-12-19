@@ -129,4 +129,4 @@ class Common(object):
     @view_config(route_name='logout', renderer='json')
     def logout(self):
         self.session.clear()
-        return HTTPFound(location=self.request.route_path('index'))
+        return HTTPFound(location=self.request.referer)

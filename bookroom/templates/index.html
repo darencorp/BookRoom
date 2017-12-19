@@ -38,8 +38,24 @@
                                     </h4>
                                 </div>
                                 <div class="uk-flex uk-flex-middle">
-                                    <div class="uk-width-1-2">
-                                        <progress class="uk-progress" value="0.9"></progress>
+                                    <div class="uk-width-1-3">
+                                        <div class="main-rating">
+                                            <input class="main-rating-input" type="radio" name="stars" id="4_stars"
+                                                   value="5" ng-model="home.mainBook.rating" disabled>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="4_stars">4 stars</label>
+                                            <input class="main-rating-input" type="radio" name="stars" id="3_stars"
+                                                   value="4" ng-model="home.mainBook.rating" disabled>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="3_stars">3 stars</label>
+                                            <input class="main-rating-input" type="radio" name="stars" id="2_stars"
+                                                   value="3" ng-model="home.mainBook.rating" disabled>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="2_stars">2 stars</label>
+                                            <input class="main-rating-input" type="radio" name="stars" id="1_stars"
+                                                   value="2" ng-model="home.mainBook.rating" disabled>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="1_stars">1 star</label>
+                                            <input class="main-rating-input" type="radio" name="stars" id="0_stars"
+                                                   value="1" ng-model="home.mainBook.rating" disabled>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="0_stars">0 star</label>
+                                        </div>
                                     </div>
                                     <div class="uk-width-1-2 uk-flex uk-flex-right uk-margin-right">
                                         <a class="uk-margin-right">Reviews</a>

@@ -8,11 +8,12 @@ import shutil
 from pyramid.httpexceptions import HTTPFound, HTTPNotFound
 from pyramid.security import authenticated_userid
 from pyramid.view import view_config
-from sqlalchemy import func, desc
+from sqlalchemy import func, desc, and_
 from sqlalchemy.dialects.postgresql import array
 
 from bookroom.models.facades.home_facade import HomeFacade
 from bookroom.models.Book import Book
+from models.BookRating import BookRating
 from models.User import User
 from models.Review import Review
 
@@ -91,6 +92,20 @@ class Home(object):
                                              User.last_name).join(User, User.email == Review.user_id).filter(
             Review.book_id == id).order_by(desc(Review._date))
 
+        rate_query = self.DBSession.query(func.avg(BookRating.value)).filter(BookRating.book_id == id).first()
+
+        avg_rating = int(rate_query[0]) if rate_query[0] else 0
+
+
+        u_rate = None
+
+        if r.authenticated_userid:
+            exist_rate = self.DBSession.query(BookRating).filter(
+                and_(BookRating.user_id == r.authenticated_userid, BookRating.book_id == id)).first()
+
+            if exist_rate:
+                u_rate = exist_rate.value
+
         book = {
             'id': book_query.id,
             'name': book_query.name,
@@ -112,7 +127,9 @@ class Home(object):
             } for i in reviews_query
         ]
 
-        return dict(book=book, reviews=reviews)
+        user_rate = u_rate if u_rate else False
+
+        return dict(book=book, reviews=reviews, user_rating=user_rate, avg_rating=avg_rating)
 
     @view_config(route_name='add_book', renderer='json')
     def add_book(self):
@@ -182,7 +199,8 @@ class Home(object):
             return dict()
 
         reviews_query = self.DBSession.query(Review.id, Review.body, Review._date, Review.modified, User.first_name,
-                                             User.last_name).join(User, User.email == Review.user_id).filter(Review.book_id == id).order_by(desc(Review._date))
+                                             User.last_name).join(User, User.email == Review.user_id).filter(
+            Review.book_id == id).order_by(desc(Review._date))
 
         reviews = [
             {
@@ -196,3 +214,32 @@ class Home(object):
         ]
 
         return dict(reviews=reviews)
+
+    @view_config(route_name='vote_book', renderer='json')
+    def vote_book(self):
+        r = self.request
+        j = r.json_body
+
+        _book_id = j.get('book_id')
+        user_id = r.authenticated_userid
+        rating = j.get('rating')
+
+        try:
+            book_id = int(_book_id)
+        except ValueError:
+            return dict()
+
+        exist_rate = self.DBSession.query(BookRating).filter(
+            and_(BookRating.user_id == user_id, BookRating.book_id == book_id)).first()
+
+        if exist_rate:
+            self.DBSession.query(BookRating).filter(
+                and_(BookRating.user_id == user_id, BookRating.book_id == book_id)).update({"value": rating})
+        else:
+            book_rating = BookRating(user_id, book_id, rating)
+            self.DBSession.add(book_rating)
+
+        rate_query = self.DBSession.query(func.avg(BookRating.value)).filter(BookRating.book_id == book_id).first()
+        avg_rating = int(rate_query[0])
+
+        return dict(avg_rating=avg_rating)
