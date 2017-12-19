@@ -72,7 +72,7 @@ class Common(object):
         user = authenticate(login, password)
 
         if user:
-            self.session['loged_as'] = user
+            self.session['logged_as'] = user
             remember(request=r, userid=user['email'])
             return dict()
 
@@ -121,7 +121,7 @@ class Common(object):
             'email': user.email
         }
 
-        self.session['loged_as'] = login_user
+        self.session['logged_as'] = login_user
         remember(request=self.request, userid=login_user['email'])
 
         return dict()

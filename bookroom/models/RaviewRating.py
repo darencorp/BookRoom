@@ -11,7 +11,7 @@ class ReviewRating(Base):
     review_id = Column(Integer, ForeignKey('review.id'))
     value = Column(Boolean)
 
-    def __init__(self, user_id, book_id, value):
+    def __init__(self, user_id, review_id, value):
         self.user_id = user_id
-        self.book_id = book_id
+        self.review_id = review_id
         self.value = value

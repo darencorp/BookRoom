@@ -41,14 +41,14 @@
             </div>
             <div class="uk-width-1-2 uk-flex uk-flex-right">
                 <div class="uk-margin-right uk-float-right menu-button">
-                    %if request.authenticated_userid is None:
-                        <div ng-controller="AppCtrl">
-                            <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
-                        </div>
-                    %else:
+                    %if request.has_permission('view'):
                         <div ng-controller="HomeCtrl as userCtrl" class="uk-margin-small-right">
                             <a href="user"
-                               class="uk-link-reset">${session.get('loged_as')['first_name']} ${session.get('loged_as')['last_name']}</a>
+                               class="uk-link-reset">${session.get('logged_as')['first_name']} ${session.get('logged_as')['last_name']}</a>
+                        </div>
+                    %else:
+                        <div ng-controller="AppCtrl">
+                            <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
                         </div>
                     %endif
                 </div>

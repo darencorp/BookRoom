@@ -14,6 +14,7 @@ from sqlalchemy.dialects.postgresql import array
 from bookroom.models.facades.home_facade import HomeFacade
 from bookroom.models.Book import Book
 from models.BookRating import BookRating
+from models.RaviewRating import ReviewRating
 from models.User import User
 from models.Review import Review
 
@@ -49,7 +50,7 @@ class Home(object):
 
         return dict(books=books)
 
-    @view_config(route_name='user', renderer='../templates/views/user-page.html')
+    @view_config(route_name='user', renderer='../templates/views/user-page.html', permission='view')
     @view_config(route_name='user', xhr=True, renderer='json')
     def user(self):
 
@@ -86,18 +87,42 @@ class Home(object):
             book_id = self.DBSession.query(Book.id).filter(Book.id == id).first().id
             return dict(book_id=book_id)
 
+        def get_user_review_rating(review_id):
+            user_rating = self.DBSession.query(ReviewRating.value).filter(
+                and_(ReviewRating.review_id == review_id, ReviewRating.user_id == r.authenticated_userid)).first()
+
+            return user_rating.value if user_rating else None
+
         book_query = self.DBSession.query(Book).filter(Book.id == id).first()
 
-        reviews_query = self.DBSession.query(Review.id, Review.body, Review._date, Review.modified, User.first_name,
-                                             User.last_name).join(User, User.email == Review.user_id).filter(
-            Review.book_id == id).order_by(desc(Review._date))
+        reviews_query = self.DBSession.query(
+            Review.id, Review.body, Review._date, Review.modified, User.first_name,
+            User.last_name,
+            self.DBSession.query(func.count(ReviewRating.id)).filter(
+                and_(ReviewRating.value == True, ReviewRating.review_id == Review.id)).label('t_value'),
+            self.DBSession.query(func.count(ReviewRating.id)).filter(
+                and_(ReviewRating.value == False, ReviewRating.review_id == Review.id)).label('f_value')) \
+            .join(User,
+                  User.email == Review.user_id).filter(
+            Review.book_id == id).group_by(Review.id).order_by(desc(Review._date))
 
         rate_query = self.DBSession.query(func.avg(BookRating.value)).filter(BookRating.book_id == id).first()
 
         avg_rating = int(rate_query[0]) if rate_query[0] else 0
 
-
         u_rate = None
+
+        reviews = {
+            i.id: {
+                'body': i.body,
+                'date': i._date.strftime("%Y-%m-%d %H:%M"),
+                'modified': i.modified,
+                'user_fname': i.first_name,
+                'user_lname': i.last_name,
+                'true_rating': i.t_value,
+                'false_rating': i.f_value
+            } for i in reviews_query
+        }
 
         if r.authenticated_userid:
             exist_rate = self.DBSession.query(BookRating).filter(
@@ -105,6 +130,9 @@ class Home(object):
 
             if exist_rate:
                 u_rate = exist_rate.value
+
+            for k, i in reviews.items():
+                i['user_vote'] = get_user_review_rating(k)
 
         book = {
             'id': book_query.id,
@@ -116,22 +144,11 @@ class Home(object):
             'image': book_query.image
         }
 
-        reviews = [
-            {
-                'id': i.id,
-                'body': i.body,
-                'date': i._date.strftime("%Y-%m-%d %H:%M"),
-                'modified': i.modified,
-                'user_fname': i.first_name,
-                'user_lname': i.last_name
-            } for i in reviews_query
-        ]
-
         user_rate = u_rate if u_rate else False
 
         return dict(book=book, reviews=reviews, user_rating=user_rate, avg_rating=avg_rating)
 
-    @view_config(route_name='add_book', renderer='json')
+    @view_config(route_name='add_book', renderer='json', permission='admin')
     def add_book(self):
         r = self.request
         j = r.json
@@ -148,7 +165,7 @@ class Home(object):
         self.DBSession.add(book)
         return dict()
 
-    @view_config(route_name='image_upload', renderer='json')
+    @view_config(route_name='image_upload', renderer='json', permission='admin')
     def image_upload(self):
         p = self.request.POST
 
@@ -171,7 +188,7 @@ class Home(object):
 
         return filename
 
-    @view_config(route_name='add_review', renderer='json')
+    @view_config(route_name='add_review', renderer='json', permission='view')
     def add_review(self):
         r = self.request
         j = r.json_body
@@ -215,7 +232,7 @@ class Home(object):
 
         return dict(reviews=reviews)
 
-    @view_config(route_name='vote_book', renderer='json')
+    @view_config(route_name='vote_book', renderer='json', permission='view')
     def vote_book(self):
         r = self.request
         j = r.json_body
@@ -243,3 +260,42 @@ class Home(object):
         avg_rating = int(rate_query[0])
 
         return dict(avg_rating=avg_rating)
+
+    @view_config(route_name='vote_review', renderer='json', permission='view')
+    def vote_review(self):
+        r = self.request
+        j = r.json_body
+
+        _review_id = j.get('review_id')
+        user_id = r.authenticated_userid
+        rating = j.get('rating')
+
+        try:
+            review_id = int(_review_id)
+        except ValueError:
+            return dict()
+
+        exist_rate = self.DBSession.query(ReviewRating).filter(
+            and_(ReviewRating.user_id == user_id, ReviewRating.review_id == review_id)).first()
+
+        if exist_rate:
+            self.DBSession.query(ReviewRating).filter(
+                and_(ReviewRating.user_id == user_id, ReviewRating.review_id == review_id)).update({"value": rating})
+        else:
+            review_rating = ReviewRating(user_id, review_id, rating)
+            self.DBSession.add(review_rating)
+
+        review_query = self.DBSession.query(Review.id, self.DBSession.query(func.count(ReviewRating.id)).filter(
+            and_(ReviewRating.value == True,
+                 ReviewRating.review_id == Review.id)).label('t_value'),
+                                            self.DBSession.query(func.count(ReviewRating.id)).filter(
+                                                and_(ReviewRating.value == False,
+                                                     ReviewRating.review_id == Review.id)).label('f_value')).filter(
+            Review.id == review_id).first()
+
+        review = {
+            'true_rating': review_query.t_value,
+            'false_rating': review_query.f_value
+        }
+
+        return dict(review=review)

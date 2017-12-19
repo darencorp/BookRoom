@@ -1,5 +1,5 @@
 import bcrypt
-from pyramid.security import Allow, ALL_PERMISSIONS
+from pyramid.security import Allow, ALL_PERMISSIONS, Authenticated
 
 from bookroom.models import User
 
@@ -29,7 +29,7 @@ def groupfinder(user_mail, request):
 
 class Root(object):
     __acl__ = [
-        (Allow, 'user', 'view'),
+        (Allow, Authenticated, 'view'),
         (Allow, 'admin', ALL_PERMISSIONS)
     ]
 

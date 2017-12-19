@@ -1,5 +1,5 @@
 angular.module('BookRoomApp')
-    .controller('BookCtrl', function ($scope, $http) {
+    .controller('BookCtrl', function ($scope, $rootScope, $http) {
         var $this = this;
 
         $this.book = {};
@@ -58,6 +58,20 @@ angular.module('BookRoomApp')
             $http.post('/vote_book', vote).then(function (ret) {
                 $this.my_rating = $this.rating;
                 $this.rating = ret.data.avg_rating + '';
+            });
+        };
+
+        $this.voteReview = function (review_id, rating) {
+
+            var vote = {
+                review_id: review_id,
+                rating: rating
+            };
+
+            $http.post('/vote_review', vote).then(function (ret) {
+                $this.reviews[review_id].true_rating = ret.data.review.true_rating;
+                $this.reviews[review_id].false_rating = ret.data.review.false_rating;
+                $this.reviews[review_id].user_vote = rating;
             });
         }
     });

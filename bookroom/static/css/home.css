@@ -25,6 +25,10 @@
         color: #0e9c20;
     }
 
+    .review-button svg {
+        cursor: pointer;
+    }
+
     .review-button-text {
         color: #0e9c20;
     }
@@ -101,4 +105,7 @@ span + .disabled-rating-input + .disabled-rating-label, legend + .disabled-ratin
 .disabled-rating-input:checked ~ .disabled-rating-label.stars {
     background-image: url('/static/img/star.png');
     counter-increment: checkbox;
+}
+
+.review-voted-up {
 }

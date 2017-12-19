@@ -24,6 +24,10 @@ body {
     list-style-type: none;
 }
 
+.catalogue-scrollable {
+    resize: none;
+}
+
 @media (min-width: 1200px) {
 
     header {
