@@ -251,10 +251,6 @@ body {
     background-color: rgba(255, 255, 255, 0.78);
 }
 
-.home-menu-body ::-webkit-scrollbar {
-    width: 0px !important;
-}
-
 .modal-footer-padding {
     padding-bottom: 2em;
 }

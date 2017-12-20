@@ -82,6 +82,13 @@ class Common(object):
     def register(self):
         j = self.request.json_body
 
+        if j.get('password') is None or j.get('confirmed_password') is None:
+            error_dict = {
+                'code': 400,
+                'desc': "Passwords are invalid"
+            }
+            return dict(error=error_dict)
+
         if j.get('password') != j.get('confirmed_password') or len(j.get('password')) == 0:
             error_dict = {
                 'code': 400,

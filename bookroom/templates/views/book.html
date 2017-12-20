@@ -4,9 +4,9 @@
 <%include file="../forms/register-form.html"/>
 
 <%block name='main'>
-    <div ng-controller="BookCtrl as bctrl" class="uk-width-1-1 uk-flex uk-flex-center" ng-init="bctrl.init(${book_id})">
+    <div ng-controller="BookCtrl as bctrl" class="uk-width-1-1 uk-flex uk-flex-center" uk-height-viewport ng-init="bctrl.init(${book_id})">
         <div class="uk-width-3-4 home-menu-body">
-            <div class="uk-flex">
+            <div class="uk-flex uk-hei">
                 <div class="uk-width-5-6 uk-height-1-1 uk-flex uk-flex-column">
                     <div class="uk-width-1-1 uk-height-1-2 uk-flex main-book">
                         <div class="uk-width-1-5 uk-margin-large-top uk-margin-medium-left uk-flex uk-flex-center">
@@ -146,11 +146,10 @@
                                                     </div>
                                                 </div>
                                             % else:
-                                                <div class="uk-width-1-5 uk-margin-left uk-flex uk-flex-column uk-flex-center">
+                                                <div class="uk-width-1-5 uk-margin-left uk-flex uk-flex-column uk-flex-center" >
                                                     <div class="uk-flex">
                                                         <div class="uk-text-success review-button review-button-up"
-                                                             uk-icon="icon: chevron-up" title="Hello World"
-                                                             uk-tooltip="pos: top"></div>
+                                                             uk-icon="icon: chevron-up"></div>
                                                         <div class="uk-text-small uk-margin-small-left review-button-text">
                                                             {{review.true_rating}}
                                                         </div>
