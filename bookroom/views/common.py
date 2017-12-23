@@ -42,6 +42,7 @@ class Common(object):
             user_query = self.DBSession.query(User).filter(User.email == email).first()
 
             user = {
+                'id': user_query.id,
                 'first_name': user_query.first_name,
                 'last_name': user_query.last_name,
                 'email': user_query.email
@@ -122,10 +123,13 @@ class Common(object):
 
         self.DBSession.add(user)
 
+        login_user_query = self.DBSession.query(User.id, User.last_name, User.last_name, User.email).filter(User.email == j.get('email')).first()
+
         login_user = {
-            'first_name': user.first_name,
-            'last_name': user.last_name,
-            'email': user.email
+            'id': login_user_query.id,
+            'first_name': login_user_query.first_name,
+            'last_name': login_user_query.last_name,
+            'email': login_user_query.email
         }
 
         self.session['logged_as'] = login_user

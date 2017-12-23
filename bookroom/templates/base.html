@@ -43,7 +43,7 @@
                 <div class="uk-margin-right uk-float-right menu-button">
                     %if request.has_permission('view'):
                         <div ng-controller="HomeCtrl as userCtrl" class="uk-margin-small-right">
-                            <a href="user"
+                            <a href="/user/${session.get('logged_as')['id']}"
                                class="uk-link-reset">${session.get('logged_as')['first_name']} ${session.get('logged_as')['last_name']}</a>
                         </div>
                     %else:

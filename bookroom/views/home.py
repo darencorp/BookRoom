@@ -1,16 +1,11 @@
 import datetime
-
 import os
-
-import sys
-
 import shutil
-from pyramid.httpexceptions import HTTPFound, HTTPNotFound
-from pyramid.security import authenticated_userid
+
+from passlib.handlers.bcrypt import bcrypt
+from pyramid.httpexceptions import HTTPNotFound
 from pyramid.view import view_config
 from sqlalchemy import func, desc, and_
-from sqlalchemy.dialects.postgresql import array
-
 from bookroom.models.facades.home_facade import HomeFacade
 from bookroom.models.Book import Book
 from models.BookRating import BookRating
@@ -50,14 +45,75 @@ class Home(object):
 
         return dict(books=books)
 
-    @view_config(route_name='user', renderer='../templates/views/user-page.html', permission='view')
+    @view_config(route_name='user', renderer='../templates/views/user-page.html')
     @view_config(route_name='user', xhr=True, renderer='json')
     def user(self):
 
-        if not self.request.is_xhr:
-            return dict()
+        m = self.request.matchdict
 
-        return dict()
+        _id = m.get('id')
+
+        try:
+            id = int(_id)
+        except ValueError:
+            return HTTPNotFound()
+
+        if not self.request.is_xhr:
+            return dict(id=id)
+
+        user_query = self.DBSession.query(User).filter(User.id == id).first()
+
+        book_query = self.DBSession.query(BookRating, Book).join(User, User.id == id).join(Book,
+                                                                                           BookRating.book_id == Book.id).filter(
+            BookRating.user_id == User.email)
+
+        book_reviews_query = self.DBSession.query(Review, Book).join(Book, Book.id == Review.book_id).join(User,
+                                                                                                           User.email == Review.user_id).filter(
+            User.id == id)
+
+        user = {
+            'first_name': user_query.first_name,
+            'last_name': user_query.last_name,
+            'image': user_query.avatar,
+            'email': user_query.email
+        }
+
+        book_stared = [
+            {
+                'id': i.Book.id,
+                'name': i.Book.name,
+                'author': i.Book.author,
+                'image': i.Book.image,
+                'desc': i.Book.description,
+                'rating': i.BookRating.value
+            } for i in book_query
+        ]
+
+        book_reviews = dict()
+
+        for i in book_reviews_query:
+            if not book_reviews.get(i.Book.id):
+                book_reviews[i.Book.id] = dict()
+
+            if book_reviews[i.Book.id].get('reviews'):
+                book_reviews[i.Book.id]['reviews'].append({
+                    'body': i.Review.body,
+                    'date': i.Review._date.strftime("%Y-%m-%d %H:%M")})
+            else:
+                book_reviews[i.Book.id]['reviews'] = [{
+                    'body': i.Review.body,
+                    'date': i.Review._date.strftime("%Y-%m-%d %H:%M")
+                }]
+
+            book_reviews[i.Book.id]['id'] = i.Book.id
+            book_reviews[i.Book.id]['name'] = i.Book.name
+            book_reviews[i.Book.id]['author'] = i.Book.author
+            book_reviews[i.Book.id]['image'] = i.Book.image
+
+        for k, v in book_reviews.items():
+            v['reviews'].sort(key=lambda x: x['date'], reverse=True)
+
+        return dict(user=user, book_stared=book_stared, book_reviews=book_reviews)
 
     @view_config(route_name='small_search', renderer='json')
     def small_search(self):
@@ -96,15 +152,14 @@ class Home(object):
         book_query = self.DBSession.query(Book).filter(Book.id == id).first()
 
         reviews_query = self.DBSession.query(
-            Review.id, Review.body, Review._date, Review.modified, User.first_name,
-            User.last_name,
+            Review, User,
             self.DBSession.query(func.count(ReviewRating.id)).filter(
                 and_(ReviewRating.value == True, ReviewRating.review_id == Review.id)).label('t_value'),
             self.DBSession.query(func.count(ReviewRating.id)).filter(
                 and_(ReviewRating.value == False, ReviewRating.review_id == Review.id)).label('f_value')) \
             .join(User,
                   User.email == Review.user_id).filter(
-            Review.book_id == id).group_by(Review.id).order_by(desc(Review._date))
+            Review.book_id == id).order_by(desc(Review._date)).all()
 
         rate_query = self.DBSession.query(func.avg(BookRating.value)).filter(BookRating.book_id == id).first()
 
@@ -112,17 +167,20 @@ class Home(object):
 
         u_rate = None
 
-        reviews = {
-            i.id: {
-                'body': i.body,
-                'date': i._date.strftime("%Y-%m-%d %H:%M"),
-                'modified': i.modified,
-                'user_fname': i.first_name,
-                'user_lname': i.last_name,
+        reviews = [
+            {
+                'id': i.Review.id,
+                'body': i.Review.body,
+                'date': i.Review._date.strftime("%Y-%m-%d %H:%M"),
+                'modified': i.Review.modified,
+                'user_fname': i.User.first_name,
+                'user_lname': i.User.last_name,
+                'user_avatar': i.User.avatar,
+                'user_id': i.User.id,
                 'true_rating': i.t_value,
                 'false_rating': i.f_value
             } for i in reviews_query
-        }
+        ]
 
         if r.authenticated_userid:
             exist_rate = self.DBSession.query(BookRating).filter(
@@ -131,8 +189,8 @@ class Home(object):
             if exist_rate:
                 u_rate = exist_rate.value
 
-            for k, i in reviews.items():
-                i['user_vote'] = get_user_review_rating(k)
+            for i in reviews:
+                i['user_vote'] = get_user_review_rating(i['id'])
 
         book = {
             'id': book_query.id,
@@ -172,7 +230,7 @@ class Home(object):
         image = p.get('image')
         name = p.get('name')
 
-        if image == None:
+        if image is None:
             return dict('')
 
         file_type = image.filename.split('.')[-1]
@@ -216,7 +274,8 @@ class Home(object):
             return dict()
 
         reviews_query = self.DBSession.query(Review.id, Review.body, Review._date, Review.modified, User.first_name,
-                                             User.last_name).join(User, User.email == Review.user_id).filter(
+                                             User.last_name, User.avatar).join(User,
+                                                                               User.email == Review.user_id).filter(
             Review.book_id == id).order_by(desc(Review._date))
 
         reviews = [
@@ -226,9 +285,12 @@ class Home(object):
                 'date': i._date.strftime("%Y-%m-%d %H:%M"),
                 'modified': i.modified,
                 'user_fname': i.first_name,
-                'user_lname': i.last_name
+                'user_lname': i.last_name,
+                'user_avatar': i.avatar
             } for i in reviews_query
         ]
+
+        sorted_reviews = sorted(reviews.keys(), key=lambda x: x, reverse=True)
 
         return dict(reviews=reviews)
 
@@ -299,3 +361,70 @@ class Home(object):
         }
 
         return dict(review=review)
+
+    @view_config(route_name='avatar_change', renderer='json', permission='view')
+    def avatar_change(self):
+        p = self.request.POST
+
+        image = p.get('image')
+
+        if image is None:
+            return dict(success=False)
+
+        file_type = image.filename.split('.')[-1]
+
+        current_date = str(datetime.datetime.now()).replace(':', '').replace(' ', '').replace('.', '')
+
+        filename = '{0}{1}.{2}'.format(current_date,
+                                       self.request.authenticated_userid.replace('.', '_').replace('@', '-'), file_type)
+        file = image.file
+        filepath = str(os.path.dirname(__file__)) + '/../static/img/users/'
+
+        user_image = self.DBSession.query(User.avatar).filter(User.email == self.request.authenticated_userid).first()[
+            0]
+
+        if user_image:
+            os.remove(filepath + user_image)
+
+        with open(filepath + filename, 'wb') as output_file:
+            shutil.copyfileobj(file, output_file)
+
+        self.DBSession.query(User).filter(User.email == self.request.authenticated_userid).update({"avatar": filename})
+
+        return dict(success=True, image=filename)
+
+    @view_config(route_name='change_data', renderer='json', permission='view')
+    def change_data(self):
+        j = self.request.json_body
+
+        fname = j.get('fname')
+        lname = j.get('lname')
+
+        self.DBSession.query(User).filter(User.email == self.request.authenticated_userid).update(
+            {'first_name': fname, 'last_name': lname})
+
+        self.session['logged_as']['first_name'] = fname
+        self.session['logged_as']['last_name'] = lname
+
+        return dict()
+
+    @view_config(route_name='change_password', renderer='json', permission='view')
+    def change_password(self):
+        j = self.request.json_body
+
+        user_password = self.DBSession.query(User).filter(
+            User.email == self.request.authenticated_userid).first().password
+
+        if not bcrypt.verify(j['old_password'], user_password):
+            return dict(error='Old password is incorrect!')
+
+        if not j['new_password'] or not j['confirm_password']:
+            return dict(error='Passwords are invalid!')
+
+        if not j['new_password'] == j['confirm_password']:
+            return dict(error='Passwords are invalid!')
+
+        self.DBSession.query(User).filter(User.email == self.request.authenticated_userid).update(
+            {'password': bcrypt.encrypt(j['confirm_password'])})
+
+        return dict()

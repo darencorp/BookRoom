@@ -16,7 +16,7 @@ def include_js(config):
         'node_modules/angular/angular.min.js',
         'node_modules/angular-ui-router/release/angular-ui-router.min.js',
         'node_modules/angular-swx-session-storage/release/swx-session-storage.min.js',
-
+        'node_modules/underscore/underscore-min.js',
 
         'js/lib/jquery.nano.js',
 
@@ -27,7 +27,7 @@ def include_js(config):
         'js/controllers/catalogue.ctrl.js',
         'js/controllers/book.ctrl.js',
         'js/controllers/newBook.ctrl.js',
-        'js/controllers/user_page.ctrl.js',
+        'js/controllers/userPage.ctrl.js',
         'js/controllers/search.ctrl.js',
 
         'js/services/home.service.js',
@@ -57,7 +57,7 @@ def main(global_config, **settings):
     """
     config = Configurator(settings=settings)
 
-    config.set_session_factory(SignedCookieSessionFactory('secret', max_age=1200))
+    config.set_session_factory(SignedCookieSessionFactory('secret', max_age=60 * 60 * 24))
     config.set_authorization_policy(ACLAuthorizationPolicy())
     config.set_authentication_policy(SessionAuthenticationPolicy('secret', callback=groupfinder))
     config.set_root_factory(Root)

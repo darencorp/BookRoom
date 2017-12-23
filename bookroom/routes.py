@@ -10,7 +10,7 @@ def includeme(config):
 
     config.add_route('catalogue', '/catalogue')
     config.add_route('get_catalogue', '/get_catalogue')
-    config.add_route('user', '/user')
+    config.add_route('user', '/user/{id}')
     config.add_route('small_search', '/front_search')
     config.add_route('global_search', '/search')
     config.add_route('get_book', '/book/{id}')
@@ -21,3 +21,7 @@ def includeme(config):
     config.add_route('update_reviews', '/update_reviews')
     config.add_route('vote_book', '/vote_book')
     config.add_route('vote_review', '/vote_review')
+
+    config.add_route('avatar_change', '/avatar_change')
+    config.add_route('change_data', '/change_data')
+    config.add_route('change_password', '/change_password')

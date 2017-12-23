@@ -17,7 +17,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    z-index: -1;
+    z-index: -3;
 }
 
 .menu {
@@ -37,6 +37,7 @@ body {
         left: 0px;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
     }
 
     .menu-button {
@@ -145,6 +146,7 @@ body {
         left: 0px;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
     }
 
     .menu-button {

@@ -6,8 +6,8 @@
 <%block name='main'>
     <div ng-controller="BookCtrl as bctrl" class="uk-width-1-1 uk-flex uk-flex-center" uk-height-viewport ng-init="bctrl.init(${book_id})">
         <div class="uk-width-3-4 home-menu-body">
-            <div class="uk-flex uk-hei">
-                <div class="uk-width-5-6 uk-height-1-1 uk-flex uk-flex-column">
+            <div class="uk-flex">
+                <div class="uk-width-5-6 uk-flex uk-flex-column">
                     <div class="uk-width-1-1 uk-height-1-2 uk-flex main-book">
                         <div class="uk-width-1-5 uk-margin-large-top uk-margin-medium-left uk-flex uk-flex-center">
                             <div class="uk-width-3-4">
@@ -109,15 +109,18 @@
                                 %endif
                             </div>
                             <div class="uk-margin-medium-top">
-                                <div class="uk-flex uk-flex-column" ng-repeat="(review_id, review) in bctrl.reviews">
+                                <div class="uk-flex uk-flex-column" ng-repeat="review in bctrl.reviews">
                                     <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom uk-box-shadow-hover-medium">
                                         <div class="uk-width-1-6">
-                                            <img class="uk-width-1-2" src="../static/img/unknown_user.png"/>
+                                            <a ng-href="/user/{{review.user_id}}" class="uk-link">
+                                                <img ng-if="review.user_avatar == null" class="uk-width-1-2" src="../static/img/unknown_user.png"/>
+                                                <img ng-if="review.user_avatar != null" class="uk-width-1-2" ng-src="../static/img/users/{{review.user_avatar}}"/>
+                                            </a>
                                         </div>
                                         <div class="uk-width-5-6 review-body uk-flex">
                                             <div class="uk-width-9-10 uk-flex uk-flex-column">
                                                 <div class="review-title">
-                                                    {{review.user_fname}} {{review.user_lname}}
+                                                    <a ng-href="/user/{{review.user_id}}" class="review-author">{{review.user_fname}} {{review.user_lname}}</a>
                                                     <div class="uk-text-small uk-text-muted">{{review.date}}</div>
                                                 </div>
                                                 <div>
@@ -130,7 +133,7 @@
                                                 <div class="uk-width-1-5 uk-margin-left uk-flex uk-flex-column uk-flex-center">
                                                     <div class="uk-flex">
                                                         <div class="review-button uk-text-success review-button-up" ng-class="{'uk-box-shadow-medium': review.user_vote != true}"
-                                                             ng-click="bctrl.voteReview(review_id, true)"
+                                                             ng-click="bctrl.voteReview(review.id, true)"
                                                              uk-icon="icon: chevron-up"></div>
                                                         <div class="uk-text-small uk-margin-small-left review-button-text">
                                                             {{review.true_rating}}
@@ -138,7 +141,7 @@
                                                     </div>
                                                     <div class="uk-flex">
                                                         <div class="uk-text-danger review-button" ng-class="{'uk-box-shadow-medium': review.user_vote != false}"
-                                                             ng-click="bctrl.voteReview(review_id, false)"
+                                                             ng-click="bctrl.voteReview(review.id, false)"
                                                              uk-icon="icon: chevron-down"></div>
                                                         <div class="uk-text-small uk-margin-small-left uk-text-danger">
                                                             {{review.false_rating}}

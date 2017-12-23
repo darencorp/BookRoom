@@ -1,4 +1,9 @@
 angular.module('BookRoomApp')
+    .filter('reverse', function () {
+        return function (items) {
+            return items.slice().reverse();
+        }
+    })
     .controller('BookCtrl', function ($scope, $rootScope, $http) {
         var $this = this;
 
@@ -69,9 +74,12 @@ angular.module('BookRoomApp')
             };
 
             $http.post('/vote_review', vote).then(function (ret) {
-                $this.reviews[review_id].true_rating = ret.data.review.true_rating;
-                $this.reviews[review_id].false_rating = ret.data.review.false_rating;
-                $this.reviews[review_id].user_vote = rating;
+
+                var r = _.find($this.reviews, function(review){ return review.id == review_id; });
+
+                r.true_rating = ret.data.review.true_rating;
+                r.false_rating = ret.data.review.false_rating;
+                r.user_vote = rating;
             });
         }
     });

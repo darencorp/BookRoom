@@ -64,18 +64,15 @@
 
 span + .rating-input + .rating-label, legend + .rating-input + .rating-label {
     clear: right;
-    counter-reset: checkbox;
 }
 
 .rating-input:checked ~ .rating-label.stars {
     background-image: url('/static/img/star.png');
-    counter-increment: checkbox;
 }
 
 .rating-label.stars:hover ~ .rating-label.stars,
 .rating-label.stars:hover{
     background-image: url('/static/img/star.png');
-    counter-increment: checkbox;
 }
 
 /*disabled*/
@@ -99,13 +96,29 @@ span + .rating-input + .rating-label, legend + .rating-input + .rating-label {
 
 span + .disabled-rating-input + .disabled-rating-label, legend + .disabled-rating-input + .disabled-rating-label {
     clear: right;
-    counter-reset: checkbox;
 }
 
 .disabled-rating-input:checked ~ .disabled-rating-label.stars {
     background-image: url('/static/img/star.png');
-    counter-increment: checkbox;
 }
 
 .review-voted-up {
+}
+
+.user-avatar {
+    z-index: 0;
+}
+
+.review-author {
+    color: #666;
+}
+
+.review-author:hover {
+    text-decoration: underline;
+    color: #666;
+}
+
+.review-author:active {
+    text-decoration: underline;
+    color: #666;
 }
