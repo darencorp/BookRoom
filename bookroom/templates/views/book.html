@@ -4,7 +4,8 @@
 <%include file="../forms/register-form.html"/>
 
 <%block name='main'>
-    <div ng-controller="BookCtrl as bctrl" class="uk-width-1-1 uk-flex uk-flex-center" uk-height-viewport ng-init="bctrl.init(${book_id})">
+    <div ng-controller="BookCtrl as bctrl" class="uk-width-1-1 uk-flex uk-flex-center" uk-height-viewport
+         ng-init="bctrl.init(${book_id})">
         <div class="uk-width-3-4 home-menu-body">
             <div class="uk-flex">
                 <div class="uk-width-5-6 uk-flex uk-flex-column">
@@ -31,24 +32,28 @@
                             </div>
                             <div class="uk-flex uk-flex-column">
                                 %if request.has_permission('view'):
-                                    <div class="uk-width-1-4">
-                                        <input class="rating-input" type="radio" name="stars" value="5" id="4_stars"
-                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
-                                        <label class="uk-width-1-5 rating-label stars" for="4_stars">4 stars</label>
-                                        <input class="rating-input" type="radio" name="stars" value="4" id="3_stars"
-                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
-                                        <label class="uk-width-1-5 rating-label stars" for="3_stars">3 stars</label>
-                                        <input class="rating-input" type="radio" name="stars" value="3" id="2_stars"
-                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
-                                        <label class="uk-width-1-5 rating-label stars" for="2_stars">2 stars</label>
-                                        <input class="rating-input" type="radio" name="stars" value="2" id="1_stars"
-                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
-                                        <label class="uk-width-1-5 rating-label stars" for="1_stars">1 star</label>
-                                        <input class="rating-input" type="radio" name="stars" value="1" id="0_stars"
-                                               ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
-                                        <label class="uk-width-1-5 rating-label stars" for="0_stars">0 star</label>
+                                    <div class="uk-flex">
+                                        <div class="uk-width-1-4">
+                                            <input class="rating-input" type="radio" name="stars" value="5" id="4_stars"
+                                                   ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                            <label class="uk-width-1-5 rating-label stars" for="4_stars">4 stars</label>
+                                            <input class="rating-input" type="radio" name="stars" value="4" id="3_stars"
+                                                   ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                            <label class="uk-width-1-5 rating-label stars" for="3_stars">3 stars</label>
+                                            <input class="rating-input" type="radio" name="stars" value="3" id="2_stars"
+                                                   ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                            <label class="uk-width-1-5 rating-label stars" for="2_stars">2 stars</label>
+                                            <input class="rating-input" type="radio" name="stars" value="2" id="1_stars"
+                                                   ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                            <label class="uk-width-1-5 rating-label stars" for="1_stars">1 star</label>
+                                            <input class="rating-input" type="radio" name="stars" value="1" id="0_stars"
+                                                   ng-model="bctrl.rating" ng-change="bctrl.voteBook()">
+                                            <label class="uk-width-1-5 rating-label stars" for="0_stars">0 star</label>
+                                        </div>
+                                        <div class="uk-text-muted uk-margin-small-left">{{bctrl.rating || 0}}</div>
                                     </div>
-                                    <div ng-if="bctrl.my_rating.length == 1" class="uk-text-muted">My vote:
+                                    <div ng-if="bctrl.my_rating.length == 1" class="uk-text-muted uk-margin-small-left">
+                                        My vote:
                                         {{bctrl.my_rating}}
                                     </div>
                                 %else:
@@ -113,14 +118,17 @@
                                     <div class="uk-flex uk-width-1-1 uk-margin-medium-bottom uk-box-shadow-hover-medium">
                                         <div class="uk-width-1-6">
                                             <a ng-href="/user/{{review.user_id}}" class="uk-link">
-                                                <img ng-if="review.user_avatar == null" class="uk-width-1-2" src="../static/img/unknown_user.png"/>
-                                                <img ng-if="review.user_avatar != null" class="uk-width-1-2" ng-src="../static/img/users/{{review.user_avatar}}"/>
+                                                <img ng-if="review.user_avatar == null" class="uk-width-1-2"
+                                                     src="../static/img/unknown_user.png"/>
+                                                <img ng-if="review.user_avatar != null" class="uk-width-1-2"
+                                                     ng-src="../static/img/users/{{review.user_avatar}}"/>
                                             </a>
                                         </div>
                                         <div class="uk-width-5-6 review-body uk-flex">
                                             <div class="uk-width-9-10 uk-flex uk-flex-column">
                                                 <div class="review-title">
-                                                    <a ng-href="/user/{{review.user_id}}" class="review-author">{{review.user_fname}} {{review.user_lname}}</a>
+                                                    <a ng-href="/user/{{review.user_id}}" class="review-author">{{review.user_fname}}
+                                                        {{review.user_lname}}</a>
                                                     <div class="uk-text-small uk-text-muted">{{review.date}}</div>
                                                 </div>
                                                 <div>
@@ -132,7 +140,8 @@
                                             % if request.has_permission('view'):
                                                 <div class="uk-width-1-5 uk-margin-left uk-flex uk-flex-column uk-flex-center">
                                                     <div class="uk-flex">
-                                                        <div class="review-button uk-text-success review-button-up" ng-class="{'uk-box-shadow-medium': review.user_vote != true}"
+                                                        <div class="review-button uk-text-success review-button-up"
+                                                             ng-class="{'uk-box-shadow-medium': review.user_vote != true}"
                                                              ng-click="bctrl.voteReview(review.id, true)"
                                                              uk-icon="icon: chevron-up"></div>
                                                         <div class="uk-text-small uk-margin-small-left review-button-text">
@@ -140,7 +149,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="uk-flex">
-                                                        <div class="uk-text-danger review-button" ng-class="{'uk-box-shadow-medium': review.user_vote != false}"
+                                                        <div class="uk-text-danger review-button"
+                                                             ng-class="{'uk-box-shadow-medium': review.user_vote != false}"
                                                              ng-click="bctrl.voteReview(review.id, false)"
                                                              uk-icon="icon: chevron-down"></div>
                                                         <div class="uk-text-small uk-margin-small-left uk-text-danger">
@@ -149,7 +159,7 @@
                                                     </div>
                                                 </div>
                                             % else:
-                                                <div class="uk-width-1-5 uk-margin-left uk-flex uk-flex-column uk-flex-center" >
+                                                <div class="uk-width-1-5 uk-margin-left uk-flex uk-flex-column uk-flex-center">
                                                     <div class="uk-flex">
                                                         <div class="uk-text-success review-button review-button-up"
                                                              uk-icon="icon: chevron-up"></div>

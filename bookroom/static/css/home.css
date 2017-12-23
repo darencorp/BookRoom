@@ -109,12 +109,17 @@ span + .disabled-rating-input + .disabled-rating-label, legend + .disabled-ratin
     z-index: 0;
 }
 
+.book-name-link:hover {
+    text-decoration-color: #333;
+}
+
 .review-author {
     color: #666;
 }
 
 .review-author:hover {
     text-decoration: underline;
+    text-decoration-color: #666;
     color: #666;
 }
 

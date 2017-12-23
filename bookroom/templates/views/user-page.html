@@ -82,15 +82,13 @@
                                         <div class="uk-width-1-1 uk-flex" ng-repeat="book in upctrl.book_stared">
                                             <div class="uk-width-1-6 uk-flex uk-flex-center">
                                                 <a ng-href="/book/{{book.id}}">
-                                                    <div class="">
-                                                        <img class="uk-width-1-1 uk-margin-top"
-                                                             ng-src="/static/img/books/{{book.image}}">
-                                                    </div>
+                                                    <img class="uk-width-1-1 uk-margin-top"
+                                                         ng-src="/static/img/books/{{book.image}}">
                                                 </a>
                                             </div>
                                             <div class="uk-width-xxlarge uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right uk-margin-medium-bottom">
                                                 <div>
-                                                    <a ng-href="/book/{{book.id}}">
+                                                    <a ng-href="/book/{{book.id}}" class="book-name-link">
                                                         <div class="uk-margin-remove uk-text-lead">{{book.name}}</div>
                                                     </a>
                                                     <div class="catalogue-book-author uk-text-bold">{{book.author}}
@@ -153,17 +151,15 @@
                                         <div class="uk-width-1-6">
                                             <div class="uk-flex uk-flex-center">
                                                 <a ng-href="/book/{{book.id}}">
-                                                    <div>
-                                                        <img class="uk-width-1-1 uk-margin-top"
-                                                             ng-src="/static/img/books/{{book.image}}">
-                                                    </div>
+                                                    <img class="uk-width-1-1 uk-margin-top"
+                                                         ng-src="/static/img/books/{{book.image}}">
                                                 </a>
                                             </div>
 
                                         </div>
                                         <div class="uk-width-xxlarge uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right uk-margin-medium-bottom">
                                             <div>
-                                                <a ng-href="/book/{{book.id}}">
+                                                <a ng-href="/book/{{book.id}}" class="book-name-link">
                                                     <div class="uk-margin-remove uk-text-lead">{{book.name}}</div>
                                                 </a>
                                                 <div class="catalogue-book-author uk-text-bold">{{book.author}}

@@ -71,9 +71,23 @@
                                             </div>
                                             <div class="uk-width-4-6 uk-flex uk-flex-column uk-margin-top uk-margin-medium-left uk-margin-right uk-margin-medium-bottom">
                                                 <div>
-                                                    <a ng-href="/book/{{book.id}}">
-                                                        <div class="uk-margin-remove uk-text-lead">{{book.name}}</div>
-                                                    </a>
+                                                    <div class="uk-flex">
+                                                        <a ng-href="/book/{{book.id}}"
+                                                           class="uk-width-5-6 book-name-link">
+                                                            <div class="uk-margin-remove uk-text-lead">{{book.name}}
+                                                            </div>
+                                                        </a>
+
+                                                        %if request.has_permission('admin'):
+                                                            <div class="uk-margin-small-top uk-margin-large-left uk-flex">
+                                                                <a class="uk-icon-link"
+                                                                     uk-icon="icon: file-edit; ratio:0.9"></a>
+                                                                &nbsp;
+                                                                <a class="uk-icon-link"
+                                                                     uk-icon="icon: trash; ratio:0.9"></a>
+                                                            </div>
+                                                        %endif
+                                                    </div>
                                                     <div class="catalogue-book-author uk-text-bold">{{book.author}}
                                                     </div>
                                                 </div>

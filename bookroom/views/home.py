@@ -8,10 +8,10 @@ from pyramid.view import view_config
 from sqlalchemy import func, desc, and_
 from bookroom.models.facades.home_facade import HomeFacade
 from bookroom.models.Book import Book
-from models.BookRating import BookRating
-from models.RaviewRating import ReviewRating
-from models.User import User
-from models.Review import Review
+from bookroom.models.BookRating import BookRating
+from bookroom.models.RaviewRating import ReviewRating
+from bookroom.models.User import User
+from bookroom.models.Review import Review
 
 
 class Home(object):
@@ -206,46 +206,6 @@ class Home(object):
 
         return dict(book=book, reviews=reviews, user_rating=user_rate, avg_rating=avg_rating)
 
-    @view_config(route_name='add_book', renderer='json', permission='admin')
-    def add_book(self):
-        r = self.request
-        j = r.json
-
-        name = j['name']
-        author = j.get('author')
-        year = j.get('year', 0)
-        genre = j.get('genre')
-        description = j.get('description')
-        image = j.get('image')
-
-        book = Book(name, author, year, genre, description, image)
-
-        self.DBSession.add(book)
-        return dict()
-
-    @view_config(route_name='image_upload', renderer='json', permission='admin')
-    def image_upload(self):
-        p = self.request.POST
-
-        image = p.get('image')
-        name = p.get('name')
-
-        if image is None:
-            return dict('')
-
-        file_type = image.filename.split('.')[-1]
-
-        current_date = str(datetime.datetime.now()).replace('.', '').replace(' ', '').replace(':', '')
-
-        filename = '{0}{1}.{2}'.format(current_date, name, file_type).replace(' ', '')
-        file = image.file
-        filepath = str(os.path.dirname(__file__)) + '/../static/img/books/'
-
-        with open(filepath + filename, 'wb') as output_file:
-            shutil.copyfileobj(file, output_file)
-
-        return filename
-
     @view_config(route_name='add_review', renderer='json', permission='view')
     def add_review(self):
         r = self.request
@@ -289,8 +249,6 @@ class Home(object):
                 'user_avatar': i.avatar
             } for i in reviews_query
         ]
-
-        sorted_reviews = sorted(reviews.keys(), key=lambda x: x, reverse=True)
 
         return dict(reviews=reviews)
 
