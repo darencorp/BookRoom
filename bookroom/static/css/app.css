@@ -296,3 +296,7 @@ span + .main-rating-input + .main-rating-label, legend + .main-rating-input + .m
     background-image: url('/static/img/star.png');
     counter-increment: checkbox;
 }
+
+#searchDrop {
+    min-width: 17em;
+}

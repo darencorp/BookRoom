@@ -8,7 +8,7 @@ from pyramid.view import view_config
 from bookroom.models.Book import Book
 
 
-class Admin(object):
+class AdminView(object):
     def __init__(self, request):
         self.request = request
         self.DBSession = request.dbsession

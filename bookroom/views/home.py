@@ -1,20 +1,17 @@
-import datetime
-import os
-import shutil
+import json
 
-from passlib.handlers.bcrypt import bcrypt
 from pyramid.httpexceptions import HTTPNotFound
 from pyramid.view import view_config
-from sqlalchemy import func, desc, and_
+from sqlalchemy import func, desc, and_, or_
 from bookroom.models.facades.home_facade import HomeFacade
 from bookroom.models.Book import Book
 from bookroom.models.BookRating import BookRating
-from bookroom.models.RaviewRating import ReviewRating
+from bookroom.models.ReviewRating import ReviewRating
 from bookroom.models.User import User
 from bookroom.models.Review import Review
 
 
-class Home(object):
+class HomeView(object):
     def __init__(self, request):
         self.request = request
         self.DBSession = request.dbsession
@@ -117,15 +114,104 @@ class Home(object):
 
     @view_config(route_name='small_search', renderer='json')
     def small_search(self):
-        return dict()
+        j = self.request.json
+        s = self.session
+
+        c = j.get('criteria', s.get('search_criteria', ''))
+        s['search_criteria'] = c
+
+        book_query = self.DBSession.query(Book.id, Book.name, Book.image).filter(Book.name.like('%'+c+'%')).all()
+        user_query = self.DBSession.query(User.id, User.first_name, User.last_name, User.avatar).filter(or_(User.first_name.like(c+'%'), User.last_name.like(c+'%'))).all()
+        genre_query = self.DBSession.query(Book.genre).filter(Book.genre.like(c+'%')).distinct().all()
+
+        book_data = [
+            {
+                'type': 'book',
+                'id': i.id,
+                'name': i.name,
+                'image': i.image,
+                'key': i.name
+            } for i in book_query
+        ]
+
+        user_data = [
+            {
+                'type': 'user',
+                'id': i.id,
+                'first_name': i.first_name,
+                'last_name': i.last_name,
+                'avatar': i.avatar,
+                'key': i.first_name
+            } for i in user_query
+        ]
+
+        genre_data = [
+            {
+                'type': 'genre',
+                'genre': i.genre,
+                'key': i.genre
+            } for i in genre_query
+        ]
+
+        result = book_data + user_data + genre_data
+
+        sorted_results = sorted(result, key=lambda x: x['key'])
+
+        if len(sorted_results) > 3:
+            sorted_results = sorted_results[0:3]
+
+        return sorted_results
 
     @view_config(route_name='global_search', renderer='../templates/views/search.html')
     @view_config(route_name='global_search', xhr=True, renderer='json')
     def global_search(self):
-        if not self.request.is_xhr:
-            return dict()
+        p = self.request.params
+        s = self.request.session
 
-        return dict()
+        is_genre = p.get('t')
+
+        c = p.get('q', s.get('search_criteria', ''))
+        s['search_criteria'] = c
+
+        if not self.request.is_xhr:
+            return dict(query=c, is_genre=is_genre)
+
+        book_query = self.DBSession.query(Book.id, Book.name, Book.image).filter(Book.name.like('%' + c + '%')).all()
+        user_query = self.DBSession.query(User.id, User.first_name, User.last_name, User.avatar).filter(
+            or_(User.first_name.like(c + '%'), User.last_name.like(c + '%'))).all()
+
+        genre_query = self.DBSession.query(Book.id, Book.name, Book.image).filter(Book.genre.like(c+'%')).all()
+
+        book_data = [
+            {
+                'type': 'book',
+                'id': i.id,
+                'name': i.name,
+                'image': i.image
+            } for i in book_query
+        ]
+
+        user_data = [
+            {
+                'type': 'user',
+                'id': i.id,
+                'first_name': i.first_name,
+                'last_name': i.last_name,
+                'avatar': i.avatar
+            } for i in user_query
+        ]
+
+        genre_data = [
+            {
+                'id': i.id,
+                'name': i.name,
+                'image': i.image
+            } for i in genre_query
+        ]
+
+        result = book_data + user_data
+
+        return dict(results=result, query=c, genre_results=genre_data)
 
     @view_config(route_name='get_book', renderer='../templates/views/book.html')
     @view_config(route_name='get_book', xhr=True, renderer='json')
@@ -205,184 +291,3 @@ class Home(object):
         user_rate = u_rate if u_rate else False
 
         return dict(book=book, reviews=reviews, user_rating=user_rate, avg_rating=avg_rating)
-
-    @view_config(route_name='add_review', renderer='json', permission='view')
-    def add_review(self):
-        r = self.request
-        j = r.json_body
-
-        body = j.get('body')
-        book_id = int(j.get('book'))
-        user_id = r.authenticated_userid
-
-        now = datetime.datetime.now().replace(microsecond=0)
-
-        review = Review(user_id, book_id, body, now, False)
-
-        self.DBSession.add(review)
-
-        return dict()
-
-    @view_config(route_name='update_reviews', renderer='json')
-    def update_reviews(self):
-        r = self.request
-        _id = r.json_body
-
-        try:
-            id = int(_id)
-        except ValueError:
-            return dict()
-
-        reviews_query = self.DBSession.query(Review.id, Review.body, Review._date, Review.modified, User.first_name,
-                                             User.last_name, User.avatar).join(User,
-                                                                               User.email == Review.user_id).filter(
-            Review.book_id == id).order_by(desc(Review._date))
-
-        reviews = [
-            {
-                'id': i.id,
-                'body': i.body,
-                'date': i._date.strftime("%Y-%m-%d %H:%M"),
-                'modified': i.modified,
-                'user_fname': i.first_name,
-                'user_lname': i.last_name,
-                'user_avatar': i.avatar
-            } for i in reviews_query
-        ]
-
-        return dict(reviews=reviews)
-
-    @view_config(route_name='vote_book', renderer='json', permission='view')
-    def vote_book(self):
-        r = self.request
-        j = r.json_body
-
-        _book_id = j.get('book_id')
-        user_id = r.authenticated_userid
-        rating = j.get('rating')
-
-        try:
-            book_id = int(_book_id)
-        except ValueError:
-            return dict()
-
-        exist_rate = self.DBSession.query(BookRating).filter(
-            and_(BookRating.user_id == user_id, BookRating.book_id == book_id)).first()
-
-        if exist_rate:
-            self.DBSession.query(BookRating).filter(
-                and_(BookRating.user_id == user_id, BookRating.book_id == book_id)).update({"value": rating})
-        else:
-            book_rating = BookRating(user_id, book_id, rating)
-            self.DBSession.add(book_rating)
-
-        rate_query = self.DBSession.query(func.avg(BookRating.value)).filter(BookRating.book_id == book_id).first()
-        avg_rating = int(rate_query[0])
-
-        return dict(avg_rating=avg_rating)
-
-    @view_config(route_name='vote_review', renderer='json', permission='view')
-    def vote_review(self):
-        r = self.request
-        j = r.json_body
-
-        _review_id = j.get('review_id')
-        user_id = r.authenticated_userid
-        rating = j.get('rating')
-
-        try:
-            review_id = int(_review_id)
-        except ValueError:
-            return dict()
-
-        exist_rate = self.DBSession.query(ReviewRating).filter(
-            and_(ReviewRating.user_id == user_id, ReviewRating.review_id == review_id)).first()
-
-        if exist_rate:
-            self.DBSession.query(ReviewRating).filter(
-                and_(ReviewRating.user_id == user_id, ReviewRating.review_id == review_id)).update({"value": rating})
-        else:
-            review_rating = ReviewRating(user_id, review_id, rating)
-            self.DBSession.add(review_rating)
-
-        review_query = self.DBSession.query(Review.id, self.DBSession.query(func.count(ReviewRating.id)).filter(
-            and_(ReviewRating.value == True,
-                 ReviewRating.review_id == Review.id)).label('t_value'),
-                                            self.DBSession.query(func.count(ReviewRating.id)).filter(
-                                                and_(ReviewRating.value == False,
-                                                     ReviewRating.review_id == Review.id)).label('f_value')).filter(
-            Review.id == review_id).first()
-
-        review = {
-            'true_rating': review_query.t_value,
-            'false_rating': review_query.f_value
-        }
-
-        return dict(review=review)
-
-    @view_config(route_name='avatar_change', renderer='json', permission='view')
-    def avatar_change(self):
-        p = self.request.POST
-
-        image = p.get('image')
-
-        if image is None:
-            return dict(success=False)
-
-        file_type = image.filename.split('.')[-1]
-
-        current_date = str(datetime.datetime.now()).replace(':', '').replace(' ', '').replace('.', '')
-
-        filename = '{0}{1}.{2}'.format(current_date,
-                                       self.request.authenticated_userid.replace('.', '_').replace('@', '-'), file_type)
-        file = image.file
-        filepath = str(os.path.dirname(__file__)) + '/../static/img/users/'
-
-        user_image = self.DBSession.query(User.avatar).filter(User.email == self.request.authenticated_userid).first()[
-            0]
-
-        if user_image:
-            os.remove(filepath + user_image)
-
-        with open(filepath + filename, 'wb') as output_file:
-            shutil.copyfileobj(file, output_file)
-
-        self.DBSession.query(User).filter(User.email == self.request.authenticated_userid).update({"avatar": filename})
-
-        return dict(success=True, image=filename)
-
-    @view_config(route_name='change_data', renderer='json', permission='view')
-    def change_data(self):
-        j = self.request.json_body
-
-        fname = j.get('fname')
-        lname = j.get('lname')
-
-        self.DBSession.query(User).filter(User.email == self.request.authenticated_userid).update(
-            {'first_name': fname, 'last_name': lname})
-
-        self.session['logged_as']['first_name'] = fname
-        self.session['logged_as']['last_name'] = lname
-
-        return dict()
-
-    @view_config(route_name='change_password', renderer='json', permission='view')
-    def change_password(self):
-        j = self.request.json_body
-
-        user_password = self.DBSession.query(User).filter(
-            User.email == self.request.authenticated_userid).first().password
-
-        if not bcrypt.verify(j['old_password'], user_password):
-            return dict(error='Old password is incorrect!')
-
-        if not j['new_password'] or not j['confirm_password']:
-            return dict(error='Passwords are invalid!')
-
-        if not j['new_password'] == j['confirm_password']:
-            return dict(error='Passwords are invalid!')
-
-        self.DBSession.query(User).filter(User.email == self.request.authenticated_userid).update(
-            {'password': bcrypt.encrypt(j['confirm_password'])})
-
-        return dict()

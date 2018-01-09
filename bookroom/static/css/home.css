@@ -127,3 +127,7 @@ span + .disabled-rating-input + .disabled-rating-label, legend + .disabled-ratin
     text-decoration: underline;
     color: #666;
 }
+
+.global-search-result:hover {
+    cursor: pointer;
+}

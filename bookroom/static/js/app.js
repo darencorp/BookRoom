@@ -30,9 +30,10 @@ var app = angular.module('BookRoomApp', [
         }
     ])
 
-    .controller('AppCtrl', function ($scope, $rootScope, $sessionStorage) {
+    .controller('AppCtrl', function ($scope, $rootScope, $sessionStorage, $http) {
         $scope.init = function () {
-            $scope.searchCriteria = $rootScope.searchCriteria;
+            if ($rootScope.searchCriteria == null)
+                $scope.searchCriteria = '';
         };
 
         $scope.openLoginForm = function () {
@@ -40,8 +41,21 @@ var app = angular.module('BookRoomApp', [
         };
 
         $scope.searchChange = function () {
-            $sessionStorage.put('searchCriteria', $rootScope.searchCriteria)
+            if ($rootScope.searchCriteria != null && $rootScope.searchCriteria.length > 0) {
+
+                $rootScope.genreSearch = false;
+
+                $http.post('/front_search', {'criteria': $rootScope.searchCriteria}).then(function (ret) {
+                    $scope.results = ret.data;
+                    UIkit.dropdown('#searchDrop').show();
+                })
+            }
         };
 
         $scope.init();
+
+        $scope.genreSearch = function (genre) {
+            $rootScope.genreSearch = true;
+            return '/search?q=' + genre
+        }
     });

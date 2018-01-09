@@ -8,7 +8,7 @@ from bookroom.models import User
 from bookroom.models.facades.home_facade import HomeFacade
 
 
-class Common(object):
+class CommonView(object):
     def __init__(self, request):
         self.request = request
         self.DBSession = request.dbsession

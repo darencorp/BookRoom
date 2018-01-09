@@ -32,9 +32,58 @@
                     <div class="uk-flex-middle">
                         <form class="uk-margin-left uk-inline" method="GET" action="/search">
                             <span class="header-search-icon uk-form-icon" uk-icon="icon: search"></span>
-                            <input ng-change="searchChange()" name="q" ng-model="$root.searchCriteria"
+                            <input ng-change="searchChange()" ng-click="searchChange()"
+                                   ng-model-options="{ debounce: 300 }" name="q"
+                                   ng-model="$root.searchCriteria"
                                    class="uk-input menu-input"
-                                   placeholder="Search">
+                                   placeholder="Search" autocomplete="off">
+                            <div id="searchDrop" uk-dropdown="mode: none, duration: 100">
+                                <div ng-repeat="result in results">
+                                    <div ng-if="result.type == 'book'" class="uk-margin-small-bottom">
+                                        <div class="uk-flex">
+                                            <div class="uk-width-1-5">
+                                                <a ng-href="/book/{{result.id}}"><img
+                                                        ng-src="/static/img/books/{{result.image}}"/></a>
+                                            </div>
+                                            <div class="uk-margin-small-left uk-margin-top uk-text-middle uk-text-truncate">
+                                                <a ng-href="/book/{{result.id}}"
+                                                   class="uk-link-reset">{{result.name}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div ng-if="result.type == 'user'" class="uk-margin-small-bottom">
+                                        <div class="uk-flex">
+                                            <div ng-if="result.avatar == null" class="uk-width-1-5">
+                                                <a ng-href="/user/{{result.id}}"><img
+                                                        ng-src="/static/img/unknown_user.png"/></a>
+                                            </div>
+                                            <div ng-if="result.avatar != null" class="uk-width-1-5">
+                                                <a ng-href="/user/{{result.id}}"><img
+                                                        ng-src="/static/img/users/{{result.avatar}}"/></a>
+                                            </div>
+                                            <div class="uk-margin-small-left uk-text-middle uk-margin-small-top uk-text-truncate">
+                                                <a ng-href="/user/{{result.id}}" class="uk-link-reset">{{result.first_name}}
+                                                    {{result.last_name}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div ng-if="result.type == 'genre'" class="uk-margin-small-bottom">
+                                        <div class="uk-flex">
+                                            <div class="uk-width-1-5">
+                                            </div>
+                                            <div class="uk-text-middle uk-text-truncate uk-margin-small-left">
+                                                <a ng-href="/search?q={{result.genre}}&t=g" class="uk-link-reset">{{result.genre}} - Genre</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-text-center">
+                                    <a href="/search?q={{$root.searchCriteria}}" class="uk-text-small uk-text-muted">Global
+                                        search</a>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </ul>
