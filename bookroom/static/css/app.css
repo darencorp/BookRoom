@@ -1,11 +1,5 @@
-@font-face {
-    font-family: Darencorp;
-    src: url(http://localhost:6543/fonts/Ubuntu-C.ttf) format("truetype");
-}
-
 body {
-    font-family: Darencorp;
-
+    font-family: Ubuntu Condensed;
 }
 
 .image {
@@ -73,6 +67,7 @@ body {
 
     .main-book-name {
         font-size: 1.5em;
+        text-decoration-color: #333;
     }
 
     .main-book-text {
@@ -86,6 +81,22 @@ body {
 
     .main-review-title {
         font-size: 1.1em;
+    }
+
+    .main-review-user {
+        color: #737373;
+    }
+
+    .main-review-user:hover {
+        color: #737373;
+    }
+
+    .main-review-book {
+        color: #737373;
+    }
+
+    .main-review-book:hover {
+        color: #737373;
     }
 
     .main-reviews-margin {

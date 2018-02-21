@@ -9,7 +9,7 @@ class ReviewRating(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     user_id = Column(Text, ForeignKey('user.email'))
     review_id = Column(Integer, ForeignKey('review.id'))
-    value = Column(Boolean)
+    value = Column(Integer)
 
     def __init__(self, user_id, review_id, value):
         self.user_id = user_id

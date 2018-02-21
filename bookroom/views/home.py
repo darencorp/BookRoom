@@ -240,9 +240,9 @@ class HomeView(object):
         reviews_query = self.DBSession.query(
             Review, User,
             self.DBSession.query(func.count(ReviewRating.id)).filter(
-                and_(ReviewRating.value == True, ReviewRating.review_id == Review.id)).label('t_value'),
+                and_(ReviewRating.value == 1, ReviewRating.review_id == Review.id)).label('t_value'),
             self.DBSession.query(func.count(ReviewRating.id)).filter(
-                and_(ReviewRating.value == False, ReviewRating.review_id == Review.id)).label('f_value')) \
+                and_(ReviewRating.value == -1, ReviewRating.review_id == Review.id)).label('f_value')) \
             .join(User,
                   User.email == Review.user_id).filter(
             Review.book_id == id).order_by(desc(Review._date)).all()

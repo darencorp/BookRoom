@@ -4,8 +4,14 @@ from passlib.handlers.bcrypt import bcrypt
 from pyramid.httpexceptions import HTTPFound
 from pyramid.security import remember, authenticated_userid
 from pyramid.view import view_config, forbidden_view_config
+from sqlalchemy import desc, func
+
 from bookroom.models import User
 from bookroom.models.facades.home_facade import HomeFacade
+from models.Book import Book
+from models.BookRating import BookRating
+from models.Review import Review
+from models.ReviewRating import ReviewRating
 
 
 class CommonView(object):
@@ -23,8 +29,49 @@ class CommonView(object):
         return dict()
 
     @view_config(route_name='index', renderer='../templates/index.html')
-    def my_view(self):
-        return dict()
+    @view_config(route_name='index', xhr=True, renderer='json')
+    def index(self):
+        r = self.request
+
+        if not r.is_xhr:
+            return dict()
+
+        book_query = self.DBSession.query(Book, func.avg(BookRating.value).label("value")).join(BookRating,
+                                                                                                BookRating.book_id == Book.id).group_by(
+            Book.id).order_by(desc("value")).first()
+
+        book = {
+            'id': book_query.Book.id,
+            'name': book_query.Book.name,
+            'author': book_query.Book.author,
+            'year': book_query.Book.year,
+            'desc': book_query.Book.description,
+            'image': book_query.Book.image,
+            'rating': str(int(book_query.value))
+        }
+
+        review_query = self.DBSession.query(Review, Book, User, func.sum(ReviewRating.value).label("value"))\
+            .join(Book, Book.id == Review.book_id)\
+            .join(User, User.email == Review.user_id)\
+            .join(ReviewRating, ReviewRating.review_id == Review.id)\
+            .group_by(Review.id)\
+            .order_by(desc("value"))\
+            .limit(3)
+
+        reviews = [
+            {
+                'body': i.Review.body,
+                'date': i.Review.modified,
+                'book_id': i.Book.id,
+                'book_name': i.Book.name,
+                'user_id': i.User.id,
+                'user_fname': i.User.first_name,
+                'user_lname': i.User.last_name,
+                'user_avatar': i.User.avatar
+            } for i in review_query
+        ]
+
+        return dict(book=book, reviews=reviews)
 
     @view_config(route_name='login', renderer='json')
     @forbidden_view_config(renderer='json')
@@ -123,7 +170,8 @@ class CommonView(object):
 
         self.DBSession.add(user)
 
-        login_user_query = self.DBSession.query(User.id, User.last_name, User.last_name, User.email).filter(User.email == j.get('email')).first()
+        login_user_query = self.DBSession.query(User.id, User.last_name, User.last_name, User.email).filter(
+            User.email == j.get('email')).first()
 
         login_user = {
             'id': login_user_query.id,

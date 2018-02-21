@@ -116,10 +116,10 @@ class BookView(object):
             self.DBSession.add(review_rating)
 
         review_query = self.DBSession.query(Review.id, self.DBSession.query(func.count(ReviewRating.id)).filter(
-            and_(ReviewRating.value == True,
+            and_(ReviewRating.value == 1,
                  ReviewRating.review_id == Review.id)).label('t_value'),
                                             self.DBSession.query(func.count(ReviewRating.id)).filter(
-                                                and_(ReviewRating.value == False,
+                                                and_(ReviewRating.value == -1,
                                                      ReviewRating.review_id == Review.id)).label('f_value')).filter(
             Review.id == review_id).first()
 

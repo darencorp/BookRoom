@@ -3,6 +3,16 @@ angular.module('BookRoomApp')
     var $this = this;
 
     $this.mainBook = {
-        rating: '4'
-    }
+        rating: '5'
+    };
+
+    $this.init = function () {
+        $http.post("/", {}).then(function (ret) {
+            $this.mainBook = ret.data.book;
+            $this.mainReviews = ret.data.reviews;
+            console.log(ret.data);
+        })
+    };
+
+    $this.init()
 });

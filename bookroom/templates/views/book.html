@@ -142,7 +142,7 @@
                                                     <div class="uk-flex">
                                                         <div class="review-button uk-text-success review-button-up"
                                                              ng-class="{'uk-box-shadow-medium': review.user_vote != true}"
-                                                             ng-click="bctrl.voteReview(review.id, true)"
+                                                             ng-click="bctrl.voteReview(review.id, 1)"
                                                              uk-icon="icon: chevron-up"></div>
                                                         <div class="uk-text-small uk-margin-small-left review-button-text">
                                                             {{review.true_rating}}
@@ -151,7 +151,7 @@
                                                     <div class="uk-flex">
                                                         <div class="uk-text-danger review-button"
                                                              ng-class="{'uk-box-shadow-medium': review.user_vote != false}"
-                                                             ng-click="bctrl.voteReview(review.id, false)"
+                                                             ng-click="bctrl.voteReview(review.id, -1)"
                                                              uk-icon="icon: chevron-down"></div>
                                                         <div class="uk-text-small uk-margin-small-left uk-text-danger">
                                                             {{review.false_rating}}

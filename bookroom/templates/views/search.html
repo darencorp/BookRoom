@@ -7,7 +7,7 @@
                 <div class="uk-width-4-5 uk-margin-large-top">
                     <div ng-if="sctrl.containsBooks()">
                         <div class="uk-heading-divider uk-text-large">Books</div>
-                        <div class="uk-margin-top uk-flex">
+                        <div class="uk-margin-top uk-flex uk-flex-wrap">
                             <a ng-href="/book/{{result.id}}" ng-repeat="result in sctrl.results | books"
                                class="uk-width-1-5 uk-card uk-card-default uk-card-hover uk-margin-left uk-margin-bottom global-search-result uk-link-reset">
                                 <div class="uk-width-1-1 uk-flex uk-flex-middle uk-flex-column">
@@ -44,7 +44,7 @@
             %else:
                 <div class="uk-width-4-5 uk-margin-large-top">
                     <div class="uk-heading-divider uk-text-large">{{sctrl.query}}</div>
-                        <div class="uk-margin-top uk-flex">
+                        <div class="uk-margin-top uk-flex uk-flex-wrap">
                             <a ng-href="/book/{{result.id}}" ng-repeat="result in sctrl.genreResults"
                                class="uk-width-1-5 uk-card uk-card-default uk-card-hover uk-margin-left uk-margin-bottom global-search-result uk-link-reset">
                                 <div class="uk-width-1-1 uk-flex uk-flex-middle uk-flex-column">

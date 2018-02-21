@@ -1,6 +1,5 @@
 def includeme(config):
     config.add_static_view('templates', 'templates/views/static', cache_max_age=3600)
-    config.add_static_view('fonts', 'static/fonts', cache_max_age=3600)
 
     config.add_route('js', '/js')
     config.add_route('index', '/')

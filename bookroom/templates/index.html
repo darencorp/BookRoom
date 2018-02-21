@@ -7,34 +7,21 @@
                 <div class="uk-width-9-10 uk-height-1-1 uk-flex uk-flex-column uk-flex-middle">
                     <div class="uk-width-2-3 uk-height-1-2 uk-flex main-book">
                         <div class="uk-width-1-3 uk-margin-large-top">
-                            <img class="uk-width-3-4@xl uk-width-2-3@l uk-height-3-4@xl uk-height-2-3@l uk-margin-top"
-                                 src="static/img/books/HarryPotter.jpg">
+                            <a ng-href="/book/{{home.mainBook.id}}">
+                                <img class="uk-width-3-4@xl uk-width-2-3@l uk-height-3-4@xl uk-height-2-3@l uk-margin-top"
+                                     ng-src="static/img/books/{{home.mainBook.image}}">
+                            </a>
                         </div>
 
                         <div class="uk-width-2-3">
                             <div class="uk-flex uk-flex-column uk-margin-large-top">
                                 <div class="uk-margin-top">
-                                    <h2 class="main-book-name">Harry Potter and the Cursed Child</h2>
+                                    <a ng-href="/book/{{home.mainBook.id}}" style="text-decoration-color: #333"><h2
+                                            class="main-book-name">{{home.mainBook.name}}</h2></a>
                                 </div>
                                 <div class="uk-text">
                                     <h4 class="main-book-text">
-                                        Harry Potter and the Cursed Child Parts One and Two is the official script
-                                        book for
-                                        the
-                                        play
-                                        of
-                                        the
-                                        same name written by J. K. Rowling, John Tiffany, and Jack Thorne.
-
-                                        It is the eighth story published in the Harry Potter book series.
-
-                                        J. K. Rowling wanted the plot of the play to remain a secret for as long as
-                                        possible.
-                                        Following
-                                        the
-                                        opening night of the first preview, she started a #KeepTheSecrets campaign.
-                                        Following the opening night of the first preview, she started a campaign
-                                        campaign.
+                                        {{home.mainBook.desc}}
                                     </h4>
                                 </div>
                                 <div class="uk-flex uk-flex-middle">
@@ -42,23 +29,28 @@
                                         <div class="main-rating">
                                             <input class="main-rating-input" type="radio" name="stars" id="4_stars"
                                                    value="5" ng-model="home.mainBook.rating" disabled>
-                                            <label class="uk-width-1-5 main-rating-label main-stars" for="4_stars">4 stars</label>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="4_stars">4
+                                                stars</label>
                                             <input class="main-rating-input" type="radio" name="stars" id="3_stars"
                                                    value="4" ng-model="home.mainBook.rating" disabled>
-                                            <label class="uk-width-1-5 main-rating-label main-stars" for="3_stars">3 stars</label>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="3_stars">3
+                                                stars</label>
                                             <input class="main-rating-input" type="radio" name="stars" id="2_stars"
                                                    value="3" ng-model="home.mainBook.rating" disabled>
-                                            <label class="uk-width-1-5 main-rating-label main-stars" for="2_stars">2 stars</label>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="2_stars">2
+                                                stars</label>
                                             <input class="main-rating-input" type="radio" name="stars" id="1_stars"
                                                    value="2" ng-model="home.mainBook.rating" disabled>
-                                            <label class="uk-width-1-5 main-rating-label main-stars" for="1_stars">1 star</label>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="1_stars">1
+                                                star</label>
                                             <input class="main-rating-input" type="radio" name="stars" id="0_stars"
                                                    value="1" ng-model="home.mainBook.rating" disabled>
-                                            <label class="uk-width-1-5 main-rating-label main-stars" for="0_stars">0 star</label>
+                                            <label class="uk-width-1-5 main-rating-label main-stars" for="0_stars">0
+                                                star</label>
                                         </div>
                                     </div>
                                     <div class="uk-width-1-2 uk-flex uk-flex-right uk-margin-right">
-                                        <a class="uk-margin-right">Reviews</a>
+                                        <a ng-href="/book/{{home.mainBook.id}}" class="uk-margin-right">Reviews</a>
                                     </div>
                                 </div>
                             </div>
@@ -68,83 +60,25 @@
                     <div class="uk-width-1-1 uk-flex main-reviews-margin">
                         <div class="uk-width-1-1 uk-margin-medium-top uk-flex uk-flex-middle">
                             <div class="uk-width-1-1 uk-flex uk-flex-around">
-                                <div class="uk-width-1-10 uk-flex uk-margin-left uk-margin-right">
+                                <div class="uk-width-1-10 uk-flex uk-margin-left uk-margin-right"
+                                     ng-repeat="review in home.mainReviews">
                                     <div class="uk-margin-left uk-width-1-4">
-                                        <img src="static/img/unknown_user.png"/>
+                                        <a ng-href="/user/{{review.user_id}}">
+                                            <img ng-if="!review.user_avatar" src="static/img/unknown_user.png"/>
+                                            <img ng-if="review.user_avatar"
+                                                 ng-src="static/img/users/{{review.user_avatar}}"/>
+                                        </a>
                                     </div>
                                     <div class="uk-width-7-10 uk-margin-left uk-flex uk-flex-column">
                                         <div class="main-review-title">
-                                            Some User > Harry Potter
+                                            <a ng-href="/user/{{review.user_id}}" class="main-review-user">{{review.user_fname}}
+                                                {{review.user_lname}}</a> > <a ng-href="/book/{{review.book_id}}"
+                                                                               class="main-review-book">{{review.book_name}}</a>
                                         </div>
-                                        <div class="uk-margin-top">
-                                            <div class="main-review-text">Jack Thorne’s play, based on a new story by
-                                                himself, Rowling and John
-                                                Tiffany,
-                                                strikes a
-                                                clever balance between recognisable Pottery and a new departure. It
-                                                begins
-                                                where the
-                                                final (seventh) book left off, with the middle-aged Harry watching his
-                                                son
-                                                board the
-                                                Hogwarts Express. Its emotional centre belongs partly to the younger
-                                                wizard
-                                                generation,
-                                                but not entirely.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-width-1-10 uk-flex uk-margin-left uk-margin-right">
-                                    <div class="uk-margin-left uk-width-1-4">
-                                        <img src="static/img/unknown_user.png"/>
-                                    </div>
-                                    <div class="uk-width-7-10 uk-margin-left uk-flex uk-flex-column">
-                                        <div class="main-review-title">
-                                            Some User > Harry Potter
-                                        </div>
-                                        <div class="uk-margin-top">
-                                            <div class="main-review-text">Jack Thorne’s play, based on a new story by
-                                                himself, Rowling and John
-                                                Tiffany,
-                                                strikes a
-                                                clever balance between recognisable Pottery and a new departure. It
-                                                begins
-                                                where the
-                                                final (seventh) book left off, with the middle-aged Harry watching his
-                                                son
-                                                board the
-                                                Hogwarts Express. Its emotional centre belongs partly to the younger
-                                                wizard
-                                                generation,
-                                                but not entirely.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-width-1-10 uk-flex uk-margin-left uk-margin-right">
-                                    <div class="uk-margin-left uk-width-1-4">
-                                        <img src="static/img/unknown_user.png"/>
-                                    </div>
-                                    <div class="uk-width-7-10 uk-margin-left uk-flex uk-flex-column">
-                                        <div class="main-review-title">
-                                            Some User > Harry Potter
-                                        </div>
-                                        <div class="uk-margin-top">
-                                            <div class="main-review-text">Jack Thorne’s play, based on a new story by
-                                                himself, Rowling and John
-                                                Tiffany,
-                                                strikes a
-                                                clever balance between recognisable Pottery and a new departure. It
-                                                begins
-                                                where the
-                                                final (seventh) book left off, with the middle-aged Harry watching his
-                                                son
-                                                board the
-                                                Hogwarts Express. Its emotional centre belongs partly to the younger
-                                                wizard
-                                                generation,
-                                                but not entirely.
+                                        <div class="uk-text-small uk-text-muted">Created on:</div>
+                                        <div>
+                                            <div class="main-review-text">
+                                                {{review.body}}
                                             </div>
                                         </div>
                                     </div>
