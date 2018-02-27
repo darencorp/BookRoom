@@ -26,7 +26,30 @@ class HomeView(object):
 
     @view_config(route_name='get_catalogue', renderer='json')
     def get_catalogue(self):
-        book_query = self.DBSession.query(Book).all()
+        r = self.request
+
+        s = r.session
+        j = r.json_body
+
+        catalogue_filter = j.get('filter', s.get('filter', None))
+        s['filter'] = catalogue_filter
+
+        if catalogue_filter:
+
+            genres_filter = catalogue_filter.get('genres', None)
+            genres = [x for x,y in genres_filter.items() if y]
+
+            f_year = catalogue_filter.get('f_year', None)
+            t_year = catalogue_filter.get('t_year', None)
+
+            t_year_filter = (Book.year <= t_year) if t_year else True
+            f_year_filter = (Book.year >= f_year) if f_year else True
+            genre_filter = (Book.genre.in_(genres)) if genres else True
+
+            book_query = self.DBSession.query(Book).filter(t_year_filter, f_year_filter, genre_filter).all()
+
+        else:
+            book_query = self.DBSession.query(Book).all()
 
         books = [
             {
@@ -40,7 +63,7 @@ class HomeView(object):
             } for i in book_query
         ]
 
-        return dict(books=books)
+        return dict(books=books, filter=catalogue_filter)
 
     @view_config(route_name='user', renderer='../templates/views/user-page.html')
     @view_config(route_name='user', xhr=True, renderer='json')

@@ -18,11 +18,13 @@
                                     <ul class="uk-list">
                                         <li class="catalogue-filter-row"><input
                                                 class="uk-checkbox uk-margin-small-right"
-                                                type="checkbox">Action
+                                                type="checkbox" ng-model="cctrl.filter.genres['Action']"
+                                                ng-click="cctrl.changeFilter()">Action
                                         </li>
                                         <li class="catalogue-filter-row"><input
                                                 class="uk-checkbox uk-margin-small-right"
-                                                type="checkbox">Romantic
+                                                type="checkbox" ng-model="cctrl.filter.genres['Romantic']"
+                                                ng-click="cctrl.changeFilter()">Romantic
                                         </li>
                                     </ul>
                                 </div>
@@ -35,15 +37,17 @@
                                         <div class="uk-text-right uk-margin-right catalogue-filter-row">To:</div>
                                     </div>
                                     <div class="uk-flex uk-flex-column">
-                                        <div><input class="uk-width-1-2@l"></div>
-                                        <div><input class="uk-width-1-2@l"></div>
+                                        <div><input class="uk-width-1-2@l" ng-model="cctrl.filter.f_year"
+                                                    ng-change="cctrl.changeFilter()"></div>
+                                        <div><input class="uk-width-1-2@l" ng-model="cctrl.filter.t_year"
+                                                    ng-change="cctrl.changeFilter()"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="uk-width-4-5 uk-height-1-1 uk-flex uk-flex-column catalogue-filter">
-                        <div class="uk-height-1-1 uk-flex uk-flex-center uk-margin-large-top uk-margin-medium-left">
+                        <div class="uk-height-1-1 uk-flex uk-flex-center uk-margin-medium-top uk-margin-medium-left">
                             <div class="uk-panel uk-panel-scrollable uk-height-1-1 catalogue-scrollable">
                                 <div class="uk-flex uk-flex-column">
 
@@ -81,10 +85,10 @@
                                                         %if request.has_permission('admin'):
                                                             <div class="uk-margin-small-top uk-margin-large-left uk-flex">
                                                                 <a class="uk-icon-link"
-                                                                     uk-icon="icon: file-edit; ratio:0.9"></a>
+                                                                   uk-icon="icon: file-edit; ratio:0.9"></a>
                                                                 &nbsp;
                                                                 <a class="uk-icon-link"
-                                                                     uk-icon="icon: trash; ratio:0.9"></a>
+                                                                   uk-icon="icon: trash; ratio:0.9"></a>
                                                             </div>
                                                         %endif
                                                     </div>
