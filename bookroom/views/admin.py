@@ -3,9 +3,13 @@ import datetime
 import os
 
 import shutil
+import transaction
 from pyramid.view import view_config
 
 from bookroom.models.Book import Book
+from bookroom.models.BookRating import BookRating
+from bookroom.models.Review import Review
+from bookroom.models.ReviewRating import ReviewRating
 
 
 class AdminView(object):
@@ -61,4 +65,19 @@ class AdminView(object):
 
     @view_config(route_name='delete_book', request_method='POST', renderer='json', permission='admin')
     def delete_book(self):
+        r = self.request
+        _id = int(r.matchdict.get('id', ''))
+
+        book = self.DBSession.query(Book).filter(Book.id == _id).first()
+
+        if book:
+            book_image = book.image
+            filename = str(os.path.dirname(__file__)) + '/../static/img/books/' + book_image
+
+            if os.path.isfile(filename):
+                os.remove(filename)
+
+                with transaction.manager:
+                    self.DBSession.delete(book)
+
         return dict()

@@ -8,7 +8,7 @@ class ReviewRating(Base):
     __tablename__ = 'review_rating'
     id = Column(Integer, primary_key=True, nullable=False)
     user_id = Column(Text, ForeignKey('user.email'))
-    review_id = Column(Integer, ForeignKey('review.id'))
+    review_id = Column(Integer, ForeignKey('review.id', ondelete='CASCADE'))
     value = Column(Integer)
 
     def __init__(self, user_id, review_id, value):

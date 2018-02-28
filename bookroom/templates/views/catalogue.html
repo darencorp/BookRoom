@@ -87,7 +87,7 @@
                                                                 <a class="uk-icon-link"
                                                                    uk-icon="icon: file-edit; ratio:0.9"></a>
                                                                 &nbsp;
-                                                                <a class="uk-icon-link"
+                                                                <a ng-click="cctrl.deleteBook(book.name, book.id)" class="uk-icon-link"
                                                                    uk-icon="icon: trash; ratio:0.9"></a>
                                                             </div>
                                                         %endif
@@ -95,7 +95,7 @@
                                                     <div class="catalogue-book-author uk-text-bold">{{book.author}}
                                                     </div>
                                                 </div>
-                                                <div class="catalogue-book-text">{{book.desc}}
+                                                <div class="catalogue-book-text">{{book.desc.slice(0, 460)}}
                                                     <span class="uk-text-muted">...</span>
                                                     <a ng-href="/book/{{book.id}}">Read more</a>
                                                 </div>

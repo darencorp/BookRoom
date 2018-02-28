@@ -15,26 +15,26 @@ angular.module('BookRoomApp')
 
         $this.openBookForm = function () {
             UIkit.modal('#new-book-form').show();
-            console.log(UIkit.modal('#new-book-form'));
-        }
+        };
 
         $this.changeFilter = function () {
-            console.log($this.filter)
-
-            $http.post('/get_catalogue', {filter: $this.filter}).then(function(ret) {
+            $http.post('/get_catalogue', {filter: $this.filter}).then(function (ret) {
                 $this.books = ret.data.books;
                 $this.filter = ret.data.filter;
             });
-        }
+        };
 
-        $this.addFilter = function(genre) {
-            if ($this.filter.genres.includes(genre)) {
-                i = $this.filter.genres.indexOf(genre);
-                $this.filter.genres.splice(i, 1);
-            } else {
-                $this.filter.genres.push(genre)
-            }
-
-            $this.changeFilter();
+        $this.deleteBook = function (name, id) {
+            UIkit.modal.confirm('Are you sure that you want to delete book "' + name + '"?').then(function () {
+                $http.post('/delete_book/' + id).then(function (ret) {
+                    UIkit.notification({
+                        message: 'Deleted!',
+                        status: 'success',
+                        pos: 'top-center',
+                        timeout: 1000
+                    });
+                })
+            }, function () {
+            });
         }
     });

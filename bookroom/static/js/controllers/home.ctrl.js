@@ -10,7 +10,6 @@ angular.module('BookRoomApp')
         $http.post("/", {}).then(function (ret) {
             $this.mainBook = ret.data.book;
             $this.mainReviews = ret.data.reviews;
-            console.log(ret.data);
         })
     };
 

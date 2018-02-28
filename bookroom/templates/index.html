@@ -21,7 +21,9 @@
                                 </div>
                                 <div class="uk-text">
                                     <h4 class="main-book-text">
-                                        {{home.mainBook.desc}}
+                                        {{home.mainBook.desc.slice(0, 849)}}
+                                        <span class="uk-text-muted">...</span>
+                                        <a ng-href="/book/{{home.mainBook.id}}">Read more</a>
                                     </h4>
                                 </div>
                                 <div class="uk-flex uk-flex-middle">
