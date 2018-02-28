@@ -37,7 +37,7 @@ class HomeView(object):
         if catalogue_filter:
 
             genres_filter = catalogue_filter.get('genres', None)
-            genres = [x for x,y in genres_filter.items() if y]
+            genres = [x for x, y in genres_filter.items() if y]
 
             f_year = catalogue_filter.get('f_year', None)
             t_year = catalogue_filter.get('t_year', None)
@@ -46,20 +46,23 @@ class HomeView(object):
             f_year_filter = (Book.year >= f_year) if f_year else True
             genre_filter = (Book.genre.in_(genres)) if genres else True
 
-            book_query = self.DBSession.query(Book).filter(t_year_filter, f_year_filter, genre_filter).all()
+            book_query = self.DBSession.query(Book, func.avg(BookRating.value).label("value")).join(
+                BookRating, BookRating.book_id == Book.id).filter(t_year_filter, f_year_filter, genre_filter).group_by(Book.id)
 
         else:
-            book_query = self.DBSession.query(Book).all()
+            book_query = self.DBSession.query(Book, func.avg(BookRating.value).label("value")).join(
+                BookRating, BookRating.book_id == Book.id).group_by(Book.id)
 
         books = [
             {
-                'id': i.id,
-                'name': i.name,
-                'author': i.author,
-                'year': i.year,
-                'genre': i.genre,
-                'desc': i.description,
-                'image': i.image
+                'id': i.Book.id,
+                'name': i.Book.name,
+                'author': i.Book.author,
+                'year': i.Book.year,
+                'genre': i.Book.genre,
+                'desc': i.Book.description,
+                'image': i.Book.image,
+                'rating': str(int(i.value))
             } for i in book_query
         ]
 
@@ -143,9 +146,10 @@ class HomeView(object):
         c = j.get('criteria', s.get('search_criteria', ''))
         s['search_criteria'] = c
 
-        book_query = self.DBSession.query(Book.id, Book.name, Book.image).filter(Book.name.like('%'+c+'%')).all()
-        user_query = self.DBSession.query(User.id, User.first_name, User.last_name, User.avatar).filter(or_(User.first_name.like(c+'%'), User.last_name.like(c+'%'))).all()
-        genre_query = self.DBSession.query(Book.genre).filter(Book.genre.like(c+'%')).distinct().all()
+        book_query = self.DBSession.query(Book.id, Book.name, Book.image).filter(Book.name.like('%' + c + '%')).all()
+        user_query = self.DBSession.query(User.id, User.first_name, User.last_name, User.avatar).filter(
+            or_(User.first_name.like(c + '%'), User.last_name.like(c + '%'))).all()
+        genre_query = self.DBSession.query(Book.genre).filter(Book.genre.like(c + '%')).distinct().all()
 
         book_data = [
             {
@@ -203,7 +207,7 @@ class HomeView(object):
         user_query = self.DBSession.query(User.id, User.first_name, User.last_name, User.avatar).filter(
             or_(User.first_name.like(c + '%'), User.last_name.like(c + '%'))).all()
 
-        genre_query = self.DBSession.query(Book.id, Book.name, Book.image).filter(Book.genre.like(c+'%')).all()
+        genre_query = self.DBSession.query(Book.id, Book.name, Book.image).filter(Book.genre.like(c + '%')).all()
 
         book_data = [
             {

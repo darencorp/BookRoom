@@ -12,6 +12,8 @@ angular.module('BookRoomApp')
             $http.post('/get_catalogue', {}).then(function (ret) {
                 $this.books = ret.data.books;
                 $this.filter = ret.data.filter;
+
+                console.log($this.books);
             })
         };
 

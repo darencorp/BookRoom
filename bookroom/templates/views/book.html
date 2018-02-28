@@ -94,14 +94,14 @@
                         <div class="uk-margin-large-left uk-flex uk-flex-column">
                             <div>
                                 %if request.authenticated_userid is not None:
-                                    <form class="uk-flex uk-flex-middle">
-                                        <div class="uk-width-3-4">
+                                    <form class="uk-width-1-1 uk-flex uk-flex-middle">
+                                        <div class="uk-width-4-5">
                                         <textarea class="uk-textarea" placeholder="Add new review..."
                                                   ng-model="bctrl.newReview"
                                                   ng-class="{'review-textarea': bctrl.newReview.length == 0, 'review-textarea-expanded': bctrl.newReview.length > 0}"></textarea>
                                         </div>
-                                        <div class="uk-margin-left">
-                                            <button ng-click="bctrl.addReview()" class="uk-button uk-button-primary">
+                                        <div class="uk-width-expand uk-margin-left">
+                                            <button ng-click="bctrl.addReview()" class="uk-margin-left uk-button uk-button-primary">
                                                 Send
                                             </button>
                                         </div>
