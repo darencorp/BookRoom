@@ -17,6 +17,24 @@
         resize: none;
     }
 
+    .review-textarea-update {
+        font-size: 1em;
+        height: 2em;
+        transition: height 0.5s, font-size 0.5s;
+        resize: none;
+    }
+
+    .review-textarea-update:focus {
+        height: 8em;
+        font-size: 1em;
+    }
+
+    .review-textarea-update-expanded {
+        height: 8em;
+        font-size: 1em;
+        resize: none;
+    }
+
     .review-body {
         margin-left: -2em;
     }

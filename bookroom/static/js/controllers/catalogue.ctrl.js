@@ -27,12 +27,21 @@ angular.module('BookRoomApp')
         $this.deleteBook = function (name, id) {
             UIkit.modal.confirm('Are you sure that you want to delete book "' + name + '"?').then(function () {
                 $http.post('/delete_book/' + id).then(function (ret) {
-                    UIkit.notification({
-                        message: 'Deleted!',
-                        status: 'success',
-                        pos: 'top-center',
-                        timeout: 1000
-                    });
+                    if (ret.data) {
+                        UIkit.notification({
+                            message: 'Deleted!',
+                            status: 'success',
+                            pos: 'top-center',
+                            timeout: 1000
+                        });
+                    } else {
+                        UIkit.notification({
+                            message: 'Error!',
+                            status: 'danger',
+                            pos: 'top-center',
+                            timeout: 1000
+                        });
+                    }
                 })
             }, function () {
             });

@@ -19,7 +19,9 @@ def includeme(config):
     config.add_route('update_book', '/update_book/{id}')
     config.add_route('delete_book', '/delete_book/{id}')
     config.add_route('add_review', '/add_review')
-    config.add_route('update_reviews', '/update_reviews')
+    config.add_route('update_review', '/update_review/{id}')
+    config.add_route('delete_review', '/delete_review/{id}')
+    config.add_route('refresh_reviews', '/refresh_reviews')
     config.add_route('vote_book', '/vote_book')
     config.add_route('vote_review', '/vote_review')
 

@@ -61,7 +61,8 @@ class CommonView(object):
         reviews = [
             {
                 'body': i.Review.body,
-                'date': i.Review.modified,
+                'modified': i.Review.modified,
+                'date': i.Review._date.strftime("%Y-%m-%d %H:%M"),
                 'book_id': i.Book.id,
                 'book_name': i.Book.name,
                 'user_id': i.User.id,

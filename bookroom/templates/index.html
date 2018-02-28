@@ -61,8 +61,8 @@
 
                     <div class="uk-width-1-1 uk-flex main-reviews-margin">
                         <div class="uk-width-1-1 uk-margin-medium-top uk-flex uk-flex-middle">
-                            <div class="uk-width-1-1 uk-flex uk-flex-around">
-                                <div class="uk-width-1-10 uk-flex uk-margin-left uk-margin-right"
+                            <div class="uk-width-1-1 uk-flex uk-flex-between">
+                                <div class="uk-width-1-3 uk-flex uk-margin-left uk-margin-right"
                                      ng-repeat="review in home.mainReviews">
                                     <div class="uk-margin-left uk-width-1-4">
                                         <a ng-href="/user/{{review.user_id}}">
@@ -72,15 +72,27 @@
                                         </a>
                                     </div>
                                     <div class="uk-width-7-10 uk-margin-left uk-flex uk-flex-column">
-                                        <div class="main-review-title">
+                                        <div class="main-review-title uk-width-4-5">
                                             <a ng-href="/user/{{review.user_id}}" class="main-review-user">{{review.user_fname}}
-                                                {{review.user_lname}}</a> > <a ng-href="/book/{{review.book_id}}"
-                                                                               class="main-review-book">{{review.book_name}}</a>
+                                                {{review.user_lname}}</a>
+
+                                            >
+
+                                            <a ng-href="/book/{{review.book_id}}"
+                                               class="main-review-book uk-text-nowrap">{{review.book_name}}</a>
                                         </div>
-                                        <div class="uk-text-small uk-text-muted">Created on:</div>
+
+                                        <div ng-if="!review.modified" class="uk-text-small uk-text-muted">Created on:
+                                            {{review.date}}
+                                        </div>
+                                        <div ng-if="review.modified" class="uk-text-small uk-text-muted">Modified on:
+                                            {{review.date}}
+                                        </div>
+
                                         <div>
                                             <div class="main-review-text">
-                                                {{review.body}}
+                                                {{review.body.slice(0, 320)}}<span class="uk-text-muted">...</span>
+                                                <a ng-href="/book/{{home.mainBook.id}}">Read more</a>
                                             </div>
                                         </div>
                                     </div>

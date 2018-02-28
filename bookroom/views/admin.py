@@ -66,7 +66,10 @@ class AdminView(object):
     @view_config(route_name='delete_book', request_method='POST', renderer='json', permission='admin')
     def delete_book(self):
         r = self.request
-        _id = int(r.matchdict.get('id', ''))
+        _id = int(r.matchdict.get('id', None))
+
+        if not _id:
+            return False
 
         book = self.DBSession.query(Book).filter(Book.id == _id).first()
 
@@ -80,4 +83,4 @@ class AdminView(object):
                 with transaction.manager:
                     self.DBSession.delete(book)
 
-        return dict()
+        return True

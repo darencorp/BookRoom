@@ -311,6 +311,8 @@ class HomeView(object):
             'image': book_query.image
         }
 
+        user_id = r.session.get('logged_as', {}).get('id', None)
+
         user_rate = u_rate if u_rate else False
 
-        return dict(book=book, reviews=reviews, user_rating=user_rate, avg_rating=avg_rating)
+        return dict(book=book, reviews=reviews, user_rating=user_rate, avg_rating=avg_rating, user_id=user_id)
