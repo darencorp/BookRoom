@@ -40,7 +40,7 @@ angular.module('BookRoomApp')
                 $this.reviews = ret.data.reviews;
                 $this.newReview = '';
             })
-        }
+        };
 
         $this.addReview = function () {
 
@@ -59,6 +59,10 @@ angular.module('BookRoomApp')
         $this.editReview = function (review) {
             review.edit = true;
         };
+
+        $this.cancelEdit = function () {
+            $this.refreshReviews()
+        }
 
         $this.updateReview = function (review) {
             if (review.body.length > 0) {

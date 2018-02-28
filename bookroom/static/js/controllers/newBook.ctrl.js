@@ -1,5 +1,5 @@
 angular.module('BookRoomApp')
-    .controller('NewBookCtrl', function ($scope, $http) {
+    .controller('NewBookCtrl', function ($scope, $rootScope, $http) {
         var $this = this;
 
         $this.newBook = {
@@ -43,6 +43,7 @@ angular.module('BookRoomApp')
 
                 fd.append('image', $this.newBook.image);
                 fd.append('name', $this.newBook.name);
+                fd.append('id', $this.newBook.id);
 
                 $http.post('/image_upload', fd, {
                     transformRequest: angular.identity,
@@ -53,7 +54,15 @@ angular.module('BookRoomApp')
                     } else {
                         $this.newBook.image = retu.data;
                         $http.post('/add_book', $this.newBook).then(function (ret) {
-                            UIkit.notification("Book is added", {status: 'primary'});
+                            if (!ret.data.id) {
+                                UIkit.notification("Book is added", {status: 'success'});
+                            } else {
+                                UIkit.notification("Book is updated", {status: 'success'});
+                            }
+
+                            UIkit.modal('#new-book-form').hide();
+
+                            $scope.$emit('refreshCatalogue', {});
                         });
 
                         $this.newBook = {
@@ -64,5 +73,12 @@ angular.module('BookRoomApp')
                     }
                 });
             }
-        }
+        };
+
+        $rootScope.$on('editBook', function (event, data) {
+            $this.newBook = data.book;
+            if (data.book. image) {
+                $this.imgPreview = '/static/img/books/' + data.book.image;
+            }
+        });
     });

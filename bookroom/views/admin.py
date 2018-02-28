@@ -28,13 +28,23 @@ class AdminView(object):
         author = j.get('author')
         year = j.get('year', 0)
         genre = j.get('genre')
-        description = j.get('description')
+        description = j.get('desc')
         image = j.get('image')
 
-        book = Book(name, author, year, genre, description, image)
+        _id = j.get('id', None)
 
-        self.DBSession.add(book)
-        return dict()
+        if _id:
+            book = self.DBSession.query(Book).filter(Book.id == _id).first()
+
+            if book:
+                self.DBSession.query(Book).filter(Book.id == _id).\
+                    update({"name": name, "author": author, "year": year, "genre": genre, "description": description, "image": image})
+
+        else:
+            book = Book(name, author, year, genre, description, image)
+            self.DBSession.add(book)
+
+        return dict(id=_id)
 
     @view_config(route_name='image_upload', request_method='POST', renderer='json', permission='admin')
     def image_upload(self):
@@ -42,9 +52,23 @@ class AdminView(object):
 
         image = p.get('image')
         name = p.get('name')
+        _id = p.get('id', None)
 
         if image is None:
             return dict('')
+
+        if type(image) is str:
+            return image
+
+        if _id:
+            book = self.DBSession.query(Book).filter(Book.id == _id).first()
+
+            if book:
+                book_image = book.image
+                filename = str(os.path.dirname(__file__)) + '/../static/img/books/' + book_image
+
+                if os.path.isfile(filename):
+                    os.remove(filename)
 
         file_type = image.filename.split('.')[-1]
 

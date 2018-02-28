@@ -84,7 +84,7 @@
 
                                                         %if request.has_permission('admin'):
                                                             <div class="uk-margin-small-top uk-margin-large-left uk-flex">
-                                                                <a class="uk-icon-link"
+                                                                <a ng-click="cctrl.openBookForm(book)" class="uk-icon-link"
                                                                    uk-icon="icon: file-edit; ratio:0.9"></a>
                                                                 &nbsp;
                                                                 <a ng-click="cctrl.deleteBook(book.name, book.id)" class="uk-icon-link"

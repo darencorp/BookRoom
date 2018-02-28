@@ -25,12 +25,12 @@
     }
 
     .review-textarea-update:focus {
-        height: 8em;
+        height: 15em;
         font-size: 1em;
     }
 
     .review-textarea-update-expanded {
-        height: 8em;
+        height: 15em;
         font-size: 1em;
         resize: none;
     }

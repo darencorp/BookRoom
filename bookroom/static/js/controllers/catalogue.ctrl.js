@@ -4,6 +4,10 @@ angular.module('BookRoomApp')
 
         $this.filter = null;
 
+        $this.newBook = {
+            'genre': 'Action'
+        };
+
         $this.init = function () {
             $http.post('/get_catalogue', {}).then(function (ret) {
                 $this.books = ret.data.books;
@@ -13,8 +17,14 @@ angular.module('BookRoomApp')
 
         $this.init();
 
-        $this.openBookForm = function () {
+        $this.openBookForm = function (book) {
             UIkit.modal('#new-book-form').show();
+
+            if(book == null) {
+                $scope.$emit('editBook', {book: $this.newBook});
+            } else {
+                $scope.$emit('editBook', {book: book});
+            }
         };
 
         $this.changeFilter = function () {
@@ -34,6 +44,8 @@ angular.module('BookRoomApp')
                             pos: 'top-center',
                             timeout: 1000
                         });
+
+                        $this.init();
                     } else {
                         UIkit.notification({
                             message: 'Error!',
@@ -46,4 +58,8 @@ angular.module('BookRoomApp')
             }, function () {
             });
         }
+
+        $rootScope.$on('refreshCatalogue', function (event) {
+            $this.init();
+        })
     });
