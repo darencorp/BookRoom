@@ -8,10 +8,10 @@ from sqlalchemy import desc, func
 
 from bookroom.models import User
 from bookroom.models.facades.home_facade import HomeFacade
-from models.Book import Book
-from models.BookRating import BookRating
-from models.Review import Review
-from models.ReviewRating import ReviewRating
+from bookroom.models.Book import Book
+from bookroom.models.BookRating import BookRating
+from bookroom.models.Review import Review
+from bookroom.models.ReviewRating import ReviewRating
 
 
 class CommonView(object):
@@ -74,9 +74,13 @@ class CommonView(object):
 
         return dict(book=book, reviews=reviews)
 
+    @view_config(route_name='about', renderer='../templates/views/about.html')
+    def about(self):
+        return dict()
+
     @view_config(route_name='login', renderer='json')
     @forbidden_view_config(renderer='json')
-    def go_login(self):
+    def ogin(self):
 
         def authenticate(email, password):
 

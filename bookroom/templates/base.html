@@ -75,15 +75,16 @@
                                         <div class="uk-flex">
                                             <div class="uk-width-1-5">
                                             </div>
-                                            <div class="uk-text-middle uk-text-truncate uk-margin-small-left">
-                                                <a ng-href="/search?q={{result.genre}}&t=g" class="uk-link-reset">{{result.genre}} - Genre</a>
+                                            <div class="uk-text-middle uk-text-truncate uk-flex uk-flex-center">
+                                                <a ng-href="/search?q={{result.genre}}&t=g" class="uk-link-reset">Search
+                                                    in {{result.genre}}</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="uk-text-center">
-                                    <a href="/search?q={{$root.searchCriteria}}" class="uk-text-small uk-text-muted">Global
-                                        search</a>
+                                    <a href="/search?q={{$root.searchCriteria}}" class="uk-text-small uk-text-muted">Show
+                                        all</a>
                                 </div>
                             </div>
                         </form>
@@ -91,22 +92,25 @@
                 </ul>
             </div>
             <div class="uk-width-1-2 uk-flex uk-flex-right">
+                <div class="menu-button uk-margin-right">
+                    <a href="/about" class="uk-link-reset">About</a>
+                </div>
+
                 <div class="uk-margin-right uk-float-right menu-button">
                     %if request.has_permission('view'):
                         <div ng-controller="HomeCtrl as userCtrl" class="uk-margin-small-right">
-                            <a href="/user/${session.get('logged_as')['id']}"
-                               class="uk-link-reset">${session.get('logged_as')['first_name']} ${session.get('logged_as')['last_name']}</a>
+                            <div class="uk-link-reset">${session.get('logged_as')['first_name']} ${session.get('logged_as')['last_name']}</div>
+                            <div uk-dropdown="delay-hide: 50">
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li><a href="/user/${session.get('logged_as')['id']}">Account</a></li>
+                                     <li class="uk-nav-divider"></li>
+                                    <li><a href="${request.route_path('logout')}">Sign Out</a></li>
+                                </ul>
+                            </div>
                         </div>
                     %else:
                         <div ng-controller="AppCtrl">
-                            <a class="uk-link-reset" ng-click="openLoginForm()">Log in</a>
-                        </div>
-                    %endif
-                </div>
-                <div class="menu-button">
-                    %if request.authenticated_userid is not None:
-                        <div class="uk-margin-right">
-                            <a class="uk-link-reset" href="${request.route_path('logout')}">Log out</a>
+                            <a class="uk-link-reset" ng-click="openLoginForm()">Sign In</a>
                         </div>
                     %endif
                 </div>

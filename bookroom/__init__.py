@@ -29,7 +29,6 @@ def include_js(config):
         'js/controllers/newBook.ctrl.js',
         'js/controllers/userPage.ctrl.js',
         'js/controllers/search.ctrl.js',
-
         'js/services/home.service.js',
 
         output='js/generated.js',
